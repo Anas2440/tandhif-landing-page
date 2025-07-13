@@ -25,8 +25,8 @@ import AnimatedCounter from './components/AnimatedCounter';
 import ServicesCarousel from './components/ServicesCarousel';
 import { translations, Language, supportedLanguages } from './data/translations';
 import { servicesData } from './data/services';
-import logo from '../images/logo.png';
-import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
+import logo from './images/logo.png';
+import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
