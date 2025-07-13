@@ -34,17 +34,20 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & Description */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
-              <img
-    src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png" // Replace with your actual path
+          <div className="lg:col-span-22">
+            <div className="flex space-x-2">
+  <img
+    src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png"
     alt="App Icon"
-    className="h-16 w-16 mr-4 group-hover:scale-110 transition-transform duration-500"
+    className="h-12 w-12 group-hover:scale-110 transition-transform duration-500"
   />
-              <span className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
-                Tandhif
-              </span>
-            </div>
+  <img
+    src="src/images/logo.png"
+    alt="Tandhif Logo"
+    className="h-7 object-left"
+  />
+</div>
+
             <p className={`${isDark ? 'text-gray-400' : 'text-gray-600'} mb-8 max-w-md text-lg leading-relaxed`}>
               {translations.footer.description}
             </p>

@@ -87,11 +87,10 @@ const Header: React.FC<HeaderProps> = ({
           >
             <div className="relative">
               <img
-  src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png" // <-- replace with your actual path
-  alt="App Icon"
-  className="h-10 w-10 mr-3 group-hover:scale-110 transition-transform duration-300"
-/>
-
+                src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png" // <-- replace with your actual path
+                alt="App Icon"
+                className="h-10 w-10 mr-3 group-hover:scale-110 transition-transform duration-300"
+              />
              <div className="absolute inset-0 h-10 w-10 mr-3 animate-pulse opacity-30">
               <img
                 src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png" // <-- same icon or blurred version
@@ -100,16 +99,13 @@ const Header: React.FC<HeaderProps> = ({
               />
              </div>  
             </div>
-            <img
-                src="src/images/logo.png" // <-- same icon or blurred version
-                alt="App Icon Pulse"
-                // className="h-10 w-10"
-              />
-            <span className={`text-2xl font-bold transition-colors duration-300 ${
-              isDark ? 'text-white' : 'text-black'
-            }`}>
-              Tandhif
-            </span>
+           <div className="flex items-center">
+  <img
+    src="src/images/logo.png"
+    alt="Tandhif Logo"
+    className="h-5 object-contain" // Keep height fixed, let width adjust
+  />
+           </div>  
           </div>
 
           {/* Desktop Navigation */}

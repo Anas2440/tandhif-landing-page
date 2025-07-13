@@ -111,13 +111,13 @@ function App() {
   </div>
 </div>
 
-              <h1 className={`text-5xl md:text-7xl font-bold bg-gradient-to-r ${
-                isDark 
-                  ? 'from-white to-gray-300' 
-                  : 'from-black to-gray-700'
-              } bg-clip-text text-transparent`}>
-                {t.hero.title}
-              </h1>
+              <div className="flex items-center">
+  <img
+    src="src/images/logo.png"
+    alt="Tandhif Logo"
+    className="h-10 object-contain" // Keep height fixed, let width adjust
+  />
+           </div>
             </div>
             
             <h2 className={`text-4xl md:text-6xl font-bold mb-8 ${
