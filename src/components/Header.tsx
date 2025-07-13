@@ -9,6 +9,8 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { Language, supportedLanguages, languageNames } from '../data/translations';
+import logo from '../images/logo.png';
+import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
 interface HeaderProps {
   isDark: boolean;
@@ -87,13 +89,13 @@ const Header: React.FC<HeaderProps> = ({
           >
             <div className="relative">
               <img
-                src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png" // <-- replace with your actual path
+                src={icon} // <-- replace with your actual path
                 alt="App Icon"
                 className="h-10 w-10 mr-3 group-hover:scale-110 transition-transform duration-300"
               />
              <div className="absolute inset-0 h-10 w-10 mr-3 animate-pulse opacity-30">
               <img
-                src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png" // <-- same icon or blurred version
+                src={icon} // <-- same icon or blurred version
                 alt="App Icon Pulse"
                 className="h-10 w-10"
               />
@@ -101,7 +103,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
            <div className="flex items-center">
   <img
-    src="src/images/logo.png"
+    src={logo}
     alt="Tandhif Logo"
     className="h-5 object-contain" // Keep height fixed, let width adjust
   />

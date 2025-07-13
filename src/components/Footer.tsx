@@ -1,5 +1,7 @@
 import React from 'react';
 import { Sparkles, Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
+import logo from '../images/logo.png';
+import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
 interface FooterProps {
   isDark: boolean;
@@ -37,12 +39,12 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations }) => {
           <div className="lg:col-span-22">
             <div className="flex space-x-2">
   <img
-    src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png"
+    src={icon}
     alt="App Icon"
     className="h-12 w-12 group-hover:scale-110 transition-transform duration-500"
   />
   <img
-    src="src/images/logo.png"
+    src={logo}
     alt="Tandhif Logo"
     className="h-7 object-left"
   />

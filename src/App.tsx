@@ -25,6 +25,8 @@ import AnimatedCounter from './components/AnimatedCounter';
 import ServicesCarousel from './components/ServicesCarousel';
 import { translations, Language, supportedLanguages } from './data/translations';
 import { servicesData } from './data/services';
+import logo from '../images/logo.png';
+import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -98,13 +100,13 @@ function App() {
             <div className="flex justify-center items-center mb-8 group">
               <div className="relative">
   <img
-    src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png" // Replace with your actual path
+    src={icon} // Replace with your actual path
     alt="App Icon"
     className="h-16 w-16 mr-4 group-hover:scale-110 transition-transform duration-500"
   />
   <div className="absolute inset-0 h-16 w-16 mr-4 animate-ping opacity-20">
     <img
-      src="src/images/imgpsh_fullsize_anim__1_-removebg-preview.png" // Optionally use a blurred or transparent version
+      src={icon} // Optionally use a blurred or transparent version
       alt="App Icon Ping"
       className="h-16 w-16"
     />
@@ -113,7 +115,7 @@ function App() {
 
               <div className="flex items-center">
   <img
-    src="src/images/logo.png"
+    src={logo}
     alt="Tandhif Logo"
     className="h-10 object-contain" // Keep height fixed, let width adjust
   />
