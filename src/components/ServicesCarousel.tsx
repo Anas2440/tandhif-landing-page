@@ -68,90 +68,79 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
   return (
     <>
       <div className="relative w-full py-8">
-        <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          autoplay={autoPlay ? {
+        <div className="mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+  <Swiper
+    effect={'coverflow'}
+    grabCursor={true}
+    centeredSlides={true}
+    slidesPerView={1} // Always show 1 centered slide
+    coverflowEffect={{
+      rotate: 0, // no rotation for cleaner center display
+      stretch: 0,
+      depth: 100,
+      modifier: 2,
+      slideShadows: false,
+    }}
+    autoplay={
+      autoPlay
+        ? {
             delay: autoPlayInterval,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
-          } : false}
-          pagination={{
-            clickable: true,
-            dynamicBullets: true,
-          }}
-          navigation={true}
-          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
-          className="services-swiper"
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 50,
-            },
-          }}
-        >
-          {services.map((service) => (
-            <SwiperSlide key={service.id} className="!w-80 !h-80">
-              <div 
-                className="group relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 rounded-2xl"
-                onClick={() => handleServiceClick(service)}
-              >
-                {/* Square Image Container */}
-                <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-2xl">
-                  <img
-                    src={service.image}
-                    alt={service.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  
-                  {/* Hover Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#FEE21B]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Service Name Overlay - Bottom Left */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-[#FEE21B] transition-colors duration-300 drop-shadow-lg">
-                      {service.name}
-                    </h3>
-                  </div>
+          }
+        : false
+    }
+    pagination={{
+      clickable: true,
+      dynamicBullets: true,
+    }}
+    navigation={true}
+    modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
+    className="services-swiper"
+  >
+    {services.map((service) => (
+      <SwiperSlide key={service.id} className="flex justify-center">
+        <div
+  className="group relative w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] md:w-[320px] md:h-[320px] overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 rounded-2xl"
+  onClick={() => handleServiceClick(service)}
+>
+          {/* Square Image Container */}
+          <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-2xl">
+            <img
+              src={service.image}
+              alt={service.name}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              loading="lazy"
+            />
 
-                  {/* Subtle Border Glow on Hover */}
-                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#FEE21B]/60 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#FEE21B]/20" />
-                  
-                  {/* Click Indicator */}
-                  <div className="absolute top-4 right-4 w-8 h-8 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="w-3 h-3 bg-[#FEE21B] rounded-full animate-pulse" />
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+            {/* Hover Glow Effect */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#FEE21B]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            {/* Service Name Overlay - Bottom Left */}
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#FEE21B] transition-colors duration-300 drop-shadow-lg">
+                {service.name}
+              </h3>
+            </div>
+
+            {/* Subtle Border Glow on Hover */}
+            <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#FEE21B]/60 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#FEE21B]/20" />
+
+            {/* Click Indicator */}
+            <div className="absolute top-4 right-4 w-8 h-8 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-3 h-3 bg-[#FEE21B] rounded-full animate-pulse" />
+            </div>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+  </div>
+</div>
+
 
       {/* Service Detail Overlay */}
       {selectedService && (
