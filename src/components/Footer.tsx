@@ -1,14 +1,15 @@
 import React from 'react';
-import { Sparkles, Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
 import logo from '../images/logo.png';
 import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
 interface FooterProps {
   isDark: boolean;
   translations: any;
+  services: String[];
 }
 
-const Footer: React.FC<FooterProps> = ({ isDark, translations }) => {
+const Footer: React.FC<FooterProps> = ({ isDark, translations, services }) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -37,7 +38,7 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & Description */}
           <div className="lg:col-span-22">
-            <div className="flex space-x-2">
+            <div className="flex items-center space-x-2">
   <img
     src={icon}
     alt="App Icon"
@@ -63,7 +64,7 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations }) => {
                   <Mail className={`h-5 w-5 ${isDark ? 'text-gray-400' : 'text-gray-600'}`} />
                 </div>
                 <span className={`${isDark ? 'text-gray-300' : 'text-gray-700'} font-medium`}>
-                  contact@tandhif.com
+                  contact@tandhif.fr
                 </span>
               </div>
               <div className="flex items-center group">
@@ -94,16 +95,17 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations }) => {
             <h3 className={`text-xl font-bold mb-6 ${isDark ? 'text-white' : 'text-black'}`}>
               {translations.footer.services}
             </h3>
-            <ul className="space-y-3">
-              {translations.footer.servicesList.map((service: string, index: number) => (
-                <li key={index}>
-                  <span className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
-                    transition-colors duration-300 cursor-pointer hover:translate-x-1 inline-block`}>
-                    {service}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <ul className="grid grid-cols-3 gap-y-2 gap-x-8">
+  {services.map((service, idx) => (
+    <li key={idx}>
+      <span className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
+        transition-colors duration-300 cursor-pointer hover:translate-x-1 inline-block`}>
+        {service}
+      </span>
+    </li>
+  ))}
+</ul>
+
           </div>
 
           {/* Quick Links */}

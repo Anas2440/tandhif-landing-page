@@ -105,7 +105,7 @@ const Header: React.FC<HeaderProps> = ({
   <img
     src={logo}
     alt="Tandhif Logo"
-    className="h-5 object-contain" // Keep height fixed, let width adjust
+    className="h-3.5 object-contain" // Keep height fixed, let width adjust
   />
            </div>  
           </div>

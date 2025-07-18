@@ -58,15 +58,18 @@ function App() {
 
   const t = translations[language];
   const services = servicesData[language] || servicesData.fr;
+  const serviceNames = (servicesData[language] || servicesData.fr).map(service => service.name);
 
-  const serviceIcons = [
-    <Home className="h-8 w-8" />,
-    <Shirt className="h-8 w-8" />,
-    <TreePine className="h-8 w-8" />,
-    <Waves className="h-8 w-8" />,
-    <Hammer className="h-8 w-8" />,
-    <Star className="h-8 w-8" />
-  ];
+
+
+  // const serviceIcons = [
+  //   <Home className="h-8 w-8" />,
+  //   <Shirt className="h-8 w-8" />,
+  //   <TreePine className="h-8 w-8" />,
+  //   <Waves className="h-8 w-8" />,
+  //   <Hammer className="h-8 w-8" />,
+  //   <Star className="h-8 w-8" />
+  // ];
 
   return (
     <div className={`min-h-screen transition-all duration-500 ${
@@ -492,7 +495,7 @@ function App() {
         </div>
       </section>
 
-      <Footer isDark={isDark} translations={t} />
+      <Footer isDark={isDark} translations={t} services={serviceNames}/>
     </div>
   );
 }

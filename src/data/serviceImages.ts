@@ -1,7 +1,7 @@
 // Import all service images
 import menage from '../images/Menage.jpeg';
 import voiture from '../images/Voiture.jpeg';
-import vetements from '../images/Vêtements.jpeg';
+import vetements from '../images/Vêtement.jpeg';
 import chaussures from '../images/Chaussures.jpeg';
 import canapes from '../images/Canapés.jpeg';
 import fauteuils from '../images/Fauteuils.jpeg';
