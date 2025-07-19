@@ -64,6 +64,34 @@ function App() {
   const serviceNames = (servicesData[language] || servicesData.fr).map(service => service.name);
   const prices = pricingData[language] || pricingData.fr;
 
+  /* ---------- helper ---------- */
+const getPlatform = (): 'android' | 'ios' | 'other' => {
+  const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
+  if (/android/i.test(ua)) return 'android';
+  if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return 'ios';
+  return 'other';
+};
+
+/* ---------- store links ---------- */
+const links = {
+  user: {
+    android: 'market://details?id=com.tandhif.user',          // Google‑Play deep‑link
+    ios:     'https://apps.apple.com/app/idXXXXXXXXX',        // App‑Store URL
+    other:   'https://tandhif.com/download/user'              // Fallback web page
+  },
+  cleaner: {
+    android: 'market://details?id=com.tandhif.cleaner',
+    ios:     'https://apps.apple.com/app/idYYYYYYYYY',
+    other:   'https://tandhif.com/download/cleaner'
+  }
+};
+
+/* ---------- click handlers ---------- */
+const openStore = (type: 'user' | 'cleaner') => {
+  const platform = getPlatform();
+  const url = links[type][platform];
+  window.open(url, '_blank');
+};
 
   // const serviceIcons = [
   //   <Home className="h-8 w-8" />,
@@ -160,19 +188,30 @@ function App() {
               </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <button className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl transform">
-                {t.hero.ctaPrimary}
-              </button>
-              <button className={`bg-transparent border-2 px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 ${
-                isDark 
-                  ? 'border-white text-white hover:bg-white hover:text-black' 
-                  : 'border-black text-black hover:bg-black hover:text-white'
-              }`}>
-                {t.hero.ctaSecondary}
-              </button>
-            </div>
+            {/* ---------- CTAs ---------- */}
+<div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+  {/* Primary – User app */}
+  <button
+    onClick={() => openStore('user')}
+    className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl
+               transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-2xl"
+  >
+    {t.hero.ctaPrimary}
+  </button>
+
+  {/* Secondary – Cleaner app */}
+  <button
+    onClick={() => openStore('cleaner')}
+    className={`bg-transparent border-2 px-10 py-5 rounded-2xl font-bold text-xl
+                transition-all duration-300 hover:scale-105 ${
+      isDark
+        ? 'border-white text-white hover:bg-white hover:text-black'
+        : 'border-black text-black hover:bg-black hover:text-white'
+    }`}
+  >
+    {t.hero.ctaSecondary}
+  </button>
+</div>
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -419,7 +458,6 @@ function App() {
         </div>
       </section>
 
-      {/* Mobile App */}
       {/* Mobile App */}
       <section id="mobile" className={`py-32 ${
         isDark ? 'bg-gray-900/50' : 'bg-gray-50'

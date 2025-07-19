@@ -121,7 +121,7 @@ const PricingModal: React.FC<PricingModalProps> = ({
               </div>
 
               {/* Services Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="flex flex-wrap justify-center gap-6">
                 {categoryServices.map((service) => (
                   <div
                     key={service.id}
