@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services }) => {
         : 'bg-gradient-to-b from-gray-50 to-white border-gray-200'
     } border-t py-20`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* Logo & Description */}
           <div className="lg:col-span-22">
             <div className="flex items-center space-x-2">

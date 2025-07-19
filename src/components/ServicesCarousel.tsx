@@ -67,17 +67,18 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
 
   return (
     <>
+    <div dir='ltr'>
       <div className="relative w-full py-8">
         <div className="mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
   <Swiper
     effect={'coverflow'}
     grabCursor={true}
     centeredSlides={true}
-    slidesPerView={1} // Always show 1 centered slide
+    slidesPerView={1} // Always show 1 centered slide/
     coverflowEffect={{
       rotate: 0, // no rotation for cleaner center display
       stretch: 0,
-      depth: 100,
+      // depth: 100,
       modifier: 2,
       slideShadows: false,
     }}
@@ -140,7 +141,7 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
   </Swiper>
   </div>
 </div>
-
+</div>
 
       {/* Service Detail Overlay */}
       {selectedService && (

@@ -19,6 +19,8 @@ import {
   MapPin,
   TrendingUp
 } from 'lucide-react';
+import { pricingData } from './data/pricing';
+import PricingModal from './components/PricingModal';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AnimatedCounter from './components/AnimatedCounter';
@@ -31,7 +33,7 @@ import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 function App() {
   const [isDark, setIsDark] = useState(true);
   const [language, setLanguage] = useState<Language>('fr');
-
+  const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
   // Load theme preference from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('tandhif-theme');
@@ -44,6 +46,7 @@ function App() {
       setLanguage(savedLanguage);
     }
   }, []);
+  
 
   const toggleTheme = () => {
     const newTheme = !isDark;
@@ -59,8 +62,37 @@ function App() {
   const t = translations[language];
   const services = servicesData[language] || servicesData.fr;
   const serviceNames = (servicesData[language] || servicesData.fr).map(service => service.name);
-
-
+  const prices = pricingData[language] || pricingData.fr;
+ 
+    /* ---------- helper ---------- */
+  const getPlatform = (): 'android' | 'ios' | 'other' => {
+    const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
+    if (/android/i.test(ua)) return 'android';
+    if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) return 'ios';
+    return 'other';
+  };
+   
+  /* ---------- store links ---------- */
+  const links = {
+    user: {
+      android: 'market://details?id=com.tandhif.user',          // Google‑Play deep‑link
+      ios:     'https://apps.apple.com/app/idXXXXXXXXX',        // App‑Store URL
+      other:   'https://tandhif.com/download/user'              // Fallback web page
+    },
+    cleaner: {
+      android: 'market://details?id=com.tandhif.cleaner',
+      ios:     'https://apps.apple.com/app/idYYYYYYYYY',
+      other:   'https://tandhif.com/download/cleaner'
+    }
+  };
+   
+  /* ---------- click handlers ---------- */
+  const openStore = (type: 'user' | 'cleaner') => {
+    const platform = getPlatform();
+    const url = links[type][platform];
+    window.open(url, '_blank');
+  };
+   
 
   // const serviceIcons = [
   //   <Home className="h-8 w-8" />,
@@ -159,18 +191,29 @@ function App() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <button className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl transform">
-                {t.hero.ctaPrimary}
-              </button>
-              <button className={`bg-transparent border-2 px-10 py-5 rounded-2xl font-bold text-xl transition-all duration-300 hover:scale-105 ${
-                isDark 
-                  ? 'border-white text-white hover:bg-white hover:text-black' 
-                  : 'border-black text-black hover:bg-black hover:text-white'
-              }`}>
-                {t.hero.ctaSecondary}
-              </button>
-            </div>
-
+  {/* Primary – User app */}
+  <button
+    onClick={() => openStore('user')}
+    className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl
+               transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-2xl"
+  >
+    {t.hero.ctaPrimary}
+  </button>
+ 
+  {/* Secondary – Cleaner app */}
+  <button
+    onClick={() => openStore('cleaner')}
+    className={`bg-transparent border-2 px-10 py-5 rounded-2xl font-bold text-xl
+                transition-all duration-300 hover:scale-105 ${
+      isDark
+        ? 'border-white text-white hover:bg-white hover:text-black'
+        : 'border-black text-black hover:bg-black hover:text-white'
+    }`}
+  >
+    {t.hero.ctaSecondary}
+  </button>
+</div>
+ 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
@@ -267,7 +310,8 @@ function App() {
                     {index + 1}
                   </div>
                   {index < 2 && (
-                    <div className={`hidden md:block absolute top-10 left-full w-full h-0.5 ${
+                    <div className={`hidden md:block absolute top-10 left-[61%]
+ w-full h-0.5 ${
                       isDark ? 'bg-gray-700' : 'bg-gray-200'
                     }`}>
                       <div className="w-0 h-full bg-[#FEE21B] group-hover:w-full transition-all duration-1000"></div>
@@ -369,8 +413,8 @@ function App() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className={`border rounded-3xl p-10 ${
-                isDark 
-                  ? 'bg-gray-900 border-[#7A7A7A]' 
+                isDark
+                  ? 'bg-gray-900 border-[#7A7A7A]'
                   : 'bg-gray-50 border-gray-200'
               }`}>
                 <h3 className={`text-2xl font-bold mb-8 ${
@@ -406,16 +450,17 @@ function App() {
                   ))}
                 </div>
                 <button className="w-full bg-black text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 mt-6">
-                  {t.pricing.cta}
+                  <span onClick={() => setIsPricingModalOpen(true)} className="cursor-pointer">
+                    {t.pricing.cta}
+                  </span>
                 </button>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Mobile App */}
-      <section id="mobile" className={`py-32 ${
+       {/* Mobile App */}
+       <section id="mobile" className={`py-32 ${
         isDark ? 'bg-gray-900/50' : 'bg-gray-50'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -440,8 +485,8 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {t.mobile.features.map((feature: string, index: number) => (
               <div key={index} className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
-                isDark 
-                  ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B]' 
+                isDark
+                  ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B]'
                   : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-md'
               }`}>
                 <CheckCircle className="h-8 w-8 text-[#FEE21B] mx-auto mb-3" />
@@ -452,26 +497,92 @@ function App() {
             ))}
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className={`border px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center ${
-              isDark 
-                ? 'bg-[#0E0E0E] border-[#7A7A7A] text-white hover:border-[#FEE21B] hover:shadow-2xl' 
-                : 'bg-white border-gray-200 text-black hover:border-[#FEE21B] shadow-sm hover:shadow-2xl'
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* User App */}
+            <div className={`p-8 rounded-3xl border transition-all duration-300 hover:scale-105 ${
+              isDark
+                ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20'
+                : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
             }`}>
-              <Smartphone className="h-6 w-6 mr-3" />
-              {t.mobile.appStore}
-            </button>
-            <button className={`border px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center ${
-              isDark 
-                ? 'bg-[#0E0E0E] border-[#7A7A7A] text-white hover:border-[#FEE21B] hover:shadow-2xl' 
-                : 'bg-white border-gray-200 text-black hover:border-[#FEE21B] shadow-sm hover:shadow-2xl'
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-[#FEE21B] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="h-8 w-8 text-black" />
+                </div>
+                <h3 className={`text-2xl font-bold mb-3 ${
+                  isDark ? 'text-white' : 'text-black'
+                }`}>
+                  {t.mobile.userApp.title}
+                </h3>
+                <p className={`text-lg ${
+                  isDark ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  {t.mobile.userApp.description}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  isDark
+                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
+                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
+                }`}>
+                  <Smartphone className="h-5 w-5 mr-2" />
+                  {t.mobile.userApp.appStore}
+                </button>
+                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  isDark
+                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
+                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
+                }`}>
+                  <Play className="h-5 w-5 mr-2" />
+                  {t.mobile.userApp.googlePlay}
+                </button>
+              </div>
+            </div>
+ 
+            {/* Cleaner App */}
+            <div className={`p-8 rounded-3xl border transition-all duration-300 hover:scale-105 ${
+              isDark
+                ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20'
+                : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
             }`}>
-              <Play className="h-6 w-6 mr-3" />
-              {t.mobile.googlePlay}
-            </button>
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-[#FEE21B] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-black" />
+                </div>
+                <h3 className={`text-2xl font-bold mb-3 ${
+                  isDark ? 'text-white' : 'text-black'
+                }`}>
+                  {t.mobile.cleanerApp.title}
+                </h3>
+                <p className={`text-lg ${
+                  isDark ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  {t.mobile.cleanerApp.description}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  isDark
+                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
+                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
+                }`}>
+                  <Smartphone className="h-5 w-5 mr-2" />
+                  {t.mobile.cleanerApp.appStore}
+                </button>
+                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  isDark
+                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
+                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
+                }`}>
+                  <Play className="h-5 w-5 mr-2" />
+                  {t.mobile.cleanerApp.googlePlay}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+ 
 
       {/* Final CTA */}
       <section className={`py-32 ${
@@ -496,6 +607,16 @@ function App() {
       </section>
 
       <Footer isDark={isDark} translations={t} services={serviceNames}/>
+      {/* Pricing Modal */}
+      <PricingModal
+        isOpen={isPricingModalOpen}
+        onClose={() => setIsPricingModalOpen(false)}
+        services={prices}
+        isDark={isDark}
+        translations={t}
+        language={language}
+      />
+ 
     </div>
   );
 }

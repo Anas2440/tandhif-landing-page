@@ -53,6 +53,7 @@ const Header: React.FC<HeaderProps> = ({
       return () => document.removeEventListener('click', handleClickOutside);
     }
   }, [isLanguageOpen]);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -91,22 +92,15 @@ const Header: React.FC<HeaderProps> = ({
               <img
                 src={icon} // <-- replace with your actual path
                 alt="App Icon"
-                className="h-10 w-10 mr-3 group-hover:scale-110 transition-transform duration-300"
+                className="h-10 w-10 mr-1 group-hover:scale-110 transition-transform duration-300"
               />
-             <div className="absolute inset-0 h-10 w-10 mr-3 animate-pulse opacity-30">
-              <img
-                src={icon} // <-- same icon or blurred version
-                alt="App Icon Pulse"
-                className="h-10 w-10"
-              />
-             </div>  
             </div>
            <div className="flex items-center">
-  <img
-    src={logo}
-    alt="Tandhif Logo"
-    className="h-3.5 object-contain" // Keep height fixed, let width adjust
-  />
+             <img
+               src={logo}
+               alt="Tandhif Logo"
+               className="h-5 object-contain" // Keep height fixed, let width adjust
+             />
            </div>  
           </div>
 
@@ -124,21 +118,6 @@ const Header: React.FC<HeaderProps> = ({
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
-            {/* <button
-              onClick={() => scrollToSection('hero')}
-              className={`px-4 py-2 font-medium transition-all duration-300 ${
-                isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
-              }`}
-            >
-              {translations.nav.becomeCleanerShort || 'Devenir cleaner'}
-            </button> */}
-            {/* <button
-              className={`px-4 py-2 font-medium transition-all duration-300 ${
-                isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
-              }`}
-            >
-              {translations.nav.account}
-            </button> */}
           </nav>
 
           {/* Controls */}
@@ -153,8 +132,12 @@ const Header: React.FC<HeaderProps> = ({
                     : 'bg-gray-100/50 text-black hover:bg-gray-200/50 border border-gray-200'
                 }`}
               >
-                <Globe className="h-4 w-4" />
-                <span className="text-sm font-medium">{language.toUpperCase()}</span>
+                {/* <Globe className="h-4 w-4" /> */}
+                <span className="text-sm font-medium">
+  {languageNames[language].split(' ')[0]}{' '}
+  {languageNames[language].split(' ')[1].slice(0, 2)}
+</span>
+
                 <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isLanguageOpen ? 'rotate-180' : ''}`} />
               </button>
               
@@ -180,7 +163,9 @@ const Header: React.FC<HeaderProps> = ({
                       }`}
                       dir={lang === 'ar' ? 'rtl' : 'ltr'}
                     >
-                      {languageNames[lang]}
+                      {/* Flag and Language Name */}
+                      <span className="mr-2">{languageNames[lang].split(' ')[0]}</span>
+                      <span>{languageNames[lang].split(' ')[1]}</span>. 
                     </button>
                   ))}
                 </div>
