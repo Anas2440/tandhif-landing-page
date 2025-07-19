@@ -415,6 +415,7 @@ function App() {
       </section>
 
       {/* Mobile App */}
+      {/* Mobile App */}
       <section id="mobile" className={`py-32 ${
         isDark ? 'bg-gray-900/50' : 'bg-gray-50'
       }`}>
@@ -452,23 +453,88 @@ function App() {
             ))}
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className={`border px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* User App */}
+            <div className={`p-8 rounded-3xl border transition-all duration-300 hover:scale-105 ${
               isDark 
-                ? 'bg-[#0E0E0E] border-[#7A7A7A] text-white hover:border-[#FEE21B] hover:shadow-2xl' 
-                : 'bg-white border-gray-200 text-black hover:border-[#FEE21B] shadow-sm hover:shadow-2xl'
+                ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20' 
+                : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
             }`}>
-              <Smartphone className="h-6 w-6 mr-3" />
-              {t.mobile.appStore}
-            </button>
-            <button className={`border px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-[#FEE21B] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Smartphone className="h-8 w-8 text-black" />
+                </div>
+                <h3 className={`text-2xl font-bold mb-3 ${
+                  isDark ? 'text-white' : 'text-black'
+                }`}>
+                  {t.mobile.userApp.title}
+                </h3>
+                <p className={`text-lg ${
+                  isDark ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  {t.mobile.userApp.description}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  isDark 
+                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]' 
+                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
+                }`}>
+                  <Smartphone className="h-5 w-5 mr-2" />
+                  {t.mobile.userApp.appStore}
+                </button>
+                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  isDark 
+                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]' 
+                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
+                }`}>
+                  <Play className="h-5 w-5 mr-2" />
+                  {t.mobile.userApp.googlePlay}
+                </button>
+              </div>
+            </div>
+
+            {/* Cleaner App */}
+            <div className={`p-8 rounded-3xl border transition-all duration-300 hover:scale-105 ${
               isDark 
-                ? 'bg-[#0E0E0E] border-[#7A7A7A] text-white hover:border-[#FEE21B] hover:shadow-2xl' 
-                : 'bg-white border-gray-200 text-black hover:border-[#FEE21B] shadow-sm hover:shadow-2xl'
+                ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20' 
+                : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
             }`}>
-              <Play className="h-6 w-6 mr-3" />
-              {t.mobile.googlePlay}
-            </button>
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-[#FEE21B] rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-8 w-8 text-black" />
+                </div>
+                <h3 className={`text-2xl font-bold mb-3 ${
+                  isDark ? 'text-white' : 'text-black'
+                }`}>
+                  {t.mobile.cleanerApp.title}
+                </h3>
+                <p className={`text-lg ${
+                  isDark ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  {t.mobile.cleanerApp.description}
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  isDark 
+                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]' 
+                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
+                }`}>
+                  <Smartphone className="h-5 w-5 mr-2" />
+                  {t.mobile.cleanerApp.appStore}
+                </button>
+                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
+                  isDark 
+                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]' 
+                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
+                }`}>
+                  <Play className="h-5 w-5 mr-2" />
+                  {t.mobile.cleanerApp.googlePlay}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -67,7 +67,8 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
 
   return (
     <>
-      <div className="relative w-full py-8">
+    <div dir='ltr'>
+    <div className="relative w-full py-8">
         <div className="mx-auto max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
   <Swiper
     effect={'coverflow'}
@@ -139,7 +140,7 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
     ))}
   </Swiper>
   </div>
-</div>
+   </div></div>
 
 
       {/* Service Detail Overlay */}

@@ -120,7 +120,7 @@ export const translations = {
     },
     mobile: {
       title: 'Télécharger l\'application',
-      subtitle: 'Tous vos services de nettoyage, réunis dans une seule application.',
+      subtitle: 'Tout Tandhif dans votre poche',
       description: 'Notifications en temps réel, paiements sécurisés, suivi des interventions, évaluation des cleaners.',
       features: [
         'Réservation en quelques clics',
@@ -128,8 +128,18 @@ export const translations = {
         'Paiement sécurisé',
         'Historique des interventions'
       ],
-      appStore: 'App Store',
-      googlePlay: 'Google Play'
+      userApp: {
+        title: 'Application Client',
+        description: 'Réservez et suivez vos services de nettoyage',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      },
+      cleanerApp: {
+        title: 'Application Cleaner',
+        description: 'Gérez vos missions et clients',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      }
     },
     finalCta: {
       title: 'Tandhif. L’application qui simplifie le nettoyage.',
@@ -277,7 +287,7 @@ export const translations = {
       },
       cta: 'See all rates'
     },
-    mobile: {
+     mobile: {
       title: 'Download the app',
       subtitle: 'All of Tandhif in your pocket',
       description: 'Real-time notifications, secure payments, intervention tracking, cleaner evaluation.',
@@ -287,8 +297,18 @@ export const translations = {
         'Secure payment',
         'Intervention history'
       ],
-      appStore: 'App Store',
-      googlePlay: 'Google Play'
+      userApp: {
+        title: 'Client App',
+        description: 'Book and track your cleaning services',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      },
+      cleanerApp: {
+        title: 'Cleaner App',
+        description: 'Manage your missions and clients',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      }
     },
     finalCta: {
       title: 'Tandhif. Much more than cleaning.',
@@ -446,8 +466,18 @@ export const translations = {
         'دفع آمن',
         'تاريخ التدخلات'
       ],
-      appStore: 'متجر التطبيقات',
-      googlePlay: 'جوجل بلاي'
+      userApp: {
+        title: 'تطبيق العميل',
+        description: 'احجز وتتبع خدمات التنظيف',
+        appStore: 'متجر التطبيقات',
+        googlePlay: 'جوجل بلاي'
+      },
+      cleanerApp: {
+        title: 'تطبيق المنظف',
+        description: 'إدارة المهام والعملاء',
+        appStore: 'متجر التطبيقات',
+        googlePlay: 'جوجل بلاي'
+      }
     },
     finalCta: {
       title: 'تندهيف. أكثر من مجرد تنظيف.',
@@ -605,8 +635,18 @@ export const translations = {
         'Pago seguro',
         'Historial de intervenciones'
       ],
-      appStore: 'App Store',
-      googlePlay: 'Google Play'
+      userApp: {
+        title: 'App Cliente',
+        description: 'Reserva y sigue tus servicios de limpieza',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      },
+      cleanerApp: {
+        title: 'App Limpiador',
+        description: 'Gestiona tus misiones y clientes',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      }
     },
     finalCta: {
       title: 'Tandhif. Mucho más que limpieza.',
@@ -764,8 +804,18 @@ export const translations = {
         'Pagamento seguro',
         'Histórico de intervenções'
       ],
-      appStore: 'App Store',
-      googlePlay: 'Google Play'
+      userApp: {
+        title: 'App Cliente',
+        description: 'Reserve e acompanhe seus serviços de limpeza',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      },
+      cleanerApp: {
+        title: 'App Limpador',
+        description: 'Gerencie suas missões e clientes',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      }
     },
     finalCta: {
       title: 'Tandhif. Muito mais que limpeza.',
@@ -923,8 +973,18 @@ export const translations = {
         'Pagamento sicuro',
         'Cronologia interventi'
       ],
-      appStore: 'App Store',
-      googlePlay: 'Google Play'
+      userApp: {
+        title: 'App Cliente',
+        description: 'Prenota e monitora i tuoi servizi di pulizia',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      },
+      cleanerApp: {
+        title: 'App Pulitore',
+        description: 'Gestisci le tue missioni e clienti',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      }
     },
     finalCta: {
       title: 'Tandhif. Molto più che pulizia.',
@@ -1082,8 +1142,18 @@ export const translations = {
         'Sichere Zahlung',
         'Interventionshistorie'
       ],
-      appStore: 'App Store',
-      googlePlay: 'Google Play'
+      userApp: {
+        title: 'Kunden-App',
+        description: 'Buchen und verfolgen Sie Ihre Reinigungsdienste',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      },
+      cleanerApp: {
+        title: 'Reiniger-App',
+        description: 'Verwalten Sie Ihre Aufträge und Kunden',
+        appStore: 'App Store',
+        googlePlay: 'Google Play'
+      }
     },
     finalCta: {
       title: 'Tandhif. Viel mehr als Reinigung.',
