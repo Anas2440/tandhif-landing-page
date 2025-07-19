@@ -23,14 +23,17 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import AnimatedCounter from './components/AnimatedCounter';
 import ServicesCarousel from './components/ServicesCarousel';
+import PricingModal from './components/PricingModal';
 import { translations, Language, supportedLanguages } from './data/translations';
 import { servicesData } from './data/services';
+import { pricingData } from './data/pricing';
 import logo from './images/logo.png';
 import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
   const [language, setLanguage] = useState<Language>('fr');
+  const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
 
   // Load theme preference from localStorage
   useEffect(() => {
@@ -59,7 +62,7 @@ function App() {
   const t = translations[language];
   const services = servicesData[language] || servicesData.fr;
   const serviceNames = (servicesData[language] || servicesData.fr).map(service => service.name);
-
+  const prices = pricingData[language] || pricingData.fr;
 
 
   // const serviceIcons = [
@@ -406,7 +409,9 @@ function App() {
                   ))}
                 </div>
                 <button className="w-full bg-black text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 mt-6">
-                  {t.pricing.cta}
+                  <span onClick={() => setIsPricingModalOpen(true)} className="cursor-pointer">
+                    {t.pricing.cta}
+                  </span>
                 </button>
               </div>
             </div>
@@ -562,6 +567,16 @@ function App() {
       </section>
 
       <Footer isDark={isDark} translations={t} services={serviceNames}/>
+
+      {/* Pricing Modal */}
+      <PricingModal
+        isOpen={isPricingModalOpen}
+        onClose={() => setIsPricingModalOpen(false)}
+        services={prices}
+        isDark={isDark}
+        translations={t}
+        language={language}
+      />
     </div>
   );
 }

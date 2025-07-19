@@ -93,10 +93,10 @@ export const translations = {
     },
     pricing: {
       title: 'Tarifs transparents',
-      subtitle: 'Vous savez ce que vous payez. Aucun frais caché.',
+      subtitle: 'Pas de surprise, tout est clair dès le départ',
       features: [
         'Tarification claire et transparente',
-        'Calcul automatique adapté à chaque besoin',
+        'Calcul automatique selon la surface',
         'Possibilité d\'ajustement selon les besoins réels',
         'Paiement sécurisé après validation'
       ],
@@ -117,6 +117,19 @@ export const translations = {
         calculation: '20m² = 240€ TTC'
       },
       cta: 'Voir tous les tarifs'
+    },
+    pricingModal: {
+      title: 'Tous les tarifs',
+      subtitle: 'Tarification transparente pour tous nos services de nettoyage',
+      close: 'Fermer',
+      bookService: 'Réserver ce service',
+      categories: {
+        'Nettoyage Intérieur': 'Nettoyage Intérieur',
+        'Nettoyage Commercial': 'Nettoyage Commercial',
+        'Textiles & Mobilier': 'Textiles & Mobilier',
+        'Extérieur & Véhicules': 'Extérieur & Véhicules',
+        'Services Spécialisés': 'Services Spécialisés'
+      }
     },
     mobile: {
       title: 'Télécharger l\'application',
@@ -287,6 +300,19 @@ export const translations = {
       },
       cta: 'See all rates'
     },
+    pricingModal: {
+      title: 'All Service Prices',
+      subtitle: 'Transparent pricing for all our cleaning services',
+      close: 'Close',
+      bookService: 'Book this service',
+      categories: {
+        'Interior Cleaning': 'Interior Cleaning',
+        'Commercial Cleaning': 'Commercial Cleaning',
+        'Textiles & Furniture': 'Textiles & Furniture',
+        'Outdoor & Vehicles': 'Outdoor & Vehicles',
+        'Specialized Services': 'Specialized Services'
+      }
+    },
      mobile: {
       title: 'Download the app',
       subtitle: 'All of Tandhif in your pocket',
@@ -455,6 +481,19 @@ export const translations = {
         calculation: '20م² = 240€ شامل الضريبة'
       },
       cta: 'انظر جميع الأسعار'
+    },
+    pricingModal: {
+      title: 'جميع أسعار الخدمات',
+      subtitle: 'أسعار شفافة لجميع خدمات التنظيف',
+      close: 'إغلاق',
+      bookService: 'احجز هذه الخدمة',
+      categories: {
+        'تنظيف داخلي': 'تنظيف داخلي',
+        'تنظيف تجاري': 'تنظيف تجاري',
+        'منسوجات وأثاث': 'منسوجات وأثاث',
+        'خارجي ومركبات': 'خارجي ومركبات',
+        'خدمات متخصصة': 'خدمات متخصصة'
+      }
     },
     mobile: {
       title: 'تحميل التطبيق',
@@ -625,6 +664,19 @@ export const translations = {
       },
       cta: 'Ver todas las tarifas'
     },
+    pricingModal: {
+      title: 'Todos los precios',
+      subtitle: 'Precios transparentes para todos nuestros servicios de limpieza',
+      close: 'Cerrar',
+      bookService: 'Reservar este servicio',
+      categories: {
+        'Limpieza Interior': 'Limpieza Interior',
+        'Limpieza Comercial': 'Limpieza Comercial',
+        'Textiles y Mobiliario': 'Textiles y Mobiliario',
+        'Exterior y Vehículos': 'Exterior y Vehículos',
+        'Servicios Especializados': 'Servicios Especializados'
+      }
+    },
     mobile: {
       title: 'Descargar la aplicación',
       subtitle: 'Todo Tandhif en tu bolsillo',
@@ -793,6 +845,19 @@ export const translations = {
         calculation: '20m² = 240€ com impostos'
       },
       cta: 'Ver todas as tarifas'
+    },
+    pricingModal: {
+      title: 'Todos os preços',
+      subtitle: 'Preços transparentes para todos os nossos serviços de limpeza',
+      close: 'Fechar',
+      bookService: 'Reservar este serviço',
+      categories: {
+        'Limpeza Interior': 'Limpeza Interior',
+        'Limpeza Comercial': 'Limpeza Comercial',
+        'Têxteis e Mobiliário': 'Têxteis e Mobiliário',
+        'Exterior e Veículos': 'Exterior e Veículos',
+        'Serviços Especializados': 'Serviços Especializados'
+      }
     },
     mobile: {
       title: 'Baixar o aplicativo',
@@ -963,6 +1028,19 @@ export const translations = {
       },
       cta: 'Vedi tutte le tariffe'
     },
+    pricingModal: {
+      title: 'Tutti i prezzi',
+      subtitle: 'Prezzi trasparenti per tutti i nostri servizi di pulizia',
+      close: 'Chiudi',
+      bookService: 'Prenota questo servizio',
+      categories: {
+        'Pulizia Interni': 'Pulizia Interni',
+        'Pulizia Commerciale': 'Pulizia Commerciale',
+        'Tessili e Mobili': 'Tessili e Mobili',
+        'Esterno e Veicoli': 'Esterno e Veicoli',
+        'Servizi Specializzati': 'Servizi Specializzati'
+      }
+    },
     mobile: {
       title: 'Scarica l\'app',
       subtitle: 'Tutto Tandhif in tasca',
@@ -1131,6 +1209,19 @@ export const translations = {
         calculation: '20m² = 240€ inkl. MwSt.'
       },
       cta: 'Alle Tarife anzeigen'
+    },
+    pricingModal: {
+      title: 'Alle Preise',
+      subtitle: 'Transparente Preise für alle unsere Reinigungsdienste',
+      close: 'Schließen',
+      bookService: 'Diesen Service buchen',
+      categories: {
+        'Innenreinigung': 'Innenreinigung',
+        'Gewerbliche Reinigung': 'Gewerbliche Reinigung',
+        'Textilien und Möbel': 'Textilien und Möbel',
+        'Außenbereich und Fahrzeuge': 'Außenbereich und Fahrzeuge',
+        'Spezialisierte Dienstleistungen': 'Spezialisierte Dienstleistungen'
+      }
     },
     mobile: {
       title: 'App herunterladen',

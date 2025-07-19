@@ -178,7 +178,7 @@ const Header: React.FC<HeaderProps> = ({
                             ? 'text-white hover:bg-gray-700' 
                             : 'text-black hover:bg-gray-50'
                       }`}
-                      dir={lang === 'ar' ? 'rtl' : 'ltr'}
+                      dir={lang === 'ar' ? 'ltr' : 'ltr'}
                     >
                       {languageNames[lang]}
                     </button>
