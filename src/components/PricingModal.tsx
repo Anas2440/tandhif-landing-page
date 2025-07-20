@@ -92,12 +92,12 @@ const PricingModal: React.FC<PricingModalProps> = ({
  
         {/* Header */}
         <div className="text-center mb-8">
-          <h2 className={`text-4xl font-bold mb-4 ${
+          <h2 className={`text-4xl font-bold mb-4 max-[450px]:text-[25px] ${
             isDark ? 'text-white' : 'text-black'
           }`}>
             {translations.pricingModal.title}
           </h2>
-          <p className={`text-xl ${
+          <p className={`text-xl max-[450px]:text-[17px] ${
             isDark ? 'text-gray-300' : 'text-gray-700'
           }`}>
             {translations.pricingModal.subtitle}
@@ -105,13 +105,13 @@ const PricingModal: React.FC<PricingModalProps> = ({
         </div>
  
         {/* Services Grid */}
-        <div className="overflow-y-auto max-h-[60vh] pr-4" style={{ scrollbarWidth: 'thin' }}>
+        <div className="overflow-y-auto max-h-[60vh] " style={{ scrollbarWidth: 'thin' }}>
           {Object.entries(groupedServices).map(([category, categoryServices]) => (
             <div key={category} className="mb-12">
               {/* Category Header */}
               <div className="flex items-center mb-6">
                 <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[#FEE21B] to-transparent"></div>
-                <h3 className={`px-6 text-2xl font-bold ${
+                <h3 className={`px-6 text-2xl font-bold max-[450px]:text-[19px] ${
                   isDark ? 'text-white' : 'text-black'
                 }`}>
                   {translations.pricingModal.categories[category] || category}
@@ -124,24 +124,23 @@ const PricingModal: React.FC<PricingModalProps> = ({
                 {categoryServices.map((service) => (
                   <div
                     key={service.id}
-                    className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-105 group ${
+                    className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-105 group 
+  w-full sm:w-[45%] md:w-[45%] max-w-full mx-auto
+  flex flex-col justify-between ${
                       isDark
                         ? 'bg-gray-800/50 border-gray-700 hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20'
                         : 'bg-gray-50/50 border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
                     }`}
                   >
                     {/* Service Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <h4 className={`text-xl font-bold group-hover:text-[#FEE21B] transition-colors duration-300 ${
+                    <div className="flex items-start justify-between mb-4 max-[30px]:flex-col">
+                      <h4 className={`text-xl font-bold group-hover:text-[#FEE21B] transition-colors duration-300 max-[450px]:text-[16px] ${
                         isDark ? 'text-white' : 'text-black'
                       }`}>
                         {service.name}
                       </h4>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-[#FEE21B] flex items-center">
-                          {service.price}
-                          <Euro className="h-5 w-5 ml-1" />
-                        </div>
+
                         <div className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                           {service.unit}
                         </div>
@@ -149,15 +148,25 @@ const PricingModal: React.FC<PricingModalProps> = ({
                     </div>
  
                     {/* Service Description */}
-                    <p className={`text-sm mb-6 leading-relaxed ${
-                      isDark ? 'text-gray-300' : 'text-gray-700'
-                    }`}>
-                      {service.description}
-                    </p>
+                    <p
+  className={`text-sm mb-6 leading-relaxed 
+    ${isDark ? 'text-gray-300' : 'text-gray-700'} 
+    w-full 
+    max-w-full mx-auto `}
+>
+  {service.description}
+</p>
+
  
                     {/* Action Button */}
                     <button className="w-full bg-[#FEE21B] text-black px-4 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                      {translations.pricingModal.bookService}
+                    <div className='display flex items-center justify-center gap-1'>
+{service.from}
+                        <div className="text-2xl font-bold text-[#FFFFF] flex items-center">
+                          {service.price}
+                          <Euro className="h-5 w-5 ml-1" />
+                        </div>
+                        </div>
                     </button>
                   </div>
                 ))}
@@ -183,6 +192,37 @@ const PricingModal: React.FC<PricingModalProps> = ({
         </div>
       </div>
  
+      <style jsx global>{`
+        @keyframes modalSlideUp {
+          from {
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+        
+        /* Custom scrollbar for modal */
+        .overflow-y-auto::-webkit-scrollbar {
+          width: 6px;
+        }
+        
+        .overflow-y-auto::-webkit-scrollbar-track {
+          background: ${isDark ? '#374151' : '#f3f4f6'};
+          border-radius: 3px;
+        }
+        
+        .overflow-y-auto::-webkit-scrollbar-thumb {
+          background: #FEE21B;
+          border-radius: 3px;
+        }
+        
+        .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+          background: #e6cb19;
+        }
+      `}</style>
     </div>
   );
 };

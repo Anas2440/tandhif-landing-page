@@ -25,16 +25,19 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import AnimatedCounter from './components/AnimatedCounter';
 import ServicesCarousel from './components/ServicesCarousel';
+import { translations, Language, supportedLanguages } from './data/translations';
+import { servicesData } from './data/services';
+import logo from './images/logo.png';
+import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
+import AppIco from './images/Appstoer.png';
+import play from './images/playestoe.png';
+import { BrowserRouter } from 'react-router-dom';
 import Help from './pages/Help';
 import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import CompanySignup from './pages/CompanySignup';
-import { translations, Language, supportedLanguages } from './data/translations';
-import { servicesData } from './data/services';
-import logo from './images/logo.png';
-import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
-import { BrowserRouter } from 'react-router-dom';
+
 
 function App() {
   const [isDark, setIsDark] = useState(true);
@@ -72,20 +75,18 @@ function App() {
   const services = servicesData[language] || servicesData.fr;
   const serviceNames = (servicesData[language] || servicesData.fr).map(service => service.name);
   const prices = pricingData[language] || pricingData.fr;
+ // Page navigation handlers
+ const showPage = (
+  page: 'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'
+) => setCurrentPage(page);
+const goHome = () => showPage('home');
 
-  // Page navigation handlers
-  const showPage = (
-    page: 'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'
-  ) => setCurrentPage(page);
-  const goHome = () => showPage('home');
-
-  // ----- page routing (simple switch) -----
-  if (currentPage === 'help')   return <Help    isDark={isDark} onBack={goHome} />;
-  if (currentPage === 'contact')return <Contact isDark={isDark} onBack={goHome} />;
-  if (currentPage === 'terms')  return <Terms   isDark={isDark} onBack={goHome} />;
-  if (currentPage === 'privacy')return <Privacy isDark={isDark} onBack={goHome} />;
-  if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHome} />;
- 
+// ----- page routing (simple switch) -----
+if (currentPage === 'help')   return <Help    isDark={isDark} onBack={goHome} />;
+if (currentPage === 'contact')return <Contact isDark={isDark} onBack={goHome} />;
+if (currentPage === 'terms')  return <Terms   isDark={isDark} onBack={goHome} />;
+if (currentPage === 'privacy')return <Privacy isDark={isDark} onBack={goHome} />;
+if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHome} />;
     /* ---------- helper ---------- */
   const getPlatform = (): 'android' | 'ios' | 'other' => {
     const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
@@ -547,7 +548,11 @@ function App() {
                     ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
                     : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
                 }`}>
-                  <Smartphone className="h-5 w-5 mr-2" />
+           <img
+    src={AppIco} // Replace with your actual path
+    alt="App Icon"
+    className="h-9 w-9 mr-4 group-hover:scale-110 transition-transform duration-500"
+  />
                   {t.mobile.userApp.appStore}
                 </button>
                 <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
@@ -555,7 +560,11 @@ function App() {
                     ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
                     : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
                 }`}>
-                  <Play className="h-5 w-5 mr-2" />
+                    <img
+    src={play} // Replace with your actual path
+    alt="App Icon"
+    className="h-9 w-9 mr-4 group-hover:scale-110 transition-transform duration-500"
+  />
                   {t.mobile.userApp.googlePlay}
                 </button>
               </div>
@@ -588,7 +597,11 @@ function App() {
                     ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
                     : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
                 }`}>
-                  <Smartphone className="h-5 w-5 mr-2" />
+           <img
+    src={AppIco} // Replace with your actual path
+    alt="App Icon"
+    className="h-9 w-9 mr-4 group-hover:scale-110 transition-transform duration-500"
+  />
                   {t.mobile.cleanerApp.appStore}
                 </button>
                 <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
@@ -596,7 +609,11 @@ function App() {
                     ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
                     : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
                 }`}>
-                  <Play className="h-5 w-5 mr-2" />
+           <img
+    src={play} // Replace with your actual path
+    alt="App Icon"
+    className="h-9 w-9 mr-4 group-hover:scale-110 transition-transform duration-500"
+  />
                   {t.mobile.cleanerApp.googlePlay}
                 </button>
               </div>

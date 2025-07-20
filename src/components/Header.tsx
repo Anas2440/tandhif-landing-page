@@ -89,18 +89,19 @@ const Header: React.FC<HeaderProps> = ({
             onClick={() => scrollToSection('hero')}
           >
             <div className="relative">
-              <img
-                src={icon} // <-- replace with your actual path
-                alt="App Icon"
-                className="h-10 w-10 mr-1 group-hover:scale-110 transition-transform duration-300"
-              />
+            <img
+  src={icon}
+  alt="App Icon"
+  className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300 sm:h-10 sm:w-10"
+/>
+
             </div>
            <div className="flex items-center">
-             <img
-               src={logo}
-               alt="Tandhif Logo"
-               className="h-5 object-contain" // Keep height fixed, let width adjust
-             />
+           <img
+  src={logo}
+  alt="Tandhif Logo"
+  className="h-3 object-contain sm:h-5"
+/>
            </div>  
           </div>
 
@@ -231,7 +232,7 @@ const Header: React.FC<HeaderProps> = ({
               >
                 {translations.nav.account}
               </button>
-              <button
+              {/* <button
                 onClick={() => scrollToSection('hero')}
                 className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
                   isDark 
@@ -239,8 +240,8 @@ const Header: React.FC<HeaderProps> = ({
                     : 'text-gray-700 hover:text-black hover:bg-gray-100'
                 }`}
               >
-                {translations.nav.becomeCleanerShort || 'Devenir cleaner'}
-              </button>
+                {translations.nav.becomeCleanerShort}
+              </button> */}
               <button className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 mt-4">
                 {translations.nav.bookNow}
               </button>

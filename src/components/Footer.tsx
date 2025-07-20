@@ -2,7 +2,6 @@ import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
 import logo from '../images/logo.png';
 import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
-// import { useNavigate } from 'react-router-dom';
 
 interface FooterProps {
   isDark: boolean;
@@ -11,7 +10,7 @@ interface FooterProps {
   onNavigate?: (page: 'help' | 'contact' | 'terms' | 'privacy' | 'company') => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavigate }) => {
+const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavigate })=> {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -23,8 +22,6 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
       });
     }
   };
-
-  // const navigate = useNavigate();
 
   const socialLinks = [
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
