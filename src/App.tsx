@@ -25,15 +25,24 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import AnimatedCounter from './components/AnimatedCounter';
 import ServicesCarousel from './components/ServicesCarousel';
+import Help from './pages/Help';
+import Contact from './pages/Contact';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import CompanySignup from './pages/CompanySignup';
 import { translations, Language, supportedLanguages } from './data/translations';
 import { servicesData } from './data/services';
 import logo from './images/logo.png';
 import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
   const [language, setLanguage] = useState<Language>('fr');
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState<'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'>(
+    'home'
+  );
   // Load theme preference from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('tandhif-theme');
@@ -63,6 +72,19 @@ function App() {
   const services = servicesData[language] || servicesData.fr;
   const serviceNames = (servicesData[language] || servicesData.fr).map(service => service.name);
   const prices = pricingData[language] || pricingData.fr;
+
+  // Page navigation handlers
+  const showPage = (
+    page: 'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'
+  ) => setCurrentPage(page);
+  const goHome = () => showPage('home');
+
+  // ----- page routing (simple switch) -----
+  if (currentPage === 'help')   return <Help    isDark={isDark} onBack={goHome} />;
+  if (currentPage === 'contact')return <Contact isDark={isDark} onBack={goHome} />;
+  if (currentPage === 'terms')  return <Terms   isDark={isDark} onBack={goHome} />;
+  if (currentPage === 'privacy')return <Privacy isDark={isDark} onBack={goHome} />;
+  if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHome} />;
  
     /* ---------- helper ---------- */
   const getPlatform = (): 'android' | 'ios' | 'other' => {
@@ -606,7 +628,12 @@ function App() {
         </div>
       </section>
 
-      <Footer isDark={isDark} translations={t} services={serviceNames}/>
+      <Footer
+        isDark={isDark}
+        translations={t}
+        services={serviceNames}
+        onNavigate={showPage}
+      />
       {/* Pricing Modal */}
       <PricingModal
         isOpen={isPricingModalOpen}

@@ -2,14 +2,16 @@ import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
 import logo from '../images/logo.png';
 import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
+// import { useNavigate } from 'react-router-dom';
 
 interface FooterProps {
   isDark: boolean;
   translations: any;
   services: String[];
+  onNavigate?: (page: 'help' | 'contact' | 'terms' | 'privacy' | 'company') => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ isDark, translations, services }) => {
+const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavigate }) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -21,6 +23,8 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services }) => {
       });
     }
   };
+
+  // const navigate = useNavigate();
 
   const socialLinks = [
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -131,22 +135,49 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services }) => {
                 </li>
               ))}
               <li>
-                <span className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
-                  transition-colors duration-300 cursor-pointer hover:translate-x-1 inline-block`}>
-                  {translations.footer.about || 'À propos'}
-                </span>
+                <button
+                  onClick={() => onNavigate?.('help')}
+                  className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
+                    transition-all duration-300 hover:translate-x-1`}
+                >
+                  {translations.pages?.help || 'Centre d\'aide'}
+                </button>
               </li>
               <li>
-                <span className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
-                  transition-colors duration-300 cursor-pointer hover:translate-x-1 inline-block`}>
-                  {translations.footer.faq || 'FAQ'}
-                </span>
+                <button
+                  onClick={() => onNavigate?.('contact')}
+                  className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
+                    transition-all duration-300 hover:translate-x-1`}
+                >
+                  {translations.pages?.contact || 'contact'}
+                </button>
               </li>
               <li>
-                <span className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
-                  transition-colors duration-300 cursor-pointer hover:translate-x-1 inline-block`}>
-                  {translations.footer.contact || 'Contact'}
-                </span>
+                <button
+                  onClick={() => onNavigate?.('company')}
+                  className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
+                    transition-all duration-300 hover:translate-x-1`}
+                >
+                  {translations.pages?.company || 'Entreprises'}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate?.('privacy')}
+                  className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
+                    transition-all duration-300 hover:translate-x-1`}
+                >
+                  {translations.pages?.privacy || 'Politique de confidentialité'}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onNavigate?.('terms')}
+                  className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
+                    transition-all duration-300 hover:translate-x-1`}
+                >
+                  {translations.pages?.terms || 'Conditions Générales'}
+                </button>
               </li>
             </ul>
           </div>

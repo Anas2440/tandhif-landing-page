@@ -160,25 +160,32 @@ export const translations = {
   cta: 'Essayez Tandhif maintenant'
   },
   footer: {
-  description: 'Le service de nettoyage nouvelle génération pensé pour les particuliers et les professionnels.',
-  services: 'Services',
-  servicesList: [
-  'Nettoyage Maison',
-  'Pressing à domicile',
-  'Entretien jardin',
-  'Tapis & Moquette',
-  'Piscines',
-  'Remise en état'
-  ],
-  quickLinks: 'Liens rapides',
-  location: 'Partout en France',
-  copyright: 'Le ménage nouvelle génération.',
-  about: 'À propos',
-  faq: 'FAQ',
-  contact: 'Contact',
-  followUs: 'Suivez-nous',
-  privacy: 'Politique de confidentialité',
-  terms: 'CGU'
+      description: 'Le service de nettoyage nouvelle génération pensé pour les particuliers et les professionnels.',
+      services: 'Services',
+      servicesList: [
+        'Nettoyage Maison',
+        'Pressing à domicile',
+        'Entretien jardin',
+        'Tapis & Moquette',
+        'Piscines',
+        'Remise en état'
+      ],
+      quickLinks: 'Liens rapides',
+      location: 'Partout en France',
+      copyright: 'Le ménage nouvelle génération.',
+      about: 'À propos',
+      faq: 'FAQ',
+      contact: 'Contact',
+      followUs: 'Suivez-nous',
+      privacy: 'Politique de confidentialité',
+      terms: 'CGU'
+  },
+  pages: {
+      help: 'Centre d\'aide',
+      contact: 'Contact',
+      terms: 'Conditions Générales',
+      privacy: 'Politique de confidentialité',
+      company: 'Entreprises'
   }
   },
   en: {
@@ -342,26 +349,33 @@ export const translations = {
   cta: 'Try Tandhif now'
   },
   footer: {
-  description: 'The next-generation cleaning service designed for individuals and professionals.',
-  services: 'Services',
-  servicesList: [
-  'House Cleaning',
-  'Home Dry Cleaning',
-  'Garden Maintenance',
-  'Carpet & Rug',
-  'Swimming Pools',
-  'Restoration'
-  ],
-  quickLinks: 'Quick Links',
-  location: 'Throughout France',
-  copyright: 'Next-generation cleaning.',
-  about: 'About',
-  faq: 'FAQ',
-  contact: 'Contact',
-  followUs: 'Follow us',
-  privacy: 'Privacy Policy',
-  terms: 'Terms'
-  }
+      description: 'The next-generation cleaning service designed for individuals and professionals.',
+      services: 'Services',
+      servicesList: [
+        'House Cleaning',
+        'Home Dry Cleaning',
+        'Garden Maintenance',
+        'Carpet & Rug',
+        'Swimming Pools',
+        'Restoration'
+      ],
+      quickLinks: 'Quick Links',
+      location: 'Throughout France',
+      copyright: 'Next-generation cleaning.',
+      about: 'About',
+      faq: 'FAQ',
+      contact: 'Contact',
+      followUs: 'Follow us',
+      privacy: 'Privacy Policy',
+      terms: 'Terms'
+    },
+    pages: {
+      help: 'Help Center',
+      contact: 'Contact',
+      terms: 'Terms & Conditions',
+      privacy: 'Privacy Policy',
+      company: 'Business'
+    }
   },
   ar: {
   nav: {
@@ -524,26 +538,33 @@ export const translations = {
   cta: 'جرب تندهيف الآن'
   },
   footer: {
-  description: 'خدمة التنظيف من الجيل القادم المصممة للأفراد والمهنيين.',
-  services: 'الخدمات',
-  servicesList: [
-  'تنظيف المنزل',
-  'التنظيف الجاف المنزلي',
-  'صيانة الحديقة',
-  'السجاد والبساط',
-  'حمامات السباحة',
-  'الترميم'
-  ],
-  quickLinks: 'روابط سريعة',
-  location: 'في جميع أنحاء فرنسا',
-  copyright: 'تنظيف الجيل القادم.',
-  about: 'حول',
-  faq: 'الأسئلة الشائعة',
-  contact: 'اتصل',
-  followUs: 'تابعنا',
-  privacy: 'سياسة الخصوصية',
-  terms: 'الشروط'
-  }
+      description: 'خدمة التنظيف من الجيل القادم المصممة للأفراد والمهنيين.',
+      services: 'الخدمات',
+      servicesList: [
+        'تنظيف المنزل',
+        'التنظيف الجاف المنزلي',
+        'صيانة الحديقة',
+        'السجاد والبساط',
+        'حمامات السباحة',
+        'الترميم'
+      ],
+      quickLinks: 'روابط سريعة',
+      location: 'في جميع أنحاء فرنسا',
+      copyright: 'تنظيف الجيل القادم.',
+      about: 'حول',
+      faq: 'الأسئلة الشائعة',
+      contact: 'اتصل',
+      followUs: 'تابعنا',
+      privacy: 'سياسة الخصوصية',
+      terms: 'الشروط'
+    },
+    pages: {
+      help: 'مركز المساعدة',
+      contact: 'اتصل',
+      terms: 'الشروط والأحكام',
+      privacy: 'سياسة الخصوصية',
+      company: 'الشركات'
+    }
   },
   es: {
   nav: {
@@ -706,26 +727,33 @@ export const translations = {
   cta: 'Prueba Tandhif ahora'
   },
   footer: {
-  description: 'El servicio de limpieza de nueva generación diseñado para particulares y profesionales.',
-  services: 'Servicios',
-  servicesList: [
-  'Limpieza del hogar',
-  'Tintorería a domicilio',
-  'Mantenimiento de jardín',
-  'Alfombras y moquetas',
-  'Piscinas',
-  'Restauración'
-  ],
-  quickLinks: 'Enlaces rápidos',
-  location: 'En toda Francia',
-  copyright: 'Limpieza de nueva generación.',
-  about: 'Acerca de',
-  faq: 'FAQ',
-  contact: 'Contacto',
-  followUs: 'Síguenos',
-  privacy: 'Política de privacidad',
-  terms: 'Términos'
-  }
+      description: 'El servicio de limpieza de nueva generación diseñado para particulares y profesionales.',
+      services: 'Servicios',
+      servicesList: [
+        'Limpieza del hogar',
+        'Tintorería a domicilio',
+        'Mantenimiento de jardín',
+        'Alfombras y moquetas',
+        'Piscinas',
+        'Restauración'
+      ],
+      quickLinks: 'Enlaces rápidos',
+      location: 'En toda Francia',
+      copyright: 'Limpieza de nueva generación.',
+      about: 'Acerca de',
+      faq: 'FAQ',
+      contact: 'Contacto',
+      followUs: 'Síguenos',
+      privacy: 'Política de privacidad',
+      terms: 'Términos'
+    },
+    pages: {
+      help: 'Centro de ayuda',
+      contact: 'Contacto',
+      terms: 'Términos y Condiciones',
+      privacy: 'Política de privacidad',
+      company: 'Empresas'
+    }
   },
   pt: {
   nav: {
@@ -888,26 +916,33 @@ export const translations = {
   cta: 'Experimente Tandhif agora'
   },
   footer: {
-  description: 'O serviço de limpeza de nova geração projetado para particulares e profissionais.',
-  services: 'Serviços',
-  servicesList: [
-  'Limpeza doméstica',
-  'Lavanderia em casa',
-  'Manutenção de jardim',
-  'Tapetes e carpetes',
-  'Piscinas',
-  'Restauração'
-  ],
-  quickLinks: 'Links rápidos',
-  location: 'Em toda a França',
-  copyright: 'Limpeza de nova geração.',
-  about: 'Sobre',
-  faq: 'FAQ',
-  contact: 'Contato',
-  followUs: 'Siga-nos',
-  privacy: 'Política de privacidade',
-  terms: 'Termos'
-  }
+      description: 'O serviço de limpeza de nova geração projetado para particulares e profissionais.',
+      services: 'Serviços',
+      servicesList: [
+        'Limpeza doméstica',
+        'Lavanderia em casa',
+        'Manutenção de jardim',
+        'Tapetes e carpetes',
+        'Piscinas',
+        'Restauração'
+      ],
+      quickLinks: 'Links rápidos',
+      location: 'Em toda a França',
+      copyright: 'Limpeza de nova geração.',
+      about: 'Sobre',
+      faq: 'FAQ',
+      contact: 'Contato',
+      followUs: 'Siga-nos',
+      privacy: 'Política de privacidade',
+      terms: 'Termos'
+    },
+    pages: {
+      help: 'Centro de ajuda',
+      contact: 'Contato',
+      terms: 'Termos e Condições',
+      privacy: 'Política de privacidade',
+      company: 'Empresas'
+    }
   },
   it: {
   nav: {
@@ -1070,26 +1105,33 @@ export const translations = {
   cta: 'Prova Tandhif ora'
   },
   footer: {
-  description: 'Il servizio di pulizia di nuova generazione progettato per privati e professionisti.',
-  services: 'Servizi',
-  servicesList: [
-  'Pulizia domestica',
-  'Lavanderia a domicilio',
-  'Manutenzione giardino',
-  'Tappeti e moquette',
-  'Piscine',
-  'Restauro'
-  ],
-  quickLinks: 'Link rapidi',
-  location: 'In tutta la Francia',
-  copyright: 'Pulizia di nuova generazione.',
-  about: 'Chi siamo',
-  faq: 'FAQ',
-  contact: 'Contatto',
-  followUs: 'Seguici',
-  privacy: 'Privacy Policy',
-  terms: 'Termini'
-  }
+      description: 'Il servizio di pulizia di nuova generazione progettato per privati e professionisti.',
+      services: 'Servizi',
+      servicesList: [
+        'Pulizia domestica',
+        'Lavanderia a domicilio',
+        'Manutenzione giardino',
+        'Tappeti e moquette',
+        'Piscine',
+        'Restauro'
+      ],
+      quickLinks: 'Link rapidi',
+      location: 'In tutta la Francia',
+      copyright: 'Pulizia di nuova generazione.',
+      about: 'Chi siamo',
+      faq: 'FAQ',
+      contact: 'Contatto',
+      followUs: 'Seguici',
+      privacy: 'Privacy Policy',
+      terms: 'Termini'
+    },
+    pages: {
+      help: 'Centro assistenza',
+      contact: 'Contatto',
+      terms: 'Termini e Condizioni',
+      privacy: 'Privacy Policy',
+      company: 'Aziende'
+    }
   },
   de: {
   nav: {
@@ -1252,26 +1294,33 @@ export const translations = {
   cta: 'Tandhif jetzt testen'
   },
   footer: {
-  description: 'Der Reinigungsservice der nächsten Generation für Privatpersonen und Profis.',
-  services: 'Dienstleistungen',
-  servicesList: [
-  'Hausreinigung',
-  'Reinigung zu Hause',
-  'Gartenpflege',
-  'Teppiche & Läufer',
-  'Schwimmbäder',
-  'Wiederherstellung'
-  ],
-  quickLinks: 'Schnelle Links',
-  location: 'In ganz Frankreich',
-  copyright: 'Reinigung der nächsten Generation.',
-  about: 'Über uns',
-  faq: 'FAQ',
-  contact: 'Kontakt',
-  followUs: 'Folgen Sie uns',
-  privacy: 'Datenschutz',
-  terms: 'AGB'
-  }
+      description: 'Der Reinigungsservice der nächsten Generation für Privatpersonen und Profis.',
+      services: 'Dienstleistungen',
+      servicesList: [
+        'Hausreinigung',
+        'Reinigung zu Hause',
+        'Gartenpflege',
+        'Teppiche & Läufer',
+        'Schwimmbäder',
+        'Wiederherstellung'
+      ],
+      quickLinks: 'Schnelle Links',
+      location: 'In ganz Frankreich',
+      copyright: 'Reinigung der nächsten Generation.',
+      about: 'Über uns',
+      faq: 'FAQ',
+      contact: 'Kontakt',
+      followUs: 'Folgen Sie uns',
+      privacy: 'Datenschutz',
+      terms: 'AGB'
+    },
+    pages: {
+      help: 'Hilfe-Center',
+      contact: 'Kontakt',
+      terms: 'AGB',
+      privacy: 'Datenschutz',
+      company: 'Unternehmen'
+    }
   }
  };
 
