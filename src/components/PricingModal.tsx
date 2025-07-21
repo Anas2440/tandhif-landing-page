@@ -125,7 +125,7 @@ const PricingModal: React.FC<PricingModalProps> = ({
                   <div
                     key={service.id}
                     className={`p-6 rounded-2xl border transition-all duration-300 hover:scale-105 group 
-  w-full sm:w-[45%] md:w-[45%] max-w-full mx-auto
+  w-[95%] max-[360px] sm:w-[40%] md:w-[40%] max-w-90% mx-auto
   flex flex-col justify-between ${
                       isDark
                         ? 'bg-gray-800/50 border-gray-700 hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20'

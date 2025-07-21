@@ -7,7 +7,7 @@ export const translations = {
  pricing: 'Tarifs',
  mobile: 'Application',
  becomeCleanerShort: 'Devenir cleaner',
- bookNow: 'Réserver',
+ bookNow: 'Connexion',
  account: 'Mon compte'
  },
  hero: {
@@ -96,7 +96,7 @@ export const translations = {
  subtitle: 'Pas de surprise, tout est clair dès le départ',
  features: [
  'Tarification claire et transparente',
- 'Calcul automatique selon la surface',
+ 'Calcul automatique adapté à chaque besoin',
  'Possibilité d\'ajustement selon les besoins réels',
  'Paiement sécurisé après validation'
  ],
@@ -133,7 +133,7 @@ export const translations = {
  },
  mobile: {
  title: 'Télécharger l\'application',
- subtitle: 'Tout Tandhif dans votre poche',
+ subtitle: 'Tous vos services de nettoyage, réunis dans une seule application.',
  description: 'Notifications en temps réel, paiements sécurisés, suivi des interventions, évaluation des cleaners.',
  features: [
  'Réservation en quelques clics',

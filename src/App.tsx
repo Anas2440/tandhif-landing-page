@@ -458,8 +458,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               </div>
               
               <div className="bg-gradient-to-br from-[#FEE21B] to-yellow-300 text-black rounded-3xl p-10">
-                <h3 className="text-2xl font-bold mb-6">{t.pricing.calculator.title}</h3>
-                <div className="text-4xl font-bold mb-4 flex items-center">
+                <h3 className="text-[30px]  font-bold mb-6 max-[400px]:text-[20px]">{t.pricing.calculator.title}</h3>
+                <div className="text-[40px] font-bold mb-4 flex items-center max-[400px]:text-[20px]">
                   <ArrowRight className="h-8 w-8 mr-3" />
                   {t.pricing.calculator.calculation}
                 </div>
@@ -498,11 +498,11 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             }`}>
               {t.mobile.subtitle}
             </p>
-            <p className={`text-lg max-w-4xl mx-auto leading-relaxed mt-6 ${
+            {/* <p className={`text-lg max-w-4xl mx-auto leading-relaxed mt-6 ${
               isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
             }`}>
               {t.mobile.description}
-            </p>
+            </p> */}
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">

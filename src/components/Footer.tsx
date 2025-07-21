@@ -133,7 +133,11 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               ))}
               <li>
                 <button
-                  onClick={() => onNavigate?.('help')}
+  onClick={() => {
+    onNavigate?.('help');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }}
+
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
                 >
@@ -142,7 +146,12 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate?.('contact')}
+                  onClick={() => {
+                    onNavigate?.('contact');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                
+                  // onClick={() => onNavigate?.('contact')}
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
                 >
@@ -151,16 +160,25 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate?.('company')}
+                  onClick={() => {
+                    onNavigate?.('company');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+
+                  // onClick={() => onNavigate?.('company')}
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
                 >
-                  {translations.pages?.company || 'Entreprises'}
+                  {translations.pages?.company || 'company'}
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate?.('privacy')}
+                                  onClick={() => {
+                                    onNavigate?.('privacy');
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                  }}
+                  // onClick={() => onNavigate?.('privacy')}
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
                 >
@@ -169,7 +187,12 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               </li>
               <li>
                 <button
-                  onClick={() => onNavigate?.('terms')}
+
+onClick={() => {
+  onNavigate?.('terms');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}}
+                  // onClick={() => onNavigate?.('terms')}
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
                 >

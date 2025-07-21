@@ -92,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({
             <img
   src={icon}
   alt="App Icon"
-  className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300 sm:h-10 sm:w-10"
+  className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300"
 />
 
             </div>
@@ -100,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({
            <img
   src={logo}
   alt="Tandhif Logo"
-  className="h-3 object-contain sm:h-5"
+  className="h-4 object-contain "
 />
            </div>  
           </div>
@@ -129,16 +129,22 @@ const Header: React.FC<HeaderProps> = ({
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
                 className={`flex items-center space-x-2 px-3 py-2 rounded-xl transition-all duration-300 ${
                   isDark 
-                    ? 'bg-gray-800/50 text-white hover:bg-gray-700/50 border border-gray-700' 
-                    : 'bg-gray-100/50 text-black hover:bg-gray-200/50 border border-gray-200'
-                }`}
+                  ? 'text-white hover:text-gray-300' 
+                  : 'text-black hover:text-gray-700'
+              }`}
+              
               >
                 {/* <Globe className="h-4 w-4" /> */}
-                <span className="text-sm font-medium">
-  {languageNames[language].split(' ')[0]}{' '}
-  {languageNames[language].split(' ')[1].slice(0, 2)}
+                <div className=''>
+                <span className="text-sm font-medium flex items-center gap-1">
+                <span className="text-3xl  rounded-md ">
+                   {languageNames[language].split(' ')[0]}
+               </span>
+  {/* {languageNames[language].split(' ')[0]}{' '} */}
+  {languageNames[language].split(' ')[1].slice(0, 2).toUpperCase()}
 </span>
 
+</div>
                 <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isLanguageOpen ? 'rotate-180' : ''}`} />
               </button>
               
@@ -232,15 +238,16 @@ const Header: React.FC<HeaderProps> = ({
               >
                 {translations.nav.account}
               </button>
-              {/* <button
+
+{/*               
+              <button
                 onClick={() => scrollToSection('hero')}
                 className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
                   isDark 
                     ? 'text-gray-300 hover:text-white hover:bg-gray-800' 
                     : 'text-gray-700 hover:text-black hover:bg-gray-100'
                 }`}
-              >
-                {translations.nav.becomeCleanerShort}
+              >Contect
               </button> */}
               <button className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 mt-4">
                 {translations.nav.bookNow}
