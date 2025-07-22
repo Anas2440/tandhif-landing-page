@@ -6,9 +6,9 @@ export const translations = {
  whyTandhif: 'Pourquoi Tandhif',
  pricing: 'Tarifs',
  mobile: 'Application',
- becomeCleanerShort: 'Devenir cleaner',
+ becomeCleanerShort: 'Entreprise',
  bookNow: 'Connexion',
- account: 'Mon compte'
+ account: 'Contact'
  },
  hero: {
  title: 'Tandhif',
@@ -189,950 +189,952 @@ pages: {
 }
  },
  en: {
- nav: {
- services: 'Services',
- howItWorks: 'How it works',
- whyTandhif: 'Why Tandhif',
- pricing: 'Pricing',
- mobile: 'Mobile App',
- becomeCleanerShort: 'Become cleaner',
- bookNow: 'Book now',
- account: 'My account'
- },
- hero: {
- title: 'Tandhif',
- subtitle: 'Cleaning, simplified.',
- description: 'Home, carpets, garden, pool… in just a few clicks.',
- feature1: 'Verified and rated cleaners',
- feature2: 'Available throughout France',
- ctaPrimary: 'Order now',
- ctaSecondary: 'Become a cleaner',
- stats: {
- clients: '+2000 satisfied clients',
- cleaners: '+500 active cleaners',
- cities: '+50 cities covered'
- }
- },
- services: {
- title: 'Our services',
- subtitle: 'Everything you need for a spotless interior',
- items: [
- {
- title: 'House Cleaning',
- description: 'Complete and regular cleaning of your home'
- },
- {
- title: 'Dry Cleaning / Carpets',
- description: 'Professional cleaning of your textiles'
- },
- {
- title: 'Garden & Outdoor',
- description: 'Maintenance of your green spaces and terraces'
- },
- {
- title: 'Swimming Pool',
- description: 'Cleaning and maintenance of your pool'
- },
- {
- title: 'Restoration',
- description: 'Cleaning after work or moving'
- },
- {
- title: 'Specialized Cleaning',
- description: 'Mattresses, armchairs, and delicate surfaces'
- }
- ]
- },
- howItWorks: {
- title: 'How does it work?',
- subtitle: 'A simple 3-step process',
- steps: [
- {
- title: 'Service selection',
- description: 'Choose the type of cleaning you need'
- },
- {
- title: 'Local cleaner assigned',
- description: 'We assign you a qualified professional near you'
- },
- {
- title: 'Real-time tracking',
- description: 'Track progress and pay securely'
- }
- ],
- cta: 'Start now'
- },
- whyTandhif: {
- title: 'Why choose Tandhif?',
- subtitle: 'The difference that makes the difference',
- features: [
- {
- title: 'Fast',
- description: '30-second order, intervention within 24h'
- },
- {
- title: 'Reliable',
- description: 'Verified, insured cleaners rated by our clients'
- },
- {
- title: 'Premium',
- description: 'Professional products and impeccable finishes'
- }
- ]
- },
- pricing: {
- title: 'Transparent pricing',
- subtitle: 'No surprises, everything is clear from the start',
- features: [
- 'Clear and transparent pricing',
- 'Automatic calculation by surface area',
- 'Possibility of adjustment according to real needs',
- 'Secure payment after validation'
- ],
- examples: [
- {
- service: 'Carpet',
- price: 'from €12/m²',
- description: 'Professional deep cleaning'
- },
- {
- service: 'Pool',
- price: 'from €14/m²',
- description: 'Complete bottom and wall cleaning'
- }
- ],
- calculator: {
- title: 'Example: Carpet = €12/m²',
- calculation: '20m² = €240 incl. tax'
- },
- cta: 'See all rates'
- },
- pricingModal: {
- title: 'All Service Prices',
- subtitle: 'Transparent pricing for all our cleaning services',
- close: 'Close',
- bookService: 'Book this service',
- categories: {
- 'Interior Cleaning': 'Interior Cleaning',
- 'Commercial Cleaning': 'Commercial Cleaning',
- 'Textiles & Furniture': 'Textiles & Furniture',
- 'Outdoor & Vehicles': 'Outdoor & Vehicles',
- 'Specialized Services': 'Specialized Services'
- }
- },
- mobile: {
- title: 'Download the app',
- subtitle: 'All of Tandhif in your pocket',
- description: 'Real-time notifications, secure payments, intervention tracking, cleaner evaluation.',
- features: [
- 'Booking in a few clicks',
- 'Real-time tracking',
- 'Secure payment',
- 'Intervention history'
- ],
- userApp: {
- title: 'Client App',
- description: 'Book and track your cleaning services',
- appStore: 'App Store',
- googlePlay: 'Google Play'
- },
- cleanerApp: {
- title: 'Cleaner App',
- description: 'Manage your missions and clients',
- appStore: 'App Store',
- googlePlay: 'Google Play'
- }
- },
- finalCta: {
- title: 'Tandhif. Much more than cleaning.',
- description: 'The cleaning service designed for individuals and professionals.',
- cta: 'Try Tandhif now'
- },
- footer: {
-  description: 'The next-generation cleaning service designed for individuals and professionals.',
-  services: 'Services',
-  servicesList: [
-    'House Cleaning',
-    'Home Dry Cleaning',
-    'Garden Maintenance',
-    'Carpet & Rug',
-    'Swimming Pools',
-    'Restoration'
-  ],
-  quickLinks: 'Quick Links',
-  location: 'Throughout France',
-  copyright: 'Next-generation cleaning.',
-  about: 'About',
-  faq: 'FAQ',
-  contact: 'Contact',
-  followUs: 'Follow us',
-  privacy: 'Privacy Policy',
-  terms: 'Terms'
+  nav: {
+    services: 'Services',
+    howItWorks: 'How it works',
+    whyTandhif: 'Why Tandhif',
+    pricing: 'Pricing',
+    mobile: 'App',
+    becomeCleanerShort: 'Business',
+    bookNow: 'Login',
+    account: 'Contact'
+  },
+  hero: {
+    title: 'Tandhif',
+    subtitle: 'cleaning in one click. Easy. Now.',
+    description: 'One app to clean everything. Book in 30 seconds.',
+    feature1: 'Verified and rated cleaners',
+    feature2: 'Available all across France',
+    ctaPrimary: 'Book now',
+    ctaSecondary: 'Become a cleaner',
+    stats: {
+      clients: '+2000 satisfied clients',
+      cleaners: '+500 active cleaners',
+      cities: '+50 cities covered'
+    }
+  },
+  services: {
+    title: 'Our services',
+    subtitle: 'Cleaning for your everyday life, reimagined on demand.',
+    items: [
+      {
+        title: 'Home Cleaning',
+        description: 'Thorough and regular cleaning of your home'
+      },
+      {
+        title: 'Dry Cleaning / Carpet',
+        description: 'Professional cleaning of your textiles'
+      },
+      {
+        title: 'Garden & Outdoor',
+        description: 'Maintenance of your green spaces and terraces'
+      },
+      {
+        title: 'Pool',
+        description: 'Cleaning and maintenance of your swimming pool'
+      },
+      {
+        title: 'Post-renovation',
+        description: 'Cleaning after renovation or moving'
+      },
+      {
+        title: 'Specialized Cleaning',
+        description: 'Mattresses, armchairs, and delicate surfaces'
+      }
+    ]
+  },
+  howItWorks: {
+    title: 'How does it work?',
+    subtitle: 'A simple 3-step process',
+    steps: [
+      {
+        title: 'Service selection',
+        description: 'Choose the type of cleaning you need'
+      },
+      {
+        title: 'Local cleaner assigned',
+        description: 'We assign you a qualified professional near you'
+      },
+      {
+        title: 'Real-time tracking',
+        description: 'Track progress and pay securely'
+      }
+    ],
+    cta: 'Get started now'
+  },
+  whyTandhif: {
+    title: 'Why choose Tandhif?',
+    subtitle: 'The difference that makes a difference',
+    features: [
+      {
+        title: 'Fast',
+        description: 'No more calls or complicated quotes.'
+      },
+      {
+        title: 'Reliable',
+        description: 'Verified, insured cleaners rated by our clients'
+      },
+      {
+        title: 'Premium',
+        description: 'High-end cleanliness, no compromises'
+      }
+    ]
+  },
+  pricing: {
+    title: 'Transparent pricing',
+    subtitle: 'No surprises, everything is clear from the start',
+    features: [
+      'Clear and transparent pricing',
+      'Automatic calculation tailored to every need',
+      'Adjustable according to real needs',
+      'Secure payment after confirmation'
+    ],
+    examples: [
+      {
+        service: 'Carpet',
+        price: 'from €12/m²',
+        description: 'Deep professional cleaning'
+      },
+      {
+        service: 'Pool',
+        price: 'from €14/m²',
+        description: 'Complete bottom and wall cleaning'
+      }
+    ],
+    calculator: {
+      title: 'Example: Carpet = €12/m²',
+      calculation: '20m² = €240 incl. VAT'
+    },
+    cta: 'See all prices'
+  },
+  pricingModal: {
+    title: 'All prices',
+    subtitle: 'Transparent pricing for all our cleaning services',
+    close: 'Close',
+    bookService: 'Book this service',
+    categories: {
+      'Nettoyage Intérieur': 'Interior Cleaning',
+      'Nettoyage Commercial': 'Commercial Cleaning',
+      'Textiles & Mobilier': 'Textiles & Furniture',
+      'Extérieur & Véhicules': 'Outdoor & Vehicles',
+      'Services Spécialisés': 'Specialized Services'
+    }
+  },
+  mobile: {
+    title: 'Download the app',
+    subtitle: 'All your cleaning services, in one single app.',
+    description: 'Real-time notifications, secure payments, job tracking, cleaner reviews.',
+    features: [
+      'Book in a few clicks',
+      'Real-time tracking',
+      'Secure payment',
+      'Service history'
+    ],
+    userApp: {
+      title: 'Client App',
+      description: 'Book and track your cleaning services',
+      appStore: 'App Store',
+      googlePlay: 'Google Play'
+    },
+    cleanerApp: {
+      title: 'Cleaner App',
+      description: 'Manage your jobs and clients',
+      appStore: 'App Store',
+      googlePlay: 'Google Play'
+    }
+  },
+  finalCta: {
+    title: 'Tandhif. The app that simplifies cleaning.',
+    description: 'A cleaning service designed for individuals and professionals.',
+    cta: 'Try Tandhif now'
+  },
+  footer: {
+    description: 'The next-generation cleaning service designed for individuals and professionals.',
+    services: 'Services',
+    servicesList: [
+      'Home Cleaning',
+      'At-home Dry Cleaning',
+      'Garden Maintenance',
+      'Carpets & Rugs',
+      'Swimming Pools',
+      'Post-renovation Cleaning'
+    ],
+    quickLinks: 'Quick links',
+    location: 'All over France',
+    copyright: 'Next-generation cleaning.',
+    about: 'About',
+    faq: 'FAQ',
+    contact: 'Contact',
+    followUs: 'Follow us',
+    privacy: 'Privacy Policy',
+    terms: 'Terms of Service'
+  },
+  pages: {
+    help: 'Help Center',
+    contact: 'Contact',
+    terms: 'Terms and Conditions',
+    privacy: 'Privacy Policy',
+    company: 'Businesses'
+  }
 },
-pages: {
-  help: 'Help Center',
-  contact: 'Contact',
-  terms: 'Terms & Conditions',
-  privacy: 'Privacy Policy',
-  company: 'Business'
-}
- },
- ar: {
- nav: {
- services: 'الخدمات',
- howItWorks: 'كيف يعمل',
- whyTandhif: 'لماذا تندهيف',
- pricing: 'الأسعار',
- mobile: 'التطبيق',
- becomeCleanerShort: 'كن منظف',
- bookNow: 'احجز الآن',
- account: 'حسابي'
- },
- hero: {
- title: 'تندهيف',
- subtitle: 'التنظيف، مبسط.',
- description: 'المنزل، السجاد، الحديقة، المسبح... بنقرات قليلة.',
- feature1: 'منظفون معتمدون ومقيمون',
- feature2: 'متوفر في جميع أنحاء فرنسا',
- ctaPrimary: 'اطلب الآن',
- ctaSecondary: 'كن منظف',
- stats: {
- clients: '+2000 عميل راضٍ',
- cleaners: '+500 منظف نشط',
- cities: '+50 مدينة مغطاة'
- }
- },
- services: {
- title: 'خدماتنا',
- subtitle: 'كل ما تحتاجه لداخلية نظيفة',
- items: [
- {
- title: 'تنظيف المنزل',
- description: 'تنظيف شامل ومنتظم لمنزلك'
- },
- {
- title: 'التنظيف الجاف / السجاد',
- description: 'تنظيف احترافي للمنسوجات'
- },
- {
- title: 'الحديقة والخارج',
- description: 'صيانة المساحات الخضراء والشرفات'
- },
- {
- title: 'حمام السباحة',
- description: 'تنظيف وصيانة حمام السباحة'
- },
- {
- title: 'الترميم',
- description: 'التنظيف بعد العمل أو الانتقال'
- },
- {
- title: 'التنظيف المتخصص',
- description: 'المراتب والكراسي والأسطح الحساسة'
- }
- ]
- },
- howItWorks: {
- title: 'كيف يعمل؟',
- subtitle: 'عملية بسيطة من 3 خطوات',
- steps: [
- {
- title: 'اختيار الخدمة',
- description: 'اختر نوع التنظيف الذي تحتاجه'
- },
- {
- title: 'تعيين منظف محلي',
- description: 'نعين لك محترف مؤهل بالقرب منك'
- },
- {
- title: 'التتبع في الوقت الفعلي',
- description: 'تتبع التقدم وادفع بأمان'
- }
- ],
- cta: 'ابدأ الآن'
- },
- whyTandhif: {
- title: 'لماذا تختار تندهيف؟',
- subtitle: 'الفرق الذي يصنع الفرق',
- features: [
- {
- title: 'سريع',
- description: 'طلب في 30 ثانية، تدخل خلال 24 ساعة'
- },
- {
- title: 'موثوق',
- description: 'منظفون معتمدون ومؤمنون ومقيمون من عملائنا'
- },
- {
- title: 'متميز',
- description: 'منتجات احترافية ولمسات نهائية لا تشوبها شائبة'
- }
- ]
- },
- pricing: {
- title: 'أسعار شفافة',
- subtitle: 'لا مفاجآت، كل شيء واضح من البداية',
- features: [
- 'تسعير واضح وشفاف',
- 'حساب تلقائي حسب المساحة',
- 'إمكانية التعديل حسب الاحتياجات الفعلية',
- 'دفع آمن بعد التحقق'
- ],
- examples: [
- {
- service: 'السجاد',
- price: 'من 12€/م²',
- description: 'تنظيف عميق احترافي'
- },
- {
- service: 'المسبح',
- price: 'من 14€/م²',
- description: 'تنظيف شامل للقاع والجدران'
- }
- ],
- calculator: {
- title: 'مثال: السجاد = 12€/م²',
- calculation: '20م² = 240€ شامل الضريبة'
- },
- cta: 'انظر جميع الأسعار'
- },
- pricingModal: {
- title: 'جميع أسعار الخدمات',
- subtitle: 'أسعار شفافة لجميع خدمات التنظيف',
- close: 'إغلاق',
- bookService: 'احجز هذه الخدمة',
- categories: {
- 'تنظيف داخلي': 'تنظيف داخلي',
- 'تنظيف تجاري': 'تنظيف تجاري',
- 'منسوجات وأثاث': 'منسوجات وأثاث',
- 'خارجي ومركبات': 'خارجي ومركبات',
- 'خدمات متخصصة': 'خدمات متخصصة'
- }
- },
- mobile: {
- title: 'تحميل التطبيق',
- subtitle: 'كل تندهيف في جيبك',
- description: 'إشعارات في الوقت الفعلي، مدفوعات آمنة، تتبع التدخلات، تقييم المنظفين.',
- features: [
- 'حجز بنقرات قليلة',
- 'تتبع في الوقت الفعلي',
- 'دفع آمن',
- 'تاريخ التدخلات'
- ],
- userApp: {
- title: 'تطبيق العميل',
- description: 'احجز وتتبع خدمات التنظيف',
- appStore: 'متجر التطبيقات',
- googlePlay: 'جوجل بلاي'
- },
- cleanerApp: {
- title: 'تطبيق المنظف',
- description: 'إدارة المهام والعملاء',
- appStore: 'متجر التطبيقات',
- googlePlay: 'جوجل بلاي'
- }
- },
- finalCta: {
- title: 'تندهيف. أكثر من مجرد تنظيف.',
- description: 'خدمة التنظيف المصممة للأفراد والمهنيين.',
- cta: 'جرب تندهيف الآن'
- },
- footer: {
-  description: 'خدمة التنظيف من الجيل القادم المصممة للأفراد والمهنيين.',
-  services: 'الخدمات',
-  servicesList: [
-    'تنظيف المنزل',
-    'التنظيف الجاف المنزلي',
-    'صيانة الحديقة',
-    'السجاد والبساط',
-    'حمامات السباحة',
-    'الترميم'
-  ],
-  quickLinks: 'روابط سريعة',
-  location: 'في جميع أنحاء فرنسا',
-  copyright: 'تنظيف الجيل القادم.',
-  about: 'حول',
-  faq: 'الأسئلة الشائعة',
-  contact: 'اتصل',
-  followUs: 'تابعنا',
-  privacy: 'سياسة الخصوصية',
-  terms: 'الشروط'
+ar: {
+  nav: {
+    services: 'الخدمات',
+    howItWorks: 'كيف يعمل',
+    whyTandhif: 'لماذا تنديف؟',
+    pricing: 'الأسعار',
+    mobile: 'التطبيق',
+    becomeCleanerShort: 'للشركات',
+    bookNow: 'تسجيل الدخول',
+    account: 'تواصل معنا'
+  },
+  hero: {
+    title: 'تنديف',
+    subtitle: 'تنظيف بضغطة زر. بسهولة. الآن.',
+    description: 'تطبيق واحد لتنظيف كل شيء. احجز خلال 30 ثانية.',
+    feature1: 'منظفون موثوقون ومقيمون',
+    feature2: 'متوفر في جميع أنحاء فرنسا',
+    ctaPrimary: 'احجز الآن',
+    ctaSecondary: 'انضم كمنظف',
+    stats: {
+      clients: '+2000 عميل راضٍ',
+      cleaners: '+500 منظف نشط',
+      cities: '+50 مدينة مغطاة'
+    }
+  },
+  services: {
+    title: 'خدماتنا',
+    subtitle: 'تنظيف يومي مُعاد تصوره حسب الطلب.',
+    items: [
+      {
+        title: 'تنظيف المنازل',
+        description: 'تنظيف شامل ومنتظم لمنزلك'
+      },
+      {
+        title: 'التنظيف الجاف / السجاد',
+        description: 'تنظيف احترافي لأقمشتك'
+      },
+      {
+        title: 'الحدائق والمساحات الخارجية',
+        description: 'صيانة الحدائق والشرفات الخاصة بك'
+      },
+      {
+        title: 'حمام السباحة',
+        description: 'تنظيف وصيانة مسبحك'
+      },
+      {
+        title: 'تنظيف ما بعد الترميم',
+        description: 'تنظيف بعد الأشغال أو الانتقال'
+      },
+      {
+        title: 'تنظيف متخصص',
+        description: 'مراتب وكراسي وأسـطح حساسة'
+      }
+    ]
+  },
+  howItWorks: {
+    title: 'كيف يعمل؟',
+    subtitle: 'عملية بسيطة من 3 خطوات',
+    steps: [
+      {
+        title: 'اختيار الخدمة',
+        description: 'اختر نوع التنظيف الذي تحتاجه'
+      },
+      {
+        title: 'تعيين منظف محلي',
+        description: 'نقوم بتعيين محترف مؤهل بالقرب منك'
+      },
+      {
+        title: 'تتبع مباشر',
+        description: 'تابع التقدم وادفع بأمان'
+      }
+    ],
+    cta: 'ابدأ الآن'
+  },
+  whyTandhif: {
+    title: 'لماذا تختار تنديف؟',
+    subtitle: 'الفرق الذي يصنع الفرق',
+    features: [
+      {
+        title: 'سريع',
+        description: 'وداعًا للمكالمات والعروض المعقدة.'
+      },
+      {
+        title: 'موثوق',
+        description: 'منظفون موثوقون ومؤمن عليهم ومقيمون من العملاء'
+      },
+      {
+        title: 'فاخر',
+        description: 'نظافة فاخرة بلا تنازلات'
+      }
+    ]
+  },
+  pricing: {
+    title: 'أسعار شفافة',
+    subtitle: 'لا مفاجآت، كل شيء واضح منذ البداية',
+    features: [
+      'تسعير واضح وشفاف',
+      'حساب تلقائي يناسب كل احتياج',
+      'إمكانية التعديل حسب الاحتياجات الفعلية',
+      'دفع آمن بعد التأكيد'
+    ],
+    examples: [
+      {
+        service: 'السجاد',
+        price: 'ابتداءً من 12€/م²',
+        description: 'تنظيف احترافي وعميق'
+      },
+      {
+        service: 'حمام السباحة',
+        price: 'ابتداءً من 14€/م²',
+        description: 'تنظيف كامل للقاع والجدران'
+      }
+    ],
+    calculator: {
+      title: 'مثال: سجاد = 12€/م²',
+      calculation: '20م² = 240€ شامل الضريبة'
+    },
+    cta: 'عرض جميع الأسعار'
+  },
+  pricingModal: {
+    title: 'جميع الأسعار',
+    subtitle: 'تسعير شفاف لجميع خدمات التنظيف لدينا',
+    close: 'إغلاق',
+    bookService: 'احجز هذه الخدمة',
+    categories: {
+      'Nettoyage Intérieur': 'تنظيف داخلي',
+      'Nettoyage Commercial': 'تنظيف تجاري',
+      'Textiles & Mobilier': 'الأقمشة والأثاث',
+      'Extérieur & Véhicules': 'الخارجية والمركبات',
+      'Services Spécialisés': 'خدمات متخصصة'
+    }
+  },
+  mobile: {
+    title: 'تحميل التطبيق',
+    subtitle: 'جميع خدمات التنظيف الخاصة بك في تطبيق واحد.',
+    description: 'إشعارات لحظية، دفع آمن، تتبع المهام، تقييم المنظفين.',
+    features: [
+      'احجز في بضع نقرات',
+      'تتبع مباشر',
+      'دفع آمن',
+      'سجل الخدمات'
+    ],
+    userApp: {
+      title: 'تطبيق العميل',
+      description: 'احجز وتابع خدمات التنظيف الخاصة بك',
+      appStore: 'متجر التطبيقات',
+      googlePlay: 'جوجل بلاي'
+    },
+    cleanerApp: {
+      title: 'تطبيق المنظف',
+      description: 'إدارة مهامك وعملائك',
+      appStore: 'متجر التطبيقات',
+      googlePlay: 'جوجل بلاي'
+    }
+  },
+  finalCta: {
+    title: 'تنديف. التطبيق الذي يسهل التنظيف.',
+    description: 'خدمة تنظيف مصممة للأفراد والشركات.',
+    cta: 'جرّب تنديف الآن'
+  },
+  footer: {
+    description: 'خدمة تنظيف الجيل الجديد مصممة للأفراد والشركات.',
+    services: 'الخدمات',
+    servicesList: [
+      'تنظيف المنازل',
+      'التنظيف الجاف المنزلي',
+      'صيانة الحدائق',
+      'السجاد والموكيت',
+      'حمامات السباحة',
+      'تنظيف ما بعد الترميم'
+    ],
+    quickLinks: 'روابط سريعة',
+    location: 'متوفرة في جميع أنحاء فرنسا',
+    copyright: 'تنظيف الجيل الجديد.',
+    about: 'من نحن',
+    faq: 'الأسئلة الشائعة',
+    contact: 'تواصل معنا',
+    followUs: 'تابعنا',
+    privacy: 'سياسة الخصوصية',
+    terms: 'الشروط والأحكام'
+  },
+  pages: {
+    help: 'مركز المساعدة',
+    contact: 'تواصل معنا',
+    terms: 'الشروط والأحكام',
+    privacy: 'سياسة الخصوصية',
+    company: 'للشركات'
+  }
 },
-pages: {
-  help: 'مركز المساعدة',
-  contact: 'اتصل',
-  terms: 'الشروط والأحكام',
-  privacy: 'سياسة الخصوصية',
-  company: 'الشركات'
-}
- },
- es: {
- nav: {
- services: 'Servicios',
- howItWorks: 'Cómo funciona',
- whyTandhif: 'Por qué Tandhif',
- pricing: 'Precios',
- mobile: 'Aplicación',
- becomeCleanerShort: 'Ser limpiador',
- bookNow: 'Reservar',
- account: 'Mi cuenta'
- },
- hero: {
- title: 'Tandhif',
- subtitle: 'Limpieza, simplificada.',
- description: 'Casa, alfombras, jardín, piscina... en pocos clics.',
- feature1: 'Limpiadores verificados y calificados',
- feature2: 'Disponible en toda Francia',
- ctaPrimary: 'Pedir ahora',
- ctaSecondary: 'Ser limpiador',
- stats: {
- clients: '+2000 clientes satisfechos',
- cleaners: '+500 limpiadores activos',
- cities: '+50 ciudades cubiertas'
- }
- },
- services: {
- title: 'Nuestros servicios',
- subtitle: 'Todo lo que necesitas para un interior impecable',
- items: [
- {
- title: 'Limpieza del hogar',
- description: 'Limpieza completa y regular de tu hogar'
- },
- {
- title: 'Tintorería / Alfombras',
- description: 'Limpieza profesional de tus textiles'
- },
- {
- title: 'Jardín y exterior',
- description: 'Mantenimiento de espacios verdes y terrazas'
- },
- {
- title: 'Piscina',
- description: 'Limpieza y mantenimiento de tu piscina'
- },
- {
- title: 'Restauración',
- description: 'Limpieza después de obras o mudanza'
- },
- {
- title: 'Limpieza especializada',
- description: 'Colchones, sillones y superficies delicadas'
- }
- ]
- },
- howItWorks: {
- title: '¿Cómo funciona?',
- subtitle: 'Un proceso simple de 3 pasos',
- steps: [
- {
- title: 'Selección del servicio',
- description: 'Elige el tipo de limpieza que necesitas'
- },
- {
- title: 'Limpiador local asignado',
- description: 'Te asignamos un profesional cualificado cerca de ti'
- },
- {
- title: 'Seguimiento en tiempo real',
- description: 'Sigue el progreso y paga de forma segura'
- }
- ],
- cta: 'Empezar ahora'
- },
- whyTandhif: {
- title: '¿Por qué elegir Tandhif?',
- subtitle: 'La diferencia que marca la diferencia',
- features: [
- {
- title: 'Rápido',
- description: 'Pedido en 30 segundos, intervención en 24h'
- },
- {
- title: 'Confiable',
- description: 'Limpiadores verificados, asegurados y evaluados'
- },
- {
- title: 'Premium',
- description: 'Productos profesionales y acabados impecables'
- }
- ]
- },
- pricing: {
- title: 'Precios transparentes',
- subtitle: 'Sin sorpresas, todo está claro desde el principio',
- features: [
- 'Precios claros y transparentes',
- 'Cálculo automático según superficie',
- 'Posibilidad de ajuste según necesidades reales',
- 'Pago seguro después de validación'
- ],
- examples: [
- {
- service: 'Alfombra',
- price: 'desde 12€/m²',
- description: 'Limpieza profunda profesional'
- },
- {
- service: 'Piscina',
- price: 'desde 14€/m²',
- description: 'Limpieza completa de fondo y paredes'
- }
- ],
- calculator: {
- title: 'Ejemplo: Alfombra = 12€/m²',
- calculation: '20m² = 240€ IVA incluido'
- },
- cta: 'Ver todas las tarifas'
- },
- pricingModal: {
- title: 'Todos los precios',
- subtitle: 'Precios transparentes para todos nuestros servicios de limpieza',
- close: 'Cerrar',
- bookService: 'Reservar este servicio',
- categories: {
- 'Limpieza Interior': 'Limpieza Interior',
- 'Limpieza Comercial': 'Limpieza Comercial',
- 'Textiles y Mobiliario': 'Textiles y Mobiliario',
- 'Exterior y Vehículos': 'Exterior y Vehículos',
- 'Servicios Especializados': 'Servicios Especializados'
- }
- },
- mobile: {
- title: 'Descargar la aplicación',
- subtitle: 'Todo Tandhif en tu bolsillo',
- description: 'Notificaciones en tiempo real, pagos seguros, seguimiento de intervenciones, evaluación de limpiadores.',
- features: [
- 'Reserva en pocos clics',
- 'Seguimiento en tiempo real',
- 'Pago seguro',
- 'Historial de intervenciones'
- ],
- userApp: {
- title: 'App Cliente',
- description: 'Reserva y sigue tus servicios de limpieza',
- appStore: 'App Store',
- googlePlay: 'Google Play'
- },
- cleanerApp: {
- title: 'App Limpiador',
- description: 'Gestiona tus misiones y clientes',
- appStore: 'App Store',
- googlePlay: 'Google Play'
- }
- },
- finalCta: {
- title: 'Tandhif. Mucho más que limpieza.',
- description: 'El servicio de limpieza diseñado para particulares y profesionales.',
- cta: 'Prueba Tandhif ahora'
- },
- footer: {
-  description: 'El servicio de limpieza de nueva generación diseñado para particulares y profesionales.',
-  services: 'Servicios',
-  servicesList: [
-    'Limpieza del hogar',
-    'Tintorería a domicilio',
-    'Mantenimiento de jardín',
-    'Alfombras y moquetas',
-    'Piscinas',
-    'Restauración'
-  ],
-  quickLinks: 'Enlaces rápidos',
-  location: 'En toda Francia',
-  copyright: 'Limpieza de nueva generación.',
-  about: 'Acerca de',
-  faq: 'FAQ',
-  contact: 'Contacto',
-  followUs: 'Síguenos',
-  privacy: 'Política de privacidad',
-  terms: 'Términos'
+es: {
+  nav: {
+    services: 'Servicios',
+    howItWorks: '¿Cómo funciona?',
+    whyTandhif: '¿Por qué Tandhif?',
+    pricing: 'Precios',
+    mobile: 'Aplicación',
+    becomeCleanerShort: 'Empresa',
+    bookNow: 'Iniciar sesión',
+    account: 'Contacto'
+  },
+  hero: {
+    title: 'Tandhif',
+    subtitle: 'la limpieza con un clic. Fácil. Ahora.',
+    description: 'Una sola aplicación para limpiar todo. Reserva en 30 segundos.',
+    feature1: 'Limpiezas verificadas y calificadas',
+    feature2: 'Disponible en toda Francia',
+    ctaPrimary: 'Reservar ahora',
+    ctaSecondary: 'Conviértete en cleaner',
+    stats: {
+      clients: '+2000 clientes satisfechos',
+      cleaners: '+500 cleaners activos',
+      cities: '+50 ciudades cubiertas'
+    }
+  },
+  services: {
+    title: 'Nuestros servicios',
+    subtitle: 'Limpieza para tu día a día, rediseñada a demanda.',
+    items: [
+      {
+        title: 'Limpieza del hogar',
+        description: 'Limpieza completa y regular de tu domicilio'
+      },
+      {
+        title: 'Tintorería / Alfombras',
+        description: 'Limpieza profesional de tus textiles'
+      },
+      {
+        title: 'Jardín y exterior',
+        description: 'Mantenimiento de jardines y terrazas'
+      },
+      {
+        title: 'Piscina',
+        description: 'Limpieza y mantenimiento de tu piscina'
+      },
+      {
+        title: 'Limpieza post obra',
+        description: 'Limpieza tras reformas o mudanzas'
+      },
+      {
+        title: 'Limpieza especializada',
+        description: 'Colchones, sillones y superficies delicadas'
+      }
+    ]
+  },
+  howItWorks: {
+    title: '¿Cómo funciona?',
+    subtitle: 'Un proceso simple en 3 pasos',
+    steps: [
+      {
+        title: 'Selección del servicio',
+        description: 'Elige el tipo de limpieza que necesitas'
+      },
+      {
+        title: 'Cleaner asignado',
+        description: 'Te asignamos un profesional calificado cerca de ti'
+      },
+      {
+        title: 'Seguimiento en tiempo real',
+        description: 'Sigue el progreso y paga con seguridad'
+      }
+    ],
+    cta: 'Comenzar ahora'
+  },
+  whyTandhif: {
+    title: '¿Por qué elegir Tandhif?',
+    subtitle: 'La diferencia que marca la diferencia',
+    features: [
+      {
+        title: 'Rápido',
+        description: 'Olvídate de llamadas o presupuestos complicados.'
+      },
+      {
+        title: 'Confiable',
+        description: 'Cleaners verificados, asegurados y evaluados por nuestros clientes'
+      },
+      {
+        title: 'Premium',
+        description: 'Limpieza de alta calidad, sin compromisos'
+      }
+    ]
+  },
+  pricing: {
+    title: 'Precios transparentes',
+    subtitle: 'Sin sorpresas, todo claro desde el principio',
+    features: [
+      'Precios claros y transparentes',
+      'Cálculo automático adaptado a cada necesidad',
+      'Posibilidad de ajuste según necesidades reales',
+      'Pago seguro tras validación'
+    ],
+    examples: [
+      {
+        service: 'Alfombra',
+        price: 'desde 12€/m²',
+        description: 'Limpieza profesional en profundidad'
+      },
+      {
+        service: 'Piscina',
+        price: 'desde 14€/m²',
+        description: 'Limpieza completa de fondo y paredes'
+      }
+    ],
+    calculator: {
+      title: 'Ejemplo: Alfombra = 12€/m²',
+      calculation: '20m² = 240€ IVA incluido'
+    },
+    cta: 'Ver todos los precios'
+  },
+  pricingModal: {
+    title: 'Todos los precios',
+    subtitle: 'Precios transparentes para todos nuestros servicios de limpieza',
+    close: 'Cerrar',
+    bookService: 'Reservar este servicio',
+    categories: {
+      'Nettoyage Intérieur': 'Limpieza interior',
+      'Nettoyage Commercial': 'Limpieza comercial',
+      'Textiles & Mobilier': 'Textiles y mobiliario',
+      'Extérieur & Véhicules': 'Exterior y vehículos',
+      'Services Spécialisés': 'Servicios especializados'
+    }
+  },
+  mobile: {
+    title: 'Descarga la aplicación',
+    subtitle: 'Todos tus servicios de limpieza en una sola aplicación.',
+    description: 'Notificaciones en tiempo real, pagos seguros, seguimiento de servicios, evaluación de cleaners.',
+    features: [
+      'Reservas en pocos clics',
+      'Seguimiento en tiempo real',
+      'Pago seguro',
+      'Historial de servicios'
+    ],
+    userApp: {
+      title: 'App para clientes',
+      description: 'Reserva y sigue tus servicios de limpieza',
+      appStore: 'App Store',
+      googlePlay: 'Google Play'
+    },
+    cleanerApp: {
+      title: 'App para cleaners',
+      description: 'Gestiona tus trabajos y clientes',
+      appStore: 'App Store',
+      googlePlay: 'Google Play'
+    }
+  },
+  finalCta: {
+    title: 'Tandhif. La aplicación que simplifica la limpieza.',
+    description: 'El servicio de limpieza pensado para particulares y profesionales.',
+    cta: 'Prueba Tandhif ahora'
+  },
+  footer: {
+    description: 'El servicio de limpieza de nueva generación pensado para particulares y empresas.',
+    services: 'Servicios',
+    servicesList: [
+      'Limpieza del hogar',
+      'Tintorería a domicilio',
+      'Mantenimiento de jardines',
+      'Alfombras y moquetas',
+      'Piscinas',
+      'Limpieza post obra'
+    ],
+    quickLinks: 'Enlaces rápidos',
+    location: 'En toda Francia',
+    copyright: 'Limpieza de nueva generación.',
+    about: 'Acerca de',
+    faq: 'Preguntas frecuentes',
+    contact: 'Contacto',
+    followUs: 'Síguenos',
+    privacy: 'Política de privacidad',
+    terms: 'Términos y condiciones'
+  },
+  pages: {
+    help: 'Centro de ayuda',
+    contact: 'Contacto',
+    terms: 'Términos y condiciones',
+    privacy: 'Política de privacidad',
+    company: 'Empresas'
+  }
 },
-pages: {
-  help: 'Centro de ayuda',
-  contact: 'Contacto',
-  terms: 'Términos y Condiciones',
-  privacy: 'Política de privacidad',
-  company: 'Empresas'
+pt: {
+  nav: {
+    services: 'Serviços',
+    howItWorks: 'Como funciona',
+    whyTandhif: 'Por que a Tandhif',
+    pricing: 'Preços',
+    mobile: 'Aplicativo',
+    becomeCleanerShort: 'Empresa',
+    bookNow: 'Entrar',
+    account: 'Contato'
+  },
+  hero: {
+    title: 'Tandhif',
+    subtitle: 'limpeza com um clique. Fácil. Agora.',
+    description: 'Um único aplicativo para limpar tudo. Reserve em 30 segundos.',
+    feature1: 'Profissionais verificados e avaliados',
+    feature2: 'Disponível em toda a França',
+    ctaPrimary: 'Reservar agora',
+    ctaSecondary: 'Torne-se um cleaner',
+    stats: {
+      clients: '+2000 clientes satisfeitos',
+      cleaners: '+500 cleaners ativos',
+      cities: '+50 cidades atendidas'
+    }
+  },
+  services: {
+    title: 'Nossos serviços',
+    subtitle: 'Limpeza para o seu dia a dia, reinventada sob demanda.',
+    items: [
+      {
+        title: 'Limpeza residencial',
+        description: 'Limpeza completa e regular da sua casa'
+      },
+      {
+        title: 'Lavanderia / Tapetes',
+        description: 'Limpeza profissional dos seus têxteis'
+      },
+      {
+        title: 'Jardim & Exterior',
+        description: 'Manutenção dos seus jardins e terraços'
+      },
+      {
+        title: 'Piscina',
+        description: 'Limpeza e manutenção da sua piscina'
+      },
+      {
+        title: 'Pós-obra',
+        description: 'Limpeza após reformas ou mudanças'
+      },
+      {
+        title: 'Limpeza especializada',
+        description: 'Colchões, sofás e superfícies delicadas'
+      }
+    ]
+  },
+  howItWorks: {
+    title: 'Como funciona?',
+    subtitle: 'Um processo simples em 3 etapas',
+    steps: [
+      {
+        title: 'Seleção do serviço',
+        description: 'Escolha o tipo de limpeza que você precisa'
+      },
+      {
+        title: 'Cleaner atribuído',
+        description: 'Atribuímos um profissional qualificado perto de você'
+      },
+      {
+        title: 'Acompanhamento em tempo real',
+        description: 'Acompanhe o andamento e pague com segurança'
+      }
+    ],
+    cta: 'Comece agora'
+  },
+  whyTandhif: {
+    title: 'Por que escolher a Tandhif?',
+    subtitle: 'A diferença que faz a diferença',
+    features: [
+      {
+        title: 'Rápido',
+        description: 'Chega de ligações ou orçamentos complicados.'
+      },
+      {
+        title: 'Confiável',
+        description: 'Cleaners verificados, segurados e avaliados por clientes'
+      },
+      {
+        title: 'Premium',
+        description: 'Limpeza de alto padrão, sem compromissos'
+      }
+    ]
+  },
+  pricing: {
+    title: 'Preços transparentes',
+    subtitle: 'Sem surpresas, tudo claro desde o início',
+    features: [
+      'Preços claros e transparentes',
+      'Cálculo automático adaptado a cada necessidade',
+      'Ajustável conforme a necessidade real',
+      'Pagamento seguro após confirmação'
+    ],
+    examples: [
+      {
+        service: 'Tapete',
+        price: 'a partir de 12€/m²',
+        description: 'Limpeza profunda e profissional'
+      },
+      {
+        service: 'Piscina',
+        price: 'a partir de 14€/m²',
+        description: 'Limpeza completa do fundo e das paredes'
+      }
+    ],
+    calculator: {
+      title: 'Exemplo: Tapete = 12€/m²',
+      calculation: '20m² = 240€ com impostos'
+    },
+    cta: 'Ver todos os preços'
+  },
+  pricingModal: {
+    title: 'Todos os preços',
+    subtitle: 'Preços transparentes para todos os nossos serviços de limpeza',
+    close: 'Fechar',
+    bookService: 'Reservar este serviço',
+    categories: {
+      'Nettoyage Intérieur': 'Limpeza Interna',
+      'Nettoyage Commercial': 'Limpeza Comercial',
+      'Textiles & Mobilier': 'Têxteis e Mobiliário',
+      'Extérieur & Véhicules': 'Externo e Veículos',
+      'Services Spécialisés': 'Serviços Especializados'
+    }
+  },
+  mobile: {
+    title: 'Baixe o aplicativo',
+    subtitle: 'Todos os seus serviços de limpeza em um só aplicativo.',
+    description: 'Notificações em tempo real, pagamentos seguros, acompanhamento de tarefas e avaliações dos cleaners.',
+    features: [
+      'Reserva em poucos cliques',
+      'Acompanhamento em tempo real',
+      'Pagamento seguro',
+      'Histórico de serviços'
+    ],
+    userApp: {
+      title: 'App do Cliente',
+      description: 'Reserve e acompanhe seus serviços de limpeza',
+      appStore: 'App Store',
+      googlePlay: 'Google Play'
+    },
+    cleanerApp: {
+      title: 'App do Cleaner',
+      description: 'Gerencie seus trabalhos e clientes',
+      appStore: 'App Store',
+      googlePlay: 'Google Play'
+    }
+  },
+  finalCta: {
+    title: 'Tandhif. O app que simplifica a limpeza.',
+    description: 'O serviço de limpeza pensado para pessoas e empresas.',
+    cta: 'Experimente a Tandhif agora'
+  },
+  footer: {
+    description: 'O serviço de limpeza de nova geração pensado para pessoas e empresas.',
+    services: 'Serviços',
+    servicesList: [
+      'Limpeza residencial',
+      'Lavanderia em domicílio',
+      'Manutenção de jardins',
+      'Tapetes e carpetes',
+      'Piscinas',
+      'Pós-obra'
+    ],
+    quickLinks: 'Links rápidos',
+    location: 'Em toda a França',
+    copyright: 'Limpeza de nova geração.',
+    about: 'Sobre',
+    faq: 'FAQ',
+    contact: 'Contato',
+    followUs: 'Siga-nos',
+    privacy: 'Política de Privacidade',
+    terms: 'Termos de Uso'
+  },
+  pages: {
+    help: 'Central de Ajuda',
+    contact: 'Contato',
+    terms: 'Termos e Condições',
+    privacy: 'Política de Privacidade',
+    company: 'Empresas'
+  }
 }
- },
- pt: {
- nav: {
- services: 'Serviços',
- howItWorks: 'Como funciona',
- whyTandhif: 'Por que Tandhif',
- pricing: 'Preços',
- mobile: 'Aplicativo',
- becomeCleanerShort: 'Ser limpador',
- bookNow: 'Reservar',
- account: 'Minha conta'
- },
- hero: {
- title: 'Tandhif',
- subtitle: 'Limpeza, simplificada.',
- description: 'Casa, tapetes, jardim, piscina... em poucos cliques.',
- feature1: 'Limpadores verificados e avaliados',
- feature2: 'Disponível em toda a França',
- ctaPrimary: 'Pedir agora',
- ctaSecondary: 'Ser limpador',
- stats: {
- clients: '+2000 clientes satisfeitos',
- cleaners: '+500 limpadores ativos',
- cities: '+50 cidades cobertas'
- }
- },
- services: {
- title: 'Nossos serviços',
- subtitle: 'Tudo que você precisa para um interior impecável',
- items: [
- {
- title: 'Limpeza doméstica',
- description: 'Limpeza completa e regular da sua casa'
- },
- {
- title: 'Lavanderia / Tapetes',
- description: 'Limpeza profissional dos seus têxteis'
- },
- {
- title: 'Jardim e exterior',
- description: 'Manutenção de espaços verdes e terraços'
- },
- {
- title: 'Piscina',
- description: 'Limpeza e manutenção da sua piscina'
- },
- {
- title: 'Restauração',
- description: 'Limpeza após obras ou mudança'
- },
- {
- title: 'Limpeza especializada',
- description: 'Colchões, poltronas e superfícies delicadas'
- }
- ]
- },
- howItWorks: {
- title: 'Como funciona?',
- subtitle: 'Um processo simples de 3 etapas',
- steps: [
- {
- title: 'Seleção do serviço',
- description: 'Escolha o tipo de limpeza que você precisa'
- },
- {
- title: 'Limpador local designado',
- description: 'Designamos um profissional qualificado perto de você'
- },
- {
- title: 'Acompanhamento em tempo real',
- description: 'Acompanhe o progresso e pague com segurança'
- }
- ],
- cta: 'Começar agora'
- },
- whyTandhif: {
- title: 'Por que escolher Tandhif?',
- subtitle: 'A diferença que faz a diferença',
- features: [
- {
- title: 'Rápido',
- description: 'Pedido em 30 segundos, intervenção em 24h'
- },
- {
- title: 'Confiável',
- description: 'Limpadores verificados, segurados e avaliados'
- },
- {
- title: 'Premium',
- description: 'Produtos profissionais e acabamentos impecáveis'
- }
- ]
- },
- pricing: {
- title: 'Preços transparentes',
- subtitle: 'Sem surpresas, tudo está claro desde o início',
- features: [
- 'Preços claros e transparentes',
- 'Cálculo automático por área',
- 'Possibilidade de ajuste conforme necessidades reais',
- 'Pagamento seguro após validação'
- ],
- examples: [
- {
- service: 'Tapete',
- price: 'a partir de 12€/m²',
- description: 'Limpeza profunda profissional'
- },
- {
- service: 'Piscina',
- price: 'a partir de 14€/m²',
- description: 'Limpeza completa do fundo e paredes'
- }
- ],
- calculator: {
- title: 'Exemplo: Tapete = 12€/m²',
- calculation: '20m² = 240€ com impostos'
- },
- cta: 'Ver todas as tarifas'
- },
- pricingModal: {
- title: 'Todos os preços',
- subtitle: 'Preços transparentes para todos os nossos serviços de limpeza',
- close: 'Fechar',
- bookService: 'Reservar este serviço',
- categories: {
- 'Limpeza Interior': 'Limpeza Interior',
- 'Limpeza Comercial': 'Limpeza Comercial',
- 'Têxteis e Mobiliário': 'Têxteis e Mobiliário',
- 'Exterior e Veículos': 'Exterior e Veículos',
- 'Serviços Especializados': 'Serviços Especializados'
- }
- },
- mobile: {
- title: 'Baixar o aplicativo',
- subtitle: 'Todo Tandhif no seu bolso',
- description: 'Notificações em tempo real, pagamentos seguros, acompanhamento de intervenções, avaliação de limpadores.',
- features: [
- 'Reserva em poucos cliques',
- 'Acompanhamento em tempo real',
- 'Pagamento seguro',
- 'Histórico de intervenções'
- ],
- userApp: {
- title: 'App Cliente',
- description: 'Reserve e acompanhe seus serviços de limpeza',
- appStore: 'App Store',
- googlePlay: 'Google Play'
- },
- cleanerApp: {
- title: 'App Limpador',
- description: 'Gerencie suas missões e clientes',
- appStore: 'App Store',
- googlePlay: 'Google Play'
- }
- },
- finalCta: {
- title: 'Tandhif. Muito mais que limpeza.',
- description: 'O serviço de limpeza projetado para particulares e profissionais.',
- cta: 'Experimente Tandhif agora'
- },
- footer: {
-  description: 'O serviço de limpeza de nova geração projetado para particulares e profissionais.',
-  services: 'Serviços',
-  servicesList: [
-    'Limpeza doméstica',
-    'Lavanderia em casa',
-    'Manutenção de jardim',
-    'Tapetes e carpetes',
-    'Piscinas',
-    'Restauração'
-  ],
-  quickLinks: 'Links rápidos',
-  location: 'Em toda a França',
-  copyright: 'Limpeza de nova geração.',
-  about: 'Sobre',
-  faq: 'FAQ',
-  contact: 'Contato',
-  followUs: 'Siga-nos',
-  privacy: 'Política de privacidade',
-  terms: 'Termos'
-},
-pages: {
-  help: 'Centro de ajuda',
-  contact: 'Contato',
-  terms: 'Termos e Condições',
-  privacy: 'Política de privacidade',
-  company: 'Empresas'
+,
+it: {
+  nav: {
+    services: 'Servizi',
+    howItWorks: 'Come funziona',
+    whyTandhif: 'Perché Tandhif',
+    pricing: 'Prezzi',
+    mobile: 'App',
+    becomeCleanerShort: 'Azienda',
+    bookNow: 'Accedi',
+    account: 'Contatto'
+  },
+  hero: {
+    title: 'Tandhif',
+    subtitle: 'la pulizia con un clic. Facile. Subito.',
+    description: 'Un’unica app per pulire tutto. Prenota in 30 secondi.',
+    feature1: 'Cleaner verificati e recensiti',
+    feature2: 'Disponibile in tutta la Francia',
+    ctaPrimary: 'Prenota ora',
+    ctaSecondary: 'Diventa un cleaner',
+    stats: {
+      clients: '+2000 clienti soddisfatti',
+      cleaners: '+500 cleaner attivi',
+      cities: '+50 città servite'
+    }
+  },
+  services: {
+    title: 'I nostri servizi',
+    subtitle: 'La pulizia quotidiana, ripensata su richiesta.',
+    items: [
+      {
+        title: 'Pulizia domestica',
+        description: 'Pulizia completa e regolare della tua casa'
+      },
+      {
+        title: 'Lavanderia / Tappeti',
+        description: 'Pulizia professionale dei tuoi tessuti'
+      },
+      {
+        title: 'Giardino & Esterni',
+        description: 'Manutenzione di giardini e terrazze'
+      },
+      {
+        title: 'Piscina',
+        description: 'Pulizia e manutenzione della piscina'
+      },
+      {
+        title: 'Pulizia post lavori',
+        description: 'Pulizie dopo ristrutturazioni o traslochi'
+      },
+      {
+        title: 'Pulizia specializzata',
+        description: 'Materassi, poltrone e superfici delicate'
+      }
+    ]
+  },
+  howItWorks: {
+    title: 'Come funziona?',
+    subtitle: 'Un processo semplice in 3 passaggi',
+    steps: [
+      {
+        title: 'Selezione del servizio',
+        description: 'Scegli il tipo di pulizia di cui hai bisogno'
+      },
+      {
+        title: 'Cleaner assegnato',
+        description: 'Ti assegniamo un professionista qualificato vicino a te'
+      },
+      {
+        title: 'Monitoraggio in tempo reale',
+        description: 'Segui lo stato e paga in sicurezza'
+      }
+    ],
+    cta: 'Inizia ora'
+  },
+  whyTandhif: {
+    title: 'Perché scegliere Tandhif?',
+    subtitle: 'La differenza che fa la differenza',
+    features: [
+      {
+        title: 'Veloce',
+        description: 'Niente più chiamate o preventivi complicati.'
+      },
+      {
+        title: 'Affidabile',
+        description: 'Cleaner verificati, assicurati e valutati dai nostri clienti'
+      },
+      {
+        title: 'Premium',
+        description: 'Pulizia di alta qualità, senza compromessi'
+      }
+    ]
+  },
+  pricing: {
+    title: 'Prezzi trasparenti',
+    subtitle: 'Nessuna sorpresa, tutto chiaro fin dall’inizio',
+    features: [
+      'Prezzi chiari e trasparenti',
+      'Calcolo automatico su misura per ogni esigenza',
+      'Possibilità di adattamento in base alle necessità reali',
+      'Pagamento sicuro dopo la conferma'
+    ],
+    examples: [
+      {
+        service: 'Moquette',
+        price: 'da 12€/m²',
+        description: 'Pulizia professionale profonda'
+      },
+      {
+        service: 'Piscina',
+        price: 'da 14€/m²',
+        description: 'Pulizia completa di fondo e pareti'
+      }
+    ],
+    calculator: {
+      title: 'Esempio: Moquette = 12€/m²',
+      calculation: '20m² = 240€ IVA inclusa'
+    },
+    cta: 'Vedi tutti i prezzi'
+  },
+  pricingModal: {
+    title: 'Tutti i prezzi',
+    subtitle: 'Prezzi trasparenti per tutti i nostri servizi di pulizia',
+    close: 'Chiudi',
+    bookService: 'Prenota questo servizio',
+    categories: {
+      'Nettoyage Intérieur': 'Pulizia Interna',
+      'Nettoyage Commercial': 'Pulizia Commerciale',
+      'Textiles & Mobilier': 'Tessuti e Arredamento',
+      'Extérieur & Véhicules': 'Esterni e Veicoli',
+      'Services Spécialisés': 'Servizi Specializzati'
+    }
+  },
+  mobile: {
+    title: 'Scarica l’app',
+    subtitle: 'Tutti i tuoi servizi di pulizia in un’unica app.',
+    description: 'Notifiche in tempo reale, pagamenti sicuri, monitoraggio degli interventi e valutazione dei cleaner.',
+    features: [
+      'Prenotazione in pochi clic',
+      'Monitoraggio in tempo reale',
+      'Pagamento sicuro',
+      'Storico degli interventi'
+    ],
+    userApp: {
+      title: 'App Cliente',
+      description: 'Prenota e monitora i tuoi servizi di pulizia',
+      appStore: 'App Store',
+      googlePlay: 'Google Play'
+    },
+    cleanerApp: {
+      title: 'App Cleaner',
+      description: 'Gestisci incarichi e clienti',
+      appStore: 'App Store',
+      googlePlay: 'Google Play'
+    }
+  },
+  finalCta: {
+    title: 'Tandhif. L’app che semplifica la pulizia.',
+    description: 'Il servizio di pulizia pensato per privati e professionisti.',
+    cta: 'Prova Tandhif ora'
+  },
+  footer: {
+    description: 'Il servizio di pulizia di nuova generazione pensato per privati e aziende.',
+    services: 'Servizi',
+    servicesList: [
+      'Pulizia domestica',
+      'Lavanderia a domicilio',
+      'Manutenzione giardini',
+      'Tappeti e moquette',
+      'Piscine',
+      'Pulizie post lavori'
+    ],
+    quickLinks: 'Link rapidi',
+    location: 'In tutta la Francia',
+    copyright: 'Pulizia di nuova generazione.',
+    about: 'Chi siamo',
+    faq: 'FAQ',
+    contact: 'Contatto',
+    followUs: 'Seguici',
+    privacy: 'Informativa sulla privacy',
+    terms: 'Termini e condizioni'
+  },
+  pages: {
+    help: 'Centro assistenza',
+    contact: 'Contatto',
+    terms: 'Termini e condizioni',
+    privacy: 'Privacy',
+    company: 'Aziende'
+  }
 }
- },
- it: {
- nav: {
- services: 'Servizi',
- howItWorks: 'Come funziona',
- whyTandhif: 'Perché Tandhif',
- pricing: 'Prezzi',
- mobile: 'App',
- becomeCleanerShort: 'Diventa pulitore',
- bookNow: 'Prenota',
- account: 'Il mio account'
- },
- hero: {
- title: 'Tandhif',
- subtitle: 'Pulizia, semplificata.',
- description: 'Casa, tappeti, giardino, piscina... in pochi clic.',
- feature1: 'Pulitori verificati e valutati',
- feature2: 'Disponibile in tutta la Francia',
- ctaPrimary: 'Ordina ora',
- ctaSecondary: 'Diventa pulitore',
- stats: {
- clients: '+2000 clienti soddisfatti',
- cleaners: '+500 pulitori attivi',
- cities: '+50 città coperte'
- }
- },
- services: {
- title: 'I nostri servizi',
- subtitle: 'Tutto ciò di cui hai bisogno per un interno impeccabile',
- items: [
- {
- title: 'Pulizia domestica',
- description: 'Pulizia completa e regolare della tua casa'
- },
- {
- title: 'Lavanderia / Tappeti',
- description: 'Pulizia professionale dei tuoi tessili'
- },
- {
- title: 'Giardino ed esterno',
- description: 'Manutenzione di spazi verdi e terrazze'
- },
- {
- title: 'Piscina',
- description: 'Pulizia e manutenzione della tua piscina'
- },
- {
- title: 'Restauro',
- description: 'Pulizia dopo lavori o trasloco'
- },
- {
- title: 'Pulizia specializzata',
- description: 'Materassi, poltrone e superfici delicate'
- }
- ]
- },
- howItWorks: {
- title: 'Come funziona?',
- subtitle: 'Un processo semplice in 3 passaggi',
- steps: [
- {
- title: 'Selezione del servizio',
- description: 'Scegli il tipo di pulizia di cui hai bisogno'
- },
- {
- title: 'Pulitore locale assegnato',
- description: 'Ti assegniamo un professionista qualificato vicino a te'
- },
- {
- title: 'Monitoraggio in tempo reale',
- description: 'Segui i progressi e paga in sicurezza'
- }
- ],
- cta: 'Inizia ora'
- },
- whyTandhif: {
- title: 'Perché scegliere Tandhif?',
- subtitle: 'La differenza che fa la differenza',
- features: [
- {
- title: 'Veloce',
- description: 'Ordine in 30 secondi, intervento entro 24h'
- },
- {
- title: 'Affidabile',
- description: 'Pulitori verificati, assicurati e valutati'
- },
- {
- title: 'Premium',
- description: 'Prodotti professionali e finiture impeccabili'
- }
- ]
- },
- pricing: {
- title: 'Prezzi trasparenti',
- subtitle: 'Nessuna sorpresa, tutto è chiaro fin dall\'inizio',
- features: [
- 'Prezzi chiari e trasparenti',
- 'Calcolo automatico per superficie',
- 'Possibilità di adeguamento secondo necessità reali',
- 'Pagamento sicuro dopo convalida'
- ],
- examples: [
- {
- service: 'Tappeto',
- price: 'da 12€/m²',
- description: 'Pulizia profonda professionale'
- },
- {
- service: 'Piscina',
- price: 'da 14€/m²',
- description: 'Pulizia completa fondo e pareti'
- }
- ],
- calculator: {
- title: 'Esempio: Tappeto = 12€/m²',
- calculation: '20m² = 240€ IVA inclusa'
- },
- cta: 'Vedi tutte le tariffe'
- },
- pricingModal: {
- title: 'Tutti i prezzi',
- subtitle: 'Prezzi trasparenti per tutti i nostri servizi di pulizia',
- close: 'Chiudi',
- bookService: 'Prenota questo servizio',
- categories: {
- 'Pulizia Interni': 'Pulizia Interni',
- 'Pulizia Commerciale': 'Pulizia Commerciale',
- 'Tessili e Mobili': 'Tessili e Mobili',
- 'Esterno e Veicoli': 'Esterno e Veicoli',
- 'Servizi Specializzati': 'Servizi Specializzati'
- }
- },
- mobile: {
- title: 'Scarica l\'app',
- subtitle: 'Tutto Tandhif in tasca',
- description: 'Notifiche in tempo reale, pagamenti sicuri, monitoraggio interventi, valutazione pulitori.',
- features: [
- 'Prenotazione in pochi clic',
- 'Monitoraggio in tempo reale',
- 'Pagamento sicuro',
- 'Cronologia interventi'
- ],
- userApp: {
- title: 'App Cliente',
- description: 'Prenota e monitora i tuoi servizi di pulizia',
- appStore: 'App Store',
- googlePlay: 'Google Play'
- },
- cleanerApp: {
- title: 'App Pulitore',
- description: 'Gestisci le tue missioni e clienti',
- appStore: 'App Store',
- googlePlay: 'Google Play'
- }
- },
- finalCta: {
- title: 'Tandhif. Molto più che pulizia.',
- description: 'Il servizio di pulizia progettato per privati e professionisti.',
- cta: 'Prova Tandhif ora'
- },
- footer: {
-  description: 'Il servizio di pulizia di nuova generazione progettato per privati e professionisti.',
-  services: 'Servizi',
-  servicesList: [
-    'Pulizia domestica',
-    'Lavanderia a domicilio',
-    'Manutenzione giardino',
-    'Tappeti e moquette',
-    'Piscine',
-    'Restauro'
-  ],
-  quickLinks: 'Link rapidi',
-  location: 'In tutta la Francia',
-  copyright: 'Pulizia di nuova generazione.',
-  about: 'Chi siamo',
-  faq: 'FAQ',
-  contact: 'Contatto',
-  followUs: 'Seguici',
-  privacy: 'Privacy Policy',
-  terms: 'Termini'
-},
-pages: {
-  help: 'Centro assistenza',
-  contact: 'Contatto',
-  terms: 'Termini e Condizioni',
-  privacy: 'Privacy Policy',
-  company: 'Aziende'
-}
- },
+, 
  de: {
  nav: {
  services: 'Dienstleistungen',
@@ -1140,15 +1142,15 @@ pages: {
  whyTandhif: 'Warum Tandhif',
  pricing: 'Preise',
  mobile: 'App',
- becomeCleanerShort: 'Reiniger werden',
+ becomeCleanerShort: 'Geschäft',
  bookNow: 'Buchen',
- account: 'Mein Konto'
+ account: 'Kontakt'
  },
  hero: {
  title: 'Tandhif',
- subtitle: 'Reinigung, vereinfacht.',
- description: 'Haus, Teppiche, Garten, Pool... mit wenigen Klicks.',
- feature1: 'Verifizierte und bewertete Reiniger',
+ subtitle: 'Reinigung mit einem Klick. Einfach. Jetzt.',
+ description: 'Eine Anwendung für die gesamte Reinigung. Buchung in 30 Sekunden.',
+ feature1: 'Geprüfte und bewertete Reinigungskräfte',
  feature2: 'Verfügbar in ganz Frankreich',
  ctaPrimary: 'Jetzt bestellen',
  ctaSecondary: 'Reiniger werden',

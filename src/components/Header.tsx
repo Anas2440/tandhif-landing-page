@@ -240,7 +240,7 @@ const Header: React.FC<HeaderProps> = ({
               </button>
 
 {/*               
-              <button
+              <button     
                 onClick={() => scrollToSection('hero')}
                 className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
                   isDark 
@@ -249,9 +249,10 @@ const Header: React.FC<HeaderProps> = ({
                 }`}
               >Contect
               </button> */}
-              <button className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 mt-4">
-                {translations.nav.bookNow}
-              </button>
+<button className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-extrabold text-xl tracking-wide transition-all duration-300 hover:bg-yellow-300 mt-4">
+  {translations.nav.bookNow}
+</button>
+
             </nav>
           </div>
         )}
