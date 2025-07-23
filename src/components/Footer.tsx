@@ -36,7 +36,7 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
         : 'bg-gradient-to-b from-gray-50 to-white border-gray-200'
     } border-t py-20`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
           {/* Logo & Description */}
           <div className="lg:col-span-22">
             <div className="flex items-center space-x-2">
@@ -96,7 +96,7 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
             <h3 className={`text-xl font-bold mb-6 ${isDark ? 'text-white' : 'text-black'}`}>
               {translations.footer.services}
             </h3>
-            <ul className="grid grid-cols-3 gap-y-5 gap-x-12">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-x-8 gap-y-6 sm:gap-x-4  sm:gap-y-5">
   {services.map((service, idx) => (
     <li key={idx}>
       <span className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
@@ -106,7 +106,6 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
     </li>
   ))}
 </ul>
-
           </div>
 
           {/* Quick Links */}
