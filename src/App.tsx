@@ -31,6 +31,7 @@ import logo from './images/logo.png';
 import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 import AppIco from './images/Appstoer.png';
 import play from './images/playestoe.png';
+import toon from './images/toon.jpg';
 import { BrowserRouter } from 'react-router-dom';
 import Help from './pages/Help';
 import Contact from './pages/Contact';
@@ -398,7 +399,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
            <div className="text-center mb-16">
             <div className="relative max-w-4xl mx-auto">
               <img 
-                src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Cleaning process illustration"
                 className="w-full h-64 object-cover rounded-3xl shadow-2xl"
               />
@@ -730,29 +731,30 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
         </div>
       </section>
  
-
+   
       {/* Final CTA */}
       <section className={`py-32 ${
         isDark ? 'bg-[#0E0E0E]' : 'bg-white'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Image */}
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                // src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                src={toon}
                 alt="Professional cleaning team"
-                className="w-full h-96 object-cover rounded-3xl shadow-2xl"
+                className="w-full h-96 object-cover rounded-0xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl"></div>
               {/* Floating badge */}
-              <div className="absolute -top-6 -right-6 bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
+              <div className="absolute -top-6 right-3  bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
                 #1 en France
               </div>
             </div>
             
             {/* Right side - Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center px-4 lg:text-left">
               <h2 className={`text-4xl md:text-5xl font-bold mb-8 ${
                 isDark ? 'text-white' : 'text-black'
               }`}>
