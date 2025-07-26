@@ -161,11 +161,26 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               </li>
               <li>
                 <button
+                
+  //                                   onClick={() => {
+  //   onNavigate?.('contact');
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }}
+                  // onClick={() => onNavigate?.('contact')}
+
                                     onClick={() => {
     onNavigate?.('contact');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
   }}
-                  // onClick={() => onNavigate?.('contact')}
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
                 >
@@ -174,9 +189,22 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               </li>
               <li>
                 <button
-                                                    onClick={() => {
-    onNavigate?.('company');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  //                                                   onClick={() => {
+  //   onNavigate?.('company');
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }}
+                                    onClick={() => {
+      onNavigate?.('company');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
   }}
                   // onClick={() => onNavigate?.('company')}
 
@@ -188,10 +216,23 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               </li>
               <li>
                 <button
-                                                                    onClick={() => {
-    onNavigate?.('privacy');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                    onClick={() => {
+      onNavigate?.('privacy');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
   }}
+  //                                                                   onClick={() => {
+  //   onNavigate?.('privacy');
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }}
                   // onClick={() => onNavigate?.('privacy')}
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
@@ -201,10 +242,23 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               </li>
               <li>
                 <button
-                                                                                    onClick={() => {
-    onNavigate?.('terms');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                                               onClick={() => {
+      onNavigate?.('terms');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
   }}
+  //                                                                                   onClick={() => {
+  //   onNavigate?.('terms');
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }}
                   // onClick={() => onNavigate?.('terms')}
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
