@@ -135,11 +135,24 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
               ))}
               <li>
                 <button
-                  // onClick={() => onNavigate?.('help')}
-                    onClick={() => {
+                  onClick={() => {
     onNavigate?.('help');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
   }}
+                  // onClick={() => onNavigate?.('help')}
+  //                   onClick={() => {
+  //   onNavigate?.('help');
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }}
                   className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
                     transition-all duration-300 hover:translate-x-1`}
                 >
