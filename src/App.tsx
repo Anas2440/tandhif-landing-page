@@ -82,11 +82,11 @@ function App() {
 const goHome = () => showPage('home');
 
 // ----- page routing (simple switch) -----
-if (currentPage === 'help')   return <Help    isDark={isDark} onBack={goHome} />;
-if (currentPage === 'contact')return <Contact isDark={isDark} onBack={goHome} />;
-if (currentPage === 'terms')  return <Terms   isDark={isDark} onBack={goHome} />;
-if (currentPage === 'privacy')return <Privacy isDark={isDark} onBack={goHome} />;
-if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHome} />;
+if (currentPage === 'help')   return <Help    isDark={isDark} onBack={goHome} translations={t}/>;
+if (currentPage === 'contact')return <Contact isDark={isDark} onBack={goHome} translations={t}/>;
+if (currentPage === 'terms')  return <Terms   isDark={isDark} onBack={goHome} translations={t}/>;
+if (currentPage === 'privacy')return <Privacy isDark={isDark} onBack={goHome} translations={t}/>;
+if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHome} translations={t}/>;
     /* ---------- helper ---------- */
   const getPlatform = (): 'android' | 'ios' | 'other' => {
     const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
@@ -146,6 +146,14 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             ? 'bg-gradient-to-br from-[#0E0E0E] via-gray-900 to-[#0E0E0E]' 
             : 'bg-gradient-to-br from-gray-50 via-white to-gray-100'
         }`}>
+          {/* Hero Background Image */}
+          <div className="absolute inset-0 opacity-10">
+            <img 
+              src="https://images.pexels.com/photos/4099468/pexels-photo-4099468.jpeg?auto=compress&cs=tinysrgb&w=1920" 
+              alt="Professional cleaning background"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div className="absolute inset-0 opacity-30">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FEE21B] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '0s' }}></div>
             <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-[#FEE21B] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -153,129 +161,149 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            {/* Logo Animation */}
-            <div className="flex justify-center items-center mb-8 group">
-              <div className="relative">
-  <img
-    src={icon} // Replace with your actual path
-    alt="App Icon"
-    className="h-16 w-16 mr-4 group-hover:scale-110 transition-transform duration-500"
-  />
-  <div className="absolute inset-0 h-16 w-16 mr-4 animate-ping opacity-20">
-    <img
-      src={icon} // Optionally use a blurred or transparent version
-      alt="App Icon Ping"
-      className="h-16 w-16"
-    />
-  </div>
-</div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Text content */}
+            <div className="text-center lg:text-left">
+              {/* Logo Animation */}
+              <div className="flex justify-center lg:justify-start items-center mb-8 group">
+                <div className="relative">
+                  <img
+                    src={icon} // Replace with your actual path
+                    alt="App Icon"
+                    className="h-16 w-16 mr-4 group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 h-16 w-16 mr-4 animate-ping opacity-20">
+                    <img
+                      src={icon} // Optionally use a blurred or transparent version
+                      alt="App Icon Ping"
+                      className="h-16 w-16"
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <img
+                    src={logo}
+                    alt="Tandhif Logo"
+                    className="h-10 object-contain" // Keep height fixed, let width adjust
+                  />
+                </div>
+              </div>
+              
+              <h2 className={`text-4xl md:text-6xl font-bold mb-8 ${
+                isDark ? 'text-white' : 'text-black'
+              }`}>
+                {t.hero.subtitle}
+              </h2>
+              
+              <p className={`text-2xl md:text-3xl mb-12 max-w-4xl mx-auto lg:mx-0 leading-relaxed ${
+                isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
+              }`}>
+                {t.hero.description}
+              </p>
+              
+              {/* Features */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center mb-16">
+                <div className={`flex items-center px-6 py-3 rounded-full border transition-all duration-300 hover:scale-105 ${
+                  isDark 
+                    ? 'border-gray-700 bg-gray-800/50 text-[#BFBFBF]' 
+                    : 'border-gray-200 bg-gray-50/50 text-[#7A7A7A]'
+                }`}>
+                  <CheckCircle className="h-6 w-6 text-[#FEE21B] mr-3" />
+                  <span className="font-medium">{t.hero.feature1}</span>
+                </div>
+                <div className={`flex items-center px-6 py-3 rounded-full border transition-all duration-300 hover:scale-105 ${
+                  isDark 
+                    ? 'border-gray-700 bg-gray-800/50 text-[#BFBFBF]' 
+                    : 'border-gray-200 bg-gray-50/50 text-[#7A7A7A]'
+                }`}>
+                  <CheckCircle className="h-6 w-6 text-[#FEE21B] mr-3" />
+                  <span className="font-medium">{t.hero.feature2}</span>
+                </div>
+              </div>
 
-              <div className="flex items-center">
-  <img
-    src={logo}
-    alt="Tandhif Logo"
-    className="h-10 object-contain" // Keep height fixed, let width adjust
-  />
-           </div>
-            </div>
-            
-            <h2 className={`text-4xl md:text-6xl font-bold mb-8 ${
-              isDark ? 'text-white' : 'text-black'
-            }`}>
-              {t.hero.subtitle}
-            </h2>
-            
-            <p className={`text-2xl md:text-3xl mb-12 max-w-4xl mx-auto leading-relaxed ${
-              isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
-            }`}>
-              {t.hero.description}
-            </p>
-            
-            {/* Features */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-              <div className={`flex items-center px-6 py-3 rounded-full border transition-all duration-300 hover:scale-105 ${
-                isDark 
-                  ? 'border-gray-700 bg-gray-800/50 text-[#BFBFBF]' 
-                  : 'border-gray-200 bg-gray-50/50 text-[#7A7A7A]'
-              }`}>
-                <CheckCircle className="h-6 w-6 text-[#FEE21B] mr-3" />
-                <span className="font-medium">{t.hero.feature1}</span>
-              </div>
-              <div className={`flex items-center px-6 py-3 rounded-full border transition-all duration-300 hover:scale-105 ${
-                isDark 
-                  ? 'border-gray-700 bg-gray-800/50 text-[#BFBFBF]' 
-                  : 'border-gray-200 bg-gray-50/50 text-[#7A7A7A]'
-              }`}>
-                <CheckCircle className="h-6 w-6 text-[#FEE21B] mr-3" />
-                <span className="font-medium">{t.hero.feature2}</span>
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-16">
+                <button
+                  onClick={() => openStore('user')}
+                  className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl
+                            transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-2xl"
+                >
+                  {t.hero.ctaPrimary}
+                </button>
+                <button
+                  onClick={() => openStore('cleaner')}
+                  className={`bg-transparent border-2 px-10 py-5 rounded-2xl font-bold text-xl
+                              transition-all duration-300 hover:scale-105 ${
+                    isDark
+                      ? 'border-white text-white hover:bg-white hover:text-black'
+                      : 'border-black text-black hover:bg-black hover:text-white'
+                  }`}
+                >
+                  {t.hero.ctaSecondary}
+                </button>
               </div>
             </div>
 
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-  {/* Primary – User app */}
-  <button
-    onClick={() => openStore('user')}
-    className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl
-               transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-2xl"
-  >
-    {t.hero.ctaPrimary}
-  </button>
- 
-  {/* Secondary – Cleaner app */}
-  <button
-    onClick={() => openStore('cleaner')}
-    className={`bg-transparent border-2 px-10 py-5 rounded-2xl font-bold text-xl
-                transition-all duration-300 hover:scale-105 ${
-      isDark
-        ? 'border-white text-white hover:bg-white hover:text-black'
-        : 'border-black text-black hover:bg-black hover:text-white'
-    }`}
-  >
-    {t.hero.ctaSecondary}
-  </button>
-</div>
- 
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
-                isDark 
-                  ? 'border-gray-700 bg-gray-800/30' 
-                  : 'border-gray-200 bg-gray-50/30'
-              }`}>
-                <div className="text-3xl font-bold text-[#FEE21B] mb-2">
-                  <AnimatedCounter end={2000} prefix="+" />
+            {/* Right side - Hero Image */}
+            <div className="relative hidden lg:block">
+              <div className="relative z-10">
+                <img 
+                  src="https://images.pexels.com/photos/4099120/pexels-photo-4099120.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  alt="Professional cleaner at work"
+                  className="w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+                />
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#FEE21B] rounded-full flex items-center justify-center shadow-xl animate-bounce">
+                  <Sparkles className="h-12 w-12 text-black" />
                 </div>
-                <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {t.hero.stats.clients}
+                <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl">
+                  <CheckCircle className="h-10 w-10 text-green-500" />
                 </div>
               </div>
-              <div className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
-                isDark 
-                  ? 'border-gray-700 bg-gray-800/30' 
-                  : 'border-gray-200 bg-gray-50/30'
-              }`}>
-                <div className="text-3xl font-bold text-[#FEE21B] mb-2">
-                  <AnimatedCounter end={500} prefix="+" />
-                </div>
-                <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {t.hero.stats.cleaners}
-                </div>
-              </div>
-              <div className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
-                isDark 
-                  ? 'border-gray-700 bg-gray-800/30' 
-                  : 'border-gray-200 bg-gray-50/30'
-              }`}>
-                <div className="text-3xl font-bold text-[#FEE21B] mb-2">
-                  <AnimatedCounter end={50} prefix="+" />
-                </div>
-                <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {t.hero.stats.cities}
-                </div>
-              </div>
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl transform rotate-3 scale-105 -z-10"></div>
             </div>
+          </div>
+          {/* Stats */}
+          <div className="mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
+                <div className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
+                  isDark 
+                    ? 'border-gray-700 bg-gray-800/30' 
+                    : 'border-gray-200 bg-gray-50/30'
+                }`}>
+                  <div className="text-3xl font-bold text-[#FEE21B] mb-2">
+                    <AnimatedCounter end={2000} prefix="+" />
+                  </div>
+                  <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {t.hero.stats.clients}
+                  </div>
+                </div>
+                <div className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
+                  isDark 
+                    ? 'border-gray-700 bg-gray-800/30' 
+                    : 'border-gray-200 bg-gray-50/30'
+                }`}>
+                  <div className="text-3xl font-bold text-[#FEE21B] mb-2">
+                    <AnimatedCounter end={500} prefix="+" />
+                  </div>
+                  <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {t.hero.stats.cleaners}
+                  </div>
+                </div>
+                <div className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
+                  isDark 
+                    ? 'border-gray-700 bg-gray-800/30' 
+                    : 'border-gray-200 bg-gray-50/30'
+                }`}>
+                  <div className="text-3xl font-bold text-[#FEE21B] mb-2">
+                    <AnimatedCounter end={50} prefix="+" />
+                  </div>
+                  <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {t.hero.stats.cities}
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </section>
@@ -325,16 +353,28 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             {t.howItWorks.steps.map((step: any, index: number) => (
               <div key={index} className="text-center group">
+                {/* Step Image */}
+                <div className="mb-8">
+                  <img 
+                    src={[
+                      "https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=400",
+                      "https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=400",
+                      "https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=400"
+                    ][index]}
+                    alt={step.title}
+                    className="w-32 h-32 object-cover rounded-full mx-auto shadow-xl group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
                 <div className="relative mb-8">
                   <div className="bg-[#FEE21B] text-black w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto group-hover:scale-125 transition-all duration-500 shadow-2xl">
                     {index + 1}
                   </div>
                   {index < 2 && (
                     <div className={`hidden md:block absolute top-10 left-[61%]
- w-full h-0.5 ${
+                                    w-full h-0.5 ${
                       isDark ? 'bg-gray-700' : 'bg-gray-200'
                     }`}>
                       <div className="w-0 h-full bg-[#FEE21B] group-hover:w-full transition-all duration-1000"></div>
@@ -353,6 +393,17 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </p>
               </div>
             ))}
+          </div>
+           {/* Process Illustration */}
+           <div className="text-center mb-16">
+            <div className="relative max-w-4xl mx-auto">
+              <img 
+                src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                alt="Cleaning process illustration"
+                className="w-full h-64 object-cover rounded-3xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl"></div>
+            </div>
           </div>
           
           <div className="text-center mt-16">
@@ -388,6 +439,11 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 <Shield className="h-16 w-16 text-[#FEE21B]" />,
                 <Award className="h-16 w-16 text-[#FEE21B]" />
               ];
+              const featureImages = [
+                "https://images.pexels.com/photos/4099459/pexels-photo-4099459.jpeg?auto=compress&cs=tinysrgb&w=400",
+                "https://images.pexels.com/photos/5025639/pexels-photo-5025639.jpeg?auto=compress&cs=tinysrgb&w=400",
+                "https://images.pexels.com/photos/4099122/pexels-photo-4099122.jpeg?auto=compress&cs=tinysrgb&w=400"
+              ];
               
               return (
                 <div key={index} className={`text-center border rounded-3xl p-10 transition-all duration-500 hover:scale-105 group ${
@@ -395,6 +451,14 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                     ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20' 
                     : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
                 }`}>
+                   {/* Feature Image */}
+                  <div className="mb-6">
+                    <img 
+                      src={featureImages[index]}
+                      alt={feature.title}
+                      className="w-24 h-24 object-cover rounded-full mx-auto shadow-lg group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
                   <div className="mb-8 group-hover:scale-125 transition-transform duration-500">
                     {icons[index]}
                   </div>
@@ -440,6 +504,14 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                   ? 'bg-gray-900 border-[#7A7A7A]'
                   : 'bg-gray-50 border-gray-200'
               }`}>
+                {/* Pricing Features Image */}
+                <div className="mb-8">
+                  <img 
+                    src="https://images.pexels.com/photos/4491459/pexels-photo-4491459.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                    alt="Transparent pricing"
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                </div>
                 <h3 className={`text-2xl font-bold mb-8 ${
                   isDark ? 'text-white' : 'text-black'
                 }`}>
@@ -458,6 +530,14 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               </div>
               
               <div className="bg-gradient-to-br from-[#FEE21B] to-yellow-300 text-black rounded-3xl p-10">
+                {/* Calculator Image */}
+                <div className="mb-6">
+                  <img 
+                    src="https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                    alt="Price calculator"
+                    className="w-full h-32 object-cover rounded-xl opacity-80"
+                  />
+                </div>
                 <h3 className="text-[30px]  font-bold mb-6 max-[400px]:text-[20px]">{t.pricing.calculator.title}</h3>
                 <div className="text-[40px] font-bold mb-4 flex items-center max-[400px]:text-[20px]">
                   <ArrowRight className="h-8 w-8 mr-3" />
@@ -498,13 +578,25 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             }`}>
               {t.mobile.subtitle}
             </p>
-            {/* <p className={`text-lg max-w-4xl mx-auto leading-relaxed mt-6 ${
-              isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
-            }`}>
-              {t.mobile.description}
-            </p> */}
           </div>
           
+           {/* Mobile App Preview */}
+           <div className="text-center mb-16">
+            <div className="relative max-w-4xl mx-auto">
+              <img 
+                src="https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                alt="Mobile app preview"
+                className="w-full h-80 object-cover rounded-3xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/30 to-transparent rounded-3xl flex items-center justify-center">
+                <div className="text-center">
+                  <Smartphone className="h-24 w-24 text-white mx-auto mb-4" />
+                  <h3 className="text-3xl font-bold text-white">Applications mobiles disponibles</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {t.mobile.features.map((feature: string, index: number) => (
               <div key={index} className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
@@ -527,6 +619,14 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20'
                 : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
             }`}>
+               {/* User App Image */}
+              <div className="mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                  alt="Client using app"
+                  className="w-full h-48 object-cover rounded-2xl"
+                />
+              </div>
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-[#FEE21B] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Smartphone className="h-8 w-8 text-black" />
@@ -576,6 +676,14 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20'
                 : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
             }`}>
+               {/* Cleaner App Image */}
+              <div className="mb-6">
+                <img 
+                  src="https://images.pexels.com/photos/4099120/pexels-photo-4099120.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                  alt="Cleaner using app"
+                  className="w-full h-48 object-cover rounded-2xl"
+                />
+              </div>
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-[#FEE21B] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-black" />
@@ -627,21 +735,49 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       <section className={`py-32 ${
         isDark ? 'bg-[#0E0E0E]' : 'bg-white'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className={`text-4xl md:text-5xl font-bold mb-8 ${
-            isDark ? 'text-white' : 'text-black'
-          }`}>
-            {t.finalCta.title}
-          </h2>
-          <p className={`text-xl mb-12 max-w-4xl mx-auto leading-relaxed ${
-            isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
-          }`}>
-            {t.finalCta.description}
-          </p>
-          
-          <button className="bg-[#FEE21B] text-black px-16 py-6 rounded-2xl font-bold text-2xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
-            {t.finalCta.cta}
-          </button>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="relative">
+              <img 
+                src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Professional cleaning team"
+                className="w-full h-96 object-cover rounded-3xl shadow-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl"></div>
+              {/* Floating badge */}
+              <div className="absolute -top-6 -right-6 bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
+                #1 en France
+              </div>
+            </div>
+            
+            {/* Right side - Content */}
+            <div className="text-center lg:text-left">
+              <h2 className={`text-4xl md:text-5xl font-bold mb-8 ${
+                isDark ? 'text-white' : 'text-black'
+              }`}>
+                {t.finalCta.title}
+              </h2>
+              <p className={`text-xl mb-12 max-w-4xl mx-auto lg:mx-0 leading-relaxed ${
+                isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
+              }`}>
+                {t.finalCta.description}
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+                <button className="bg-[#FEE21B] text-black px-16 py-6 rounded-2xl font-bold text-2xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
+                  {t.finalCta.cta}
+                </button>
+                <button className={`border-2 px-16 py-6 rounded-2xl font-bold text-2xl transition-all duration-300 hover:scale-105 ${
+                  isDark 
+                    ? 'border-white text-white hover:bg-white hover:text-black' 
+                    : 'border-black text-black hover:bg-black hover:text-white'
+                }`}>
+                  En savoir plus
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

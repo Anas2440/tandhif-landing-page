@@ -1,78 +1,83 @@
-import React from 'react';
-import { ArrowLeft, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, AlertCircle, Info } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowLeft, Search, MessageCircle, Phone, Mail, Info } from 'lucide-react';
 
 interface HelpProps {
   isDark: boolean;
   onBack: () => void;
+  translations: any;
 }
 
-const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
+const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  
+  const t = translations.helpPage;
+  
   const faqItems = [
     {
-      category: "Commande et réservation",
+      category: t.categories.orderBooking,
       questions: [
         {
-          question: "Comment passer une commande ?",
-          answer: "Vous pouvez passer commande directement sur notre site web ou via notre application mobile. Sélectionnez le service souhaité, indiquez vos préférences et confirmez votre réservation."
+          question: t.questions.howToOrder,
+          answer: t.questions.howToOrderAnswer
         },
         {
-          question: "Puis-je modifier ou annuler ma commande ?",
-          answer: "Oui, vous pouvez modifier ou annuler votre commande jusqu'à 2 heures avant l'intervention prévue. Connectez-vous à votre compte ou contactez notre service client."
+          question: t.questions.modifyCancel,
+          answer: t.questions.modifyCancelAnswer
         },
         {
-          question: "Combien de temps à l'avance dois-je réserver ?",
-          answer: "Nous recommandons de réserver au moins 24h à l'avance, mais nous acceptons aussi les demandes urgentes selon la disponibilité de nos cleaners."
+          question: t.questions.advanceBooking,
+          answer: t.questions.advanceBookingAnswer
         }
       ]
     },
     {
-      category: "Services et tarifs",
+      category: t.categories.servicesPricing,
       questions: [
         {
-          question: "Quels services proposez-vous ?",
-          answer: "Nous proposons une large gamme de services : ménage à domicile, nettoyage de bureaux, pressing, entretien de jardins, nettoyage de véhicules, et bien plus encore."
+          question: t.questions.servicesOffered,
+          answer: t.questions.servicesOfferedAnswer
         },
         {
-          question: "Comment sont calculés les tarifs ?",
-          answer: "Nos tarifs sont transparents et calculés selon la surface, le type de service et la complexité de la tâche. Vous pouvez consulter notre grille tarifaire complète."
+          question: t.questions.pricingCalculation,
+          answer: t.questions.pricingCalculationAnswer
         },
         {
-          question: "Y a-t-il des frais cachés ?",
-          answer: "Non, tous nos tarifs sont transparents. Le prix affiché lors de votre commande est le prix final, sans surprise."
+          question: t.questions.hiddenFees,
+          answer: t.questions.hiddenFeesAnswer
         }
       ]
     },
     {
-      category: "Cleaners et qualité",
+      category: t.categories.cleanersQuality,
       questions: [
         {
-          question: "Comment sélectionnez-vous vos cleaners ?",
-          answer: "Tous nos cleaners sont soigneusement sélectionnés, vérifiés et formés. Ils sont assurés et évalués régulièrement par nos clients."
+          question: t.questions.cleanerSelection,
+          answer: t.questions.cleanerSelectionAnswer
         },
         {
-          question: "Que faire si je ne suis pas satisfait du service ?",
-          answer: "Votre satisfaction est notre priorité. Si vous n'êtes pas satisfait, contactez-nous dans les 24h et nous trouverons une solution adaptée."
+          question: t.questions.notSatisfied,
+          answer: t.questions.notSatisfiedAnswer
         },
         {
-          question: "Les cleaners apportent-ils leur matériel ?",
-          answer: "Oui, nos cleaners viennent avec tout le matériel et les produits professionnels nécessaires, sauf indication contraire."
+          question: t.questions.cleanerMaterials,
+          answer: t.questions.cleanerMaterialsAnswer
         }
       ]
     },
     {
-      category: "Paiement et facturation",
+      category: t.categories.paymentBilling,
       questions: [
         {
-          question: "Quels moyens de paiement acceptez-vous ?",
-          answer: "Nous acceptons les cartes bancaires, PayPal, et les virements. Le paiement se fait de manière sécurisée après validation du service."
+          question: t.questions.paymentMethods,
+          answer: t.questions.paymentMethodsAnswer
         },
         {
-          question: "Quand suis-je débité ?",
-          answer: "Le paiement est effectué après la réalisation du service et votre validation. Vous recevez une facture détaillée par email."
+          question: t.questions.whenCharged,
+          answer: t.questions.whenChargedAnswer
         },
         {
-          question: "Puis-je avoir une facture ?",
-          answer: "Oui, une facture est automatiquement générée et envoyée par email après chaque prestation. Vous pouvez aussi la télécharger depuis votre compte."
+          question: t.questions.invoice,
+          answer: t.questions.invoiceAnswer
         }
       ]
     }
@@ -88,13 +93,13 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
             className={`flex items-center mb-4 ${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} transition-colors duration-300`}
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
-            Retour
+            {translations.nav?.back || t.back}
           </button>
           <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
-            Centre d'aide
+            {t.title}
           </h1>
           <p className={`text-xl mt-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            Trouvez rapidement les réponses à vos questions
+            {t.subtitle}
           </p>
         </div>
       </div>
@@ -105,7 +110,9 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
           <Search className={`absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
           <input
             type="text"
-            placeholder="Rechercher dans l'aide..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder={t.searchPlaceholder}
             className={`w-full pl-12 pr-4 py-4 rounded-xl border text-lg ${
               isDark 
                 ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
@@ -118,7 +125,7 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
       {/* Quick Actions */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <h2 className={`text-2xl font-bold mb-6 ${isDark ? 'text-white' : 'text-black'}`}>
-          Actions rapides
+          {t.quickActions}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
@@ -128,10 +135,10 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
           }`}>
             <MessageCircle className="h-8 w-8 text-[#FEE21B] mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-              Chat en direct
+              {t.liveChat}
             </h3>
             <p className={`${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-              Discutez avec notre équipe support
+              {t.liveChatDesc}
             </p>
           </div>
           
@@ -142,7 +149,7 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
           }`}>
             <Phone className="h-8 w-8 text-[#FEE21B] mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-              Nous appeler
+              {t.callUs}
             </h3>
             <p className={`${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               +33 1 23 45 67 89
@@ -156,7 +163,7 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
           }`}>
             <Mail className="h-8 w-8 text-[#FEE21B] mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-              Email
+              {t.email}
             </h3>
             <p className={`${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
               support@tandhif.com
@@ -168,7 +175,7 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
       {/* FAQ Sections */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <h2 className={`text-2xl font-bold mb-8 ${isDark ? 'text-white' : 'text-black'}`}>
-          Questions fréquentes
+          {t.faq}
         </h2>
         
         {faqItems.map((category, categoryIndex) => (
@@ -215,21 +222,21 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack }) => {
       <div className={`border-t ${isDark ? 'border-gray-800 bg-gray-900' : 'border-gray-200 bg-gray-50'} py-12`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className={`text-2xl font-bold mb-4 ${isDark ? 'text-white' : 'text-black'}`}>
-            Vous ne trouvez pas votre réponse ?
+            {t.notFound}
           </h2>
           <p className={`text-lg mb-8 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            Notre équipe support est là pour vous aider
+            {t.notFoundDesc}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-[#FEE21B] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105">
-              Contacter le support
+              {t.contactSupport}
             </button>
             <button className={`border-2 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 ${
               isDark 
                 ? 'border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white' 
                 : 'border-gray-300 text-gray-700 hover:border-gray-400 hover:text-black'
             }`}>
-              Programmer un appel
+              {t.scheduleCall}
             </button>
           </div>
         </div>

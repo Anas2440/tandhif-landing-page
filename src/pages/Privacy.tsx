@@ -4,9 +4,12 @@ import { ArrowLeft, Shield, Eye, Lock, Database, UserCheck, AlertTriangle, Calen
 interface PrivacyProps {
   isDark: boolean;
   onBack: () => void;
+  translations: any;
 }
 
-const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
+const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
+  const t = translations.privacyPage;
+
   return (
     <div className={`min-h-screen ${isDark ? 'bg-[#0E0E0E] text-white' : 'bg-white text-black'}`}>
       {/* Header */}
@@ -17,18 +20,18 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
             className={`flex items-center mb-4 ${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} transition-colors duration-300`}
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
-            Retour
+            {t.back}
           </button>
           <div className="flex items-center mb-4">
             <Shield className="h-8 w-8 text-[#FEE21B] mr-3" />
             <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
-              Politique de Confidentialité
+              {t.title}
             </h1>
           </div>
           <div className="flex items-center text-sm">
             <Calendar className={`h-4 w-4 mr-2 ${isDark ? 'text-gray-400' : 'text-gray-500'}`} />
             <span className={`${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-              Dernière mise à jour : 15 janvier 2025
+              {t.lastUpdated}
             </span>
           </div>
         </div>
@@ -43,11 +46,10 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
             <Lock className="h-6 w-6 text-[#FEE21B] mr-3 mt-1 flex-shrink-0" />
             <div>
               <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-                Votre vie privée est importante
+                {t.importantNotice.title}
               </h3>
               <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                Chez Tandhif, nous nous engageons à protéger vos données personnelles et à respecter votre vie privée. 
-                Cette politique explique comment nous collectons, utilisons et protégeons vos informations.
+                {t.importantNotice.description}
               </p>
             </div>
           </div>
@@ -60,10 +62,10 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
           }`}>
             <Eye className="h-8 w-8 text-[#FEE21B] mx-auto mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-              Transparence
+              {t.overview.transparency.title}
             </h3>
             <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              Nous vous informons clairement sur l'utilisation de vos données
+              {t.overview.transparency.description}
             </p>
           </div>
           
@@ -72,10 +74,10 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
           }`}>
             <Lock className="h-8 w-8 text-[#FEE21B] mx-auto mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-              Sécurité
+              {t.overview.security.title}
             </h3>
             <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              Vos données sont protégées par des mesures de sécurité avancées
+              {t.overview.security.description}
             </p>
           </div>
           
@@ -84,10 +86,10 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
           }`}>
             <UserCheck className="h-8 w-8 text-[#FEE21B] mx-auto mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-              Contrôle
+              {t.overview.control.title}
             </h3>
             <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-600'}`}>
-              Vous gardez le contrôle sur vos données personnelles
+              {t.overview.control.description}
             </p>
           </div>
         </div>
@@ -98,20 +100,19 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
           <section>
             <h2 className={`text-2xl font-bold mb-6 flex items-center ${isDark ? 'text-white' : 'text-black'}`}>
               <Database className="h-6 w-6 text-[#FEE21B] mr-3" />
-              1. Données que nous collectons
+              {t.dataCollection.title}
             </h2>
             <div className="space-y-6">
               <div className={`p-6 rounded-xl border ${
                 isDark ? 'bg-gray-800/50 border-gray-700' : 'bg-gray-50 border-gray-200'
               }`}>
                 <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                  Informations d'identification
+                  {t.dataCollection.identification.title}
                 </h3>
                 <ul className={`list-disc list-inside space-y-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  <li>Nom, prénom, adresse email</li>
-                  <li>Numéro de téléphone</li>
-                  <li>Adresse postale</li>
-                  <li>Date de naissance (si nécessaire)</li>
+                  {t.dataCollection.identification.items.map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -119,13 +120,12 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
                 isDark ? 'bg-gray-800/50 border-gray-700' : 'bg-gray-50 border-gray-200'
               }`}>
                 <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                  Données d'utilisation
+                  {t.dataCollection.usage.title}
                 </h3>
                 <ul className={`list-disc list-inside space-y-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  <li>Historique des commandes et prestations</li>
-                  <li>Préférences et paramètres de compte</li>
-                  <li>Évaluations et commentaires</li>
-                  <li>Communications avec le support client</li>
+                  {t.dataCollection.usage.items.map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -133,13 +133,12 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
                 isDark ? 'bg-gray-800/50 border-gray-700' : 'bg-gray-50 border-gray-200'
               }`}>
                 <h3 className={`text-lg font-semibold mb-3 ${isDark ? 'text-white' : 'text-black'}`}>
-                  Données techniques
+                  {t.dataCollection.technical.title}
                 </h3>
                 <ul className={`list-disc list-inside space-y-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  <li>Adresse IP et données de géolocalisation</li>
-                  <li>Type d'appareil et navigateur utilisé</li>
-                  <li>Pages visitées et temps de navigation</li>
-                  <li>Cookies et technologies similaires</li>
+                  {t.dataCollection.technical.items.map((item: string, index: number) => (
+                    <li key={index}>{item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -387,19 +386,18 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
             <div className="flex items-center mb-4">
               <AlertTriangle className="h-6 w-6 text-[#FEE21B] mr-3" />
               <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
-                Questions sur la confidentialité ?
+                {t.contact.title}
               </h3>
             </div>
             <p className={`mb-6 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-              Notre délégué à la protection des données est à votre disposition pour toute question 
-              concernant le traitement de vos données personnelles.
+              {t.contact.description}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className={`p-4 rounded-xl border ${
                 isDark ? 'bg-gray-700/50 border-gray-600' : 'bg-white border-gray-200'
               }`}>
                 <h4 className={`font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-                  Email
+                  {t.contact.email}
                 </h4>
                 <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
                   privacy@tandhif.com
@@ -409,12 +407,10 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack }) => {
                 isDark ? 'bg-gray-700/50 border-gray-600' : 'bg-white border-gray-200'
               }`}>
                 <h4 className={`font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-                  Courrier
+                  {t.contact.mail}
                 </h4>
                 <p className={`text-sm ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  DPO Tandhif<br />
-                  123 Avenue des Champs-Élysées<br />
-                  75008 Paris, France
+                  {t.contact.address}
                 </p>
               </div>
             </div>

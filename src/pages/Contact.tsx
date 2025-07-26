@@ -4,9 +4,10 @@ import { ArrowLeft, Mail, Phone, MapPin, Clock, Send, MessageCircle, Users, Buil
 interface ContactProps {
   isDark: boolean;
   onBack: () => void;
+  translations: any;
 }
 
-const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
+const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,6 +29,9 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
     });
   };
 
+  // Safely access contactPage translations, defaulting to an empty object to prevent errors
+  const t = translations.contactPage || {};
+
   return (
     <div className={`min-h-screen ${isDark ? 'bg-[#0E0E0E] text-white' : 'bg-white text-black'}`}>
       {/* Header */}
@@ -38,13 +42,13 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
             className={`flex items-center mb-4 ${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} transition-colors duration-300`}
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
-            Retour
+            {t.back}
           </button>
           <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
-            Contactez-nous
+            {t.title}
           </h1>
           <p className={`text-xl mt-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-            Nous sommes là pour vous aider
+            {t.subtitle}
           </p>
         </div>
       </div>
@@ -54,7 +58,7 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
           {/* Contact Information */}
           <div>
             <h2 className={`text-2xl font-bold mb-8 ${isDark ? 'text-white' : 'text-black'}`}>
-              Informations de contact
+              {t.contactInfo}
             </h2>
             
             {/* Contact Cards */}
@@ -70,13 +74,13 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                   </div>
                   <div>
                     <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-                      Téléphone
+                      {t.phone}
                     </h3>
                     <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} mb-1`}>
-                      Service client : +33 1 23 45 67 89
+                      {t.customerService}: +33 1 23 45 67 89
                     </p>
                     <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                      Urgences : +33 1 23 45 67 90
+                      {t.emergencies}: +33 1 23 45 67 90
                     </p>
                   </div>
                 </div>
@@ -93,13 +97,13 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                   </div>
                   <div>
                     <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-                      Email
+                      {t.email}
                     </h3>
                     <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} mb-1`}>
-                      Support : support@tandhif.com
+                      {t.support}: support@tandhif.com
                     </p>
                     <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                      Commercial : commercial@tandhif.com
+                      {t.commercial}: commercial@tandhif.com
                     </p>
                   </div>
                 </div>
@@ -116,11 +120,11 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                   </div>
                   <div>
                     <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-                      Adresse
+                      {t.address}
                     </h3>
                     <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                      123 Avenue des Champs-Élysées<br />
-                      75008 Paris, France
+                      {/* You can add a specific key for address details if needed */}
+                      123 Avenue des Champs-Élysées, 75008 Paris, France
                     </p>
                   </div>
                 </div>
@@ -137,16 +141,16 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                   </div>
                   <div>
                     <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
-                      Horaires
+                      {t.hours}
                     </h3>
                     <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} mb-1`}>
-                      Lun - Ven : 8h00 - 20h00
+                      {t.weekdays}
                     </p>
                     <p className={`${isDark ? 'text-gray-300' : 'text-gray-700'} mb-1`}>
-                      Sam - Dim : 9h00 - 18h00
+                      {t.weekends}
                     </p>
                     <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
-                      Support 24h/7j pour les urgences
+                      {t.support24h}
                     </p>
                   </div>
                 </div>
@@ -161,7 +165,7 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                   : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B] text-black'
               }`}>
                 <MessageCircle className="h-6 w-6 text-[#FEE21B] mx-auto mb-2" />
-                <span className="text-sm font-medium">Chat en direct</span>
+                <span className="text-sm font-medium">{t.liveChat}</span>
               </button>
               
               <button className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 text-center ${
@@ -170,7 +174,7 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                   : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B] text-black'
               }`}>
                 <Users className="h-6 w-6 text-[#FEE21B] mx-auto mb-2" />
-                <span className="text-sm font-medium">Devenir cleaner</span>
+                <span className="text-sm font-medium">{t.becomeCleanerShort}</span>
               </button>
               
               <button className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 text-center ${
@@ -179,7 +183,7 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                   : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B] text-black'
               }`}>
                 <Building className="h-6 w-6 text-[#FEE21B] mx-auto mb-2" />
-                <span className="text-sm font-medium">Entreprises</span>
+                <span className="text-sm font-medium">{t.business}</span>
               </button>
             </div>
           </div>
@@ -187,14 +191,14 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
           {/* Contact Form */}
           <div>
             <h2 className={`text-2xl font-bold mb-8 ${isDark ? 'text-white' : 'text-black'}`}>
-              Envoyez-nous un message
+              {t.sendMessage}
             </h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                    Nom complet *
+                    {t.fullName} *
                   </label>
                   <input
                     type="text"
@@ -207,13 +211,13 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                         ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
                         : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
                     } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
-                    placeholder="Votre nom"
+                    placeholder={t.yourName}
                   />
                 </div>
                 
                 <div>
                   <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                    Email *
+                    {t.email} *
                   </label>
                   <input
                     type="email"
@@ -226,14 +230,14 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                         ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
                         : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
                     } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
-                    placeholder="votre@email.com"
+                    placeholder={t.yourEmail}
                   />
                 </div>
               </div>
 
               <div>
                 <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  Type de demande *
+                  {t.requestType} *
                 </label>
                 <select
                   name="type"
@@ -245,18 +249,19 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                       : 'bg-white border-gray-300 text-black focus:border-[#FEE21B]'
                   } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
                 >
-                  <option value="general">Question générale</option>
-                  <option value="support">Support technique</option>
-                  <option value="billing">Facturation</option>
-                  <option value="partnership">Partenariat</option>
-                  <option value="cleaner">Devenir cleaner</option>
-                  <option value="company">Compte entreprise</option>
+                  {/* FIX: Use the keys from your latest translation object */}
+                  <option value="general">{t.generalQuestion}</option>
+                  <option value="support">{t.technicalSupport}</option>
+                  <option value="billing">{t.billing}</option>
+                  <option value="partnership">{t.partnership}</option>
+                  <option value="cleaner">{t.becomeCleanerLong}</option>
+                  <option value="company">{t.companyAccount}</option>
                 </select>
               </div>
 
               <div>
                 <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  Sujet *
+                  {t.subject} *
                 </label>
                 <input
                   type="text"
@@ -269,13 +274,13 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                       ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
                       : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
                   } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
-                  placeholder="Sujet de votre message"
+                  placeholder={t.subjectPlaceholder}
                 />
               </div>
 
               <div>
                 <label className={`block text-sm font-medium mb-2 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
-                  Message *
+                  {t.message} *
                 </label>
                 <textarea
                   name="message"
@@ -288,7 +293,7 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                       ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
                       : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
                   } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
-                  placeholder="Décrivez votre demande en détail..."
+                  placeholder={t.messagePlaceholder}
                 />
               </div>
 
@@ -297,7 +302,7 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                 className="w-full bg-[#FEE21B] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 flex items-center justify-center"
               >
                 <Send className="h-5 w-5 mr-2" />
-                Envoyer le message
+                {t.sendButton}
               </button>
             </form>
 
@@ -307,8 +312,7 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack }) => {
                 : 'bg-gray-50 border-gray-200'
             }`}>
               <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                <strong>Temps de réponse :</strong> Nous nous engageons à répondre à votre message dans les 24 heures ouvrées. 
-                Pour les urgences, contactez-nous directement par téléphone.
+                <strong>{t.responseTime}</strong> {t.responseTimeDesc}
               </p>
             </div>
           </div>
