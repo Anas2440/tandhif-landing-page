@@ -260,7 +260,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       {/* Titre en haut */}
       <div className="absolute top-6 left-0 w-full flex justify-center px-4">
         <h2 className="text-yellow-400 text-2xl md:text-3xl font-bold text-center font-extrabold  px-4 py-2 rounded-xl">
-        {t.hero.cleanerTitle}
+        {/* {t.hero.cleanerTitle} */}
         </h2>
       </div>
 
@@ -376,12 +376,12 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       }`}>
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="text-center mb-5">
-            <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${
+            <h2 className={`text-3xl md:text-5xl font-bold mb-6  ${
               isDark ? 'text-white' : 'text-black'
             }`}>
               {t.services.title}
             </h2>
-            <p className={`text-xl max-w-3xl mx-auto ${
+            <p className={`text-xl max-w-3xl mx-auto px-4 ${
               isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
             }`}>
               {t.services.subtitle}
@@ -592,7 +592,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </div>
               </div>
               
-              <div className="bg-[#001f3f] text-white rounded-3xl p-10">
+              <div className="bg-yellow-500 text-black rounded-3xl p-10">
                 {/* Calculator Image */}
                 <div className="mb-6">
                 <img 
