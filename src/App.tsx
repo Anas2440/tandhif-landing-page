@@ -592,7 +592,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </div>
               </div>
               
-              <div className="bg-yellow-500 text-black rounded-3xl p-10">
+              <div className="bg-[#001f3f] text-white rounded-3xl p-10">
                 {/* Calculator Image */}
                 <div className="mb-6">
                 <img 
@@ -639,7 +639,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
     style={{ height: '400px', objectFit: 'cover' }}
   />
 
-  <p className={`text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-4 sm:px-6 ${
+  <p className={`text-xl sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-4 sm:px-6 ${
     isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
   }`}>
     {t.mobile.cleanerApp.cleanerDescription}
@@ -716,7 +716,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 <img 
                   src={logo1}
                   alt="Client using app"
-                 className="w-12 h-12 sm:w-20 sm:h-20 md:w-16 md:h-16 rounded-2xl object-contain"
+               className="w-15 h-20 md:w-[70px] md:h-[70px] rounded-2xl object-cover"
                 />
                   
                 </div>
@@ -766,7 +766,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               <img 
   src={logo2}
   alt="Client using app"
-  className="w-12 h-12 sm:w-20 sm:h-20 md:w-16 md:h-16 rounded-2xl object-contain"
+   className="w-15 h-20 md:w-[70px] md:h-[70px] rounded-2xl object-cover"
  />
                   
                 </div>
@@ -803,20 +803,20 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
  
    
       {/* Final CTA */}
-      <section className={`py-32 ${
+      <section className={`py-14 ${
         isDark ? 'bg-[#0E0E0E]' : 'bg-white'
       }`}>
         <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Image */}
             <div className="relative">
-              <img 
-                // src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                src={toon}
-                alt="Professional cleaning team"
-                className="w-full h-96 object-cover rounded-0xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl"></div>
+            <img
+  src={toon} // ton image
+  alt="Description"
+  className="w-full h-66 object-contain shadow-2xl 
+             sm:h-96 sm:object-cover rounded-none"
+/>
+              <div className="absolute inset-0  rounded-3xl"></div>
               {/* Floating badge */}
               <div className="absolute -top-6 right-3  bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
                 #1 en France
