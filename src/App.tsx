@@ -592,7 +592,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </div>
               </div>
               
-              <div className="bg-yellow-500 text-black rounded-3xl p-10">
+              <div className="bg-yellow-300 text-black rounded-3xl p-10">
                 {/* Calculator Image */}
                 <div className="mb-6">
                 <img 

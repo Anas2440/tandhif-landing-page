@@ -97,7 +97,7 @@ export const translations = {
  title: 'Tarifs transparents',
  subtitle: 'Pas de surprise, tout est clair dès le départ',
  features: [
- 'Tarification claire et transparente',
+ 'Prix fixes et sans surprise',
  'Calcul automatique adapté à chaque besoin',
  'Possibilité d\'ajustement selon les besoins réels',
  'Paiement sécurisé après validation'
