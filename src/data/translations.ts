@@ -18,6 +18,8 @@ export const translations = {
  feature2: 'Disponible partout en France',
  ctaPrimary: 'Réserver maintenant',
  ctaSecondary: 'Devenir cleaner',
+ cleanerTitle: "Vous êtes cleaner ?",
+    cleanerSubtext: "Recevez + de missions, + de clients. Rejoignez Tandhif.",
  stats: {
  clients: '+2000 clients satisfaits',
  cleaners: '+500 cleaners actifs',
@@ -151,7 +153,10 @@ export const translations = {
  title: 'Application Cleaner',
  description: 'Gérez vos missions et clients',
  appStore: 'App Store',
+ cleanerTitle: "Développez votre activité de nettoyage avec Tandhif",
+ cleanerDescription: "Rejoignez Tandhif et accédez à des dizaines de missions de nettoyage par jour. Pour les auto-entrepreneurs et sociétés souhaitant développer leur activité, sans prospection, avec des revenus garantis et des outils pros intégrés.",
  googlePlay: 'Google Play'
+
  }
  },
  finalCta: {
@@ -646,6 +651,7 @@ termsPage: {
     bookNow: 'Login',
     account: 'Contact'
   },
+  
   hero: {
     title: 'Tandhif',
     subtitle: 'cleaning in one click. Easy. Now.',
@@ -654,6 +660,8 @@ termsPage: {
     feature2: 'Available all across France',
     ctaPrimary: 'Book now',
     ctaSecondary: 'Become a cleaner',
+     cleanerTitle: "Are you a cleaner?",
+    cleanerSubtext: "Get more jobs, more clients. Join Tandhif.",
     stats: {
       clients: '+2000 satisfied clients',
       cleaners: '+500 active cleaners',
@@ -787,6 +795,8 @@ termsPage: {
       title: 'Cleaner App',
       description: 'Manage your jobs and clients',
       appStore: 'App Store',
+      cleanerTitle: "Grow your cleaning business with Tandhif",
+      cleanerDescription: "Join Tandhif and access dozens of cleaning jobs every day. For self-employed individuals and companies looking to grow their business, with guaranteed income and integrated professional tools—no need for prospecting.",  
       googlePlay: 'Google Play'
     }
   },
@@ -1194,6 +1204,8 @@ termsPage: {
             description: 'Receive a single, detailed monthly invoice to simplify your accounting.'
         }
     },
+
+    
     form: {
         title: 'Request Your Custom Quote',
         companyInfo: 'Company Information',
@@ -1284,6 +1296,8 @@ termsPage: {
     feature2: 'متوفر في جميع أنحاء فرنسا',
     ctaPrimary: 'احجز الآن',
     ctaSecondary: 'انضم كمنظف',
+      cleanerTitle: "هل أنت عامل تنظيف؟",
+    cleanerSubtext: "احصل على المزيد من المهام والمزيد من العملاء. انضم إلى Tandhif.",
     stats: {
       clients: '+2000 عميل راضٍ',
       cleaners: '+500 منظف نشط',
@@ -1417,6 +1431,8 @@ termsPage: {
       title: 'تطبيق المنظف',
       description: 'إدارة مهامك وعملائك',
       appStore: 'متجر التطبيقات',
+      cleanerTitle: "نمِّ نشاط التنظيف الخاص بك مع Tandhif",
+      cleanerDescription: "انضم إلى Tandhif وابدأ في استقبال عشرات مهام التنظيف يوميًا. مثالي للمستقلين والشركات الراغبة في تطوير نشاطهم، بدون حاجة للبحث عن عملاء، مع دخل مضمون وأدوات احترافية مدمجة.",  
       googlePlay: 'جوجل بلاي'
     }
   },
@@ -1914,6 +1930,8 @@ companyPage: {
     feature2: 'Disponible en toda Francia',
     ctaPrimary: 'Reservar ahora',
     ctaSecondary: 'Conviértete en cleaner',
+    cleanerTitle: "¿Eres limpiador?",
+    cleanerSubtext: "Consigue más trabajos, más clientes. Únete a Tandhif.",
     stats: {
       clients: '+2000 clientes satisfechos',
       cleaners: '+500 cleaners activos',
@@ -2047,6 +2065,9 @@ companyPage: {
       title: 'App para cleaners',
       description: 'Gestiona tus trabajos y clientes',
       appStore: 'App Store',
+      cleanerTitle: "Haz crecer tu negocio de limpieza con Tandhif",
+      cleanerDescription: "Únete a Tandhif y accede a decenas de trabajos de limpieza al día. Para autónomos y empresas que desean expandir su actividad, sin necesidad de buscar clientes, con ingresos garantizados y herramientas profesionales integradas.",
+    
       googlePlay: 'Google Play'
     }
   },
@@ -2557,6 +2578,8 @@ companyPage: {
     feature2: 'Disponível em toda a França',
     ctaPrimary: 'Reservar agora',
     ctaSecondary: 'Torne-se um cleaner',
+     cleanerTitle: "Você é um cleaner?",
+    cleanerSubtext: "Receba mais trabalhos, mais clientes. Junte-se à Tandhif.",
     stats: {
       clients: '+2000 clientes satisfeitos',
       cleaners: '+500 cleaners ativos',
@@ -2690,6 +2713,9 @@ companyPage: {
       title: 'App do Cleaner',
       description: 'Gerencie seus trabalhos e clientes',
       appStore: 'App Store',
+      cleanerTitle: "Desenvolva o seu negócio de limpeza com a Tandhif",
+      cleanerDescription: "Junte-se à Tandhif e tenha acesso a dezenas de missões de limpeza por dia. Ideal para autônomos e empresas que desejam expandir seus negócios, com receita garantida e ferramentas profissionais integradas, sem necessidade de prospecção.",
+    
       googlePlay: 'Google Play'
     }
   },
@@ -3200,6 +3226,8 @@ companyPage: {
     feature2: 'Disponibile in tutta la Francia',
     ctaPrimary: 'Prenota ora',
     ctaSecondary: 'Diventa un cleaner',
+    cleanerTitle: "Sei un cleaner?",
+    cleanerSubtext: "Ottieni più incarichi, più clienti. Unisciti a Tandhif.",
     stats: {
       clients: '+2000 clienti soddisfatti',
       cleaners: '+500 cleaner attivi',
@@ -3333,6 +3361,9 @@ companyPage: {
       title: 'App Cleaner',
       description: 'Gestisci incarichi e clienti',
       appStore: 'App Store',
+      cleanerTitle: "Fai crescere la tua attività di pulizie con Tandhif",
+    cleanerDescription: "Unisciti a Tandhif e accedi a decine di incarichi di pulizia ogni giorno. Per liberi professionisti e aziende che desiderano sviluppare la propria attività, senza necessità di cercare clienti, con entrate garantite e strumenti professionali integrati.",
+   
       googlePlay: 'Google Play'
     }
   },
@@ -3843,6 +3874,8 @@ companyPage: {
  feature2: 'Verfügbar in ganz Frankreich',
  ctaPrimary: 'Jetzt bestellen',
  ctaSecondary: 'Reiniger werden',
+  cleanerTitle: "Bist du ein Cleaner?",
+    cleanerSubtext: "Erhalte mehr Aufträge, mehr Kunden. Schließe dich Tandhif an.",
  stats: {
  clients: '+2000 zufriedene Kunden',
  cleaners: '+500 aktive Reiniger',
@@ -3976,7 +4009,10 @@ companyPage: {
  title: 'Reiniger-App',
  description: 'Verwalten Sie Ihre Aufträge und Kunden',
  appStore: 'App Store',
+ cleanerTitle: "Wachse mit Tandhif in deinem Reinigungsunternehmen",
+ cleanerDescription: "Tritt Tandhif bei und erhalte täglich Zugang zu Dutzenden von Reinigungsaufträgen. Für Selbstständige und Unternehmen, die ihr Geschäft ausbauen wollen – ohne Akquise, mit garantiertem Einkommen und integrierten Profi-Tools.",
  googlePlay: 'Google Play'
+ 
  }
  },
  finalCta: {

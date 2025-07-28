@@ -28,13 +28,26 @@ import ServicesCarousel from './components/ServicesCarousel';
 import { translations, Language, supportedLanguages } from './data/translations';
 import { servicesData } from './data/services';
 import logo from './images/logo.png';
+import brak from './images/brooks-rice-_ECrWRcYA3o-unsplash.jpg';
+import brak2 from './images/bruce-mars-FWVMhUa_wbY-unsplash 2.jpg';
+import brak3 from './images/patrick-tomasso-fMntI8HAAB8-unsplash.jpg';
+import brak4 from './images/neelabh-raj-cw1914zDHUs-unsplash.jpg';
 import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
-import AppIco from './images/Appstoer.png';
-import play from './images/playestoe.png';
+import brak5 from './images/cytonn-photography-n95VMLxqM2I-unsplash.jpg';
+import brak6 from './images/nicolas-hoizey--4trKf0Kbow-unsplash.jpg';
+import brak7 from './images/joshua-bowers-J4i2xrPmcm0-unsplash.jpg';
+import brak8 from './images/linkedin-sales-solutions-46bom4lObsA-unsplash.jpg';
+import brak9 from './images/jon-tyson-jgaxGjXKlpw-unsplash 2.jpg';
+import brak10 from './images/gil-ribeiro-3hO8igCybds-unsplash 2.jpg';
+import AppIco from './images/Component 3.png';
+import play from './images/Component 2 (1).png';
 import toon from './images/toon.jpg';
+import logo1 from './images/black1.jpeg';
+import logo2 from './images/white1.jpeg';
 import { BrowserRouter } from 'react-router-dom';
 import Help from './pages/Help';
 import Contact from './pages/Contact';
+
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import CompanySignup from './pages/CompanySignup';
@@ -190,7 +203,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </div>
               </div>
               
-              <h2 className={`text-4xl md:text-6xl font-bold mb-8 ${
+              <h2 className={`text-3xl md:text-6xl font-bold mb-8 ${
                 isDark ? 'text-white' : 'text-black'
               }`}>
                 {t.hero.subtitle}
@@ -223,7 +236,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-16">
+              <div className="flex flex-col sm:flex-col gap-6 justify-center lg:justify-start mb-4">
                 <button
                   onClick={() => openStore('user')}
                   className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl
@@ -231,6 +244,54 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 >
                   {t.hero.ctaPrimary}
                 </button>
+
+                   <div className="">
+                   <div className="-mx-4 sm:-mx-6 lg:hidden">
+  <div className="w-full flex flex-col items-center justify-center  py-10">
+    {/* Image with Text Overlay */}
+    <div className="relative w-full max-w-4xl">
+    <img 
+    src={brak9} 
+    alt="Professional cleaner at work"
+    className="w-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
+    style={{ height: '400px', objectFit: 'cover' }}
+  />
+
+      {/* Titre en haut */}
+      <div className="absolute top-6 left-0 w-full flex justify-center px-4">
+        <h2 className="text-yellow-400 text-2xl md:text-3xl font-bold text-center font-extrabold  px-4 py-2 rounded-xl">
+        {t.hero.cleanerTitle}
+        </h2>
+      </div>
+
+      {/* Texte en bas */}
+      {/* <div className="absolute bottom-1 left-1 w-full flex  ">
+  <div className="flex flex-col items-center   px-4 py-3 rounded-xl text-black text-lg md:text-lg text-center">
+    <span>Recevez + de missions,</span>
+    <span>+ de clients.</span>
+    <span>Rejoignez Tandhif.</span>
+  </div>
+</div> */}
+    </div>
+  </div>
+</div>
+
+      {/* Image with Text Overlay */}
+      {/* <div className="relative w-full max-w-4xl"> */}
+        {/* <img
+          src={brak9}
+          alt="Cleaner"
+          className="w-full h-50 object-cover rounded-3xl shadow-2xl"
+        /> */}
+        {/* <div className="absolute inset-0 flex items-center justify-center">
+          <p className="text-white text-center text-lg md:text-2xl font-bold px-4 bg-black bg-opacity-50 rounded-xl py-4">
+            Vous êtes cleaner ? <br />
+            Recevez + de missions, + de clients. <br />
+            Rejoignez Tandhif.
+          </p>
+        </div> */}
+      {/* </div> */}
+    </div>
                 <button
                   onClick={() => openStore('cleaner')}
                   className={`bg-transparent border-2 px-10 py-5 rounded-2xl font-bold text-xl
@@ -249,7 +310,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             <div className="relative hidden lg:block">
               <div className="relative z-10">
                 <img 
-                  src="https://images.pexels.com/photos/4099120/pexels-photo-4099120.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                  src={brak9} 
                   alt="Professional cleaner at work"
                   className="w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 />
@@ -310,12 +371,12 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       </section>
 
       {/* Services Section */}
-      <section id="services" className={`py-32 ${
+      <section id="services" className={`py-10 ${
         isDark ? 'bg-gray-900/50' : 'bg-gray-50'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${
+        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+          <div className="text-center mb-5">
+            <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${
               isDark ? 'text-white' : 'text-black'
             }`}>
               {t.services.title}
@@ -337,12 +398,12 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       </section>
 
       {/* How it works */}
-      <section id="how-it-works" className={`py-32 ${
+      <section id="how-it-works" className={`py-10 ${
         isDark ? 'bg-[#0E0E0E]' : 'bg-white'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${
+            <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${
               isDark ? 'text-white' : 'text-black'
             }`}>
               {t.howItWorks.title}
@@ -398,12 +459,13 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
            {/* Process Illustration */}
            <div className="text-center mb-16">
             <div className="relative max-w-4xl mx-auto">
-              <img 
-                src="https://images.pexels.com/photos/4099467/pexels-photo-4099467.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Cleaning process illustration"
-                className="w-full h-64 object-cover rounded-3xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl"></div>
+            <img 
+  src={brak7}
+  alt="Cleaning process illustration" 
+  className="w-full h-90 object-cover rounded-3xl shadow-2xl"
+  // style={{ height: '400px', width: '100%' }} // Adjust height and width as needed
+/>
+              {/* <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl"></div> */}
             </div>
           </div>
           
@@ -416,12 +478,12 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       </section>
 
       {/* Why Tandhif */}
-      <section id="why-tandhif" className={`py-32 ${
+      <section id="why-tandhif" className={`py-10 ${
         isDark ? 'bg-gray-900/50' : 'bg-gray-50'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${
+            <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${
               isDark ? 'text-white' : 'text-black'
             }`}>
               {t.whyTandhif.title}
@@ -441,9 +503,9 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 <Award className="h-16 w-16 text-[#FEE21B]" />
               ];
               const featureImages = [
-                "https://images.pexels.com/photos/4099459/pexels-photo-4099459.jpeg?auto=compress&cs=tinysrgb&w=400",
-                "https://images.pexels.com/photos/5025639/pexels-photo-5025639.jpeg?auto=compress&cs=tinysrgb&w=400",
-                "https://images.pexels.com/photos/4099122/pexels-photo-4099122.jpeg?auto=compress&cs=tinysrgb&w=400"
+               brak6,
+               brak5,
+                brak4
               ];
               
               return (
@@ -457,7 +519,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                     <img 
                       src={featureImages[index]}
                       alt={feature.title}
-                      className="w-24 h-24 object-cover rounded-full mx-auto shadow-lg group-hover:scale-110 transition-transform duration-500"
+                      className="w-24 h-24 rounded-full mx-auto shadow-lg group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                   <div className="mb-8 group-hover:scale-125 transition-transform duration-500">
@@ -481,12 +543,12 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className={`py-32 ${
+      <section id="pricing" className={` mt-10 ${
         isDark ? 'bg-[#0E0E0E]' : 'bg-white'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${
+            <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${
               isDark ? 'text-white' : 'text-black'
             }`}>
               {t.pricing.title}
@@ -508,9 +570,9 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 {/* Pricing Features Image */}
                 <div className="mb-8">
                   <img 
-                    src="https://images.pexels.com/photos/4491459/pexels-photo-4491459.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                    src={brak3}
                     alt="Transparent pricing"
-                    className="w-full h-48 object-cover rounded-2xl"
+                    className="w-full h-70  rounded-2xl"
                   />
                 </div>
                 <h3 className={`text-2xl font-bold mb-8 ${
@@ -530,13 +592,13 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-[#FEE21B] to-yellow-300 text-black rounded-3xl p-10">
+              <div className="bg-yellow-500 text-black rounded-3xl p-10">
                 {/* Calculator Image */}
                 <div className="mb-6">
-                  <img 
-                    src="https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                <img 
+                    src={brak8}
                     alt="Price calculator"
-                    className="w-full h-32 object-cover rounded-xl opacity-80"
+                    className="w-full h-50 object-cover rounded-xl"
                   />
                 </div>
                 <h3 className="text-[30px]  font-bold mb-6 max-[400px]:text-[20px]">{t.pricing.calculator.title}</h3>
@@ -563,13 +625,34 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
           </div>
         </div>
       </section>
+      <div className="flex flex-col items-center justify-center mt-10 py-10 text-center">
+  <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4 sm:px-6 ${
+    isDark ? 'text-white' : 'text-black'
+  }`}>
+    {t.mobile.cleanerApp.cleanerTitle}
+  </h2>
+
+  <img
+    src={brak10} // Replace with actual path
+    alt="Cleaner"
+    className="w-full max-w-4xl rounded-xl mb-8 shadow-lg mt-5"
+    style={{ height: '400px', objectFit: 'cover' }}
+  />
+
+  <p className={`text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-4 sm:px-6 ${
+    isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
+  }`}>
+    {t.mobile.cleanerApp.cleanerDescription}
+  </p>
+</div>
+
        {/* Mobile App */}
-       <section id="mobile" className={`py-32 ${
+       <section id="mobile" className={`py-10 ${
         isDark ? 'bg-gray-900/50' : 'bg-gray-50'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${
+            <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${
               isDark ? 'text-white' : 'text-black'
             }`}>
               {t.mobile.title}
@@ -623,14 +706,19 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                {/* User App Image */}
               <div className="mb-6">
                 <img 
-                  src="https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                  src={brak2}
                   alt="Client using app"
                   className="w-full h-48 object-cover rounded-2xl"
                 />
               </div>
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-[#FEE21B] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Smartphone className="h-8 w-8 text-black" />
+                <div className="flex items-center justify-center mx-auto mb-4">
+                <img 
+                  src={logo1}
+                  alt="Client using app"
+                 className="w-12 h-12 sm:w-20 sm:h-20 md:w-16 md:h-16 rounded-2xl object-contain"
+                />
+                  
                 </div>
                 <h3 className={`text-2xl font-bold mb-3 ${
                   isDark ? 'text-white' : 'text-black'
@@ -643,31 +731,19 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                   {t.mobile.userApp.description}
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
-                  isDark
-                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
-                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
-                }`}>
-           <img
-    src={AppIco} // Replace with your actual path
-    alt="App Icon"
-    className="h-9 w-9 mr-4 group-hover:scale-110 transition-transform duration-500"
-  />
-                  {t.mobile.userApp.appStore}
-                </button>
-                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
-                  isDark
-                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
-                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
-                }`}>
-                    <img
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <img
     src={play} // Replace with your actual path
     alt="App Icon"
-    className="h-9 w-9 mr-4 group-hover:scale-110 transition-transform duration-500"
+  className="w-40 h-14 sm:w-44 sm:h-16 md:w-48 md:h-20 transition-all duration-300 hover:scale-105 object-contain"
   />
-                  {t.mobile.userApp.googlePlay}
-                </button>
+
+<img
+    src={AppIco} // Replace with your actual path
+    alt="App Icon"
+   className="w-40 h-14 sm:w-44 sm:h-16 md:w-48 md:h-20 transition-all duration-300 hover:scale-105 object-contain"
+  />
+             
               </div>
             </div>
  
@@ -680,14 +756,19 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                {/* Cleaner App Image */}
               <div className="mb-6">
                 <img 
-                  src="https://images.pexels.com/photos/4099120/pexels-photo-4099120.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                  src={brak}
                   alt="Cleaner using app"
                   className="w-full h-48 object-cover rounded-2xl"
                 />
               </div>
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-[#FEE21B] rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Users className="h-8 w-8 text-black" />
+              <div className="flex items-center justify-center mx-auto mb-4">
+              <img 
+  src={logo2}
+  alt="Client using app"
+  className="w-12 h-12 sm:w-20 sm:h-20 md:w-16 md:h-16 rounded-2xl object-contain"
+ />
+                  
                 </div>
                 <h3 className={`text-2xl font-bold mb-3 ${
                   isDark ? 'text-white' : 'text-black'
@@ -700,31 +781,20 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                   {t.mobile.cleanerApp.description}
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
-                  isDark
-                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
-                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
-                }`}>
-           <img
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <img
+  src={play} // Replace with your actual path
+  alt="App Icon"
+  className="w-40 h-14 sm:w-44 sm:h-16 md:w-48 md:h-20 transition-all duration-300 hover:scale-105 object-contain"
+/>
+
+<img
     src={AppIco} // Replace with your actual path
     alt="App Icon"
-    className="h-9 w-9 mr-4 group-hover:scale-110 transition-transform duration-500"
+     className="w-40 h-14 sm:w-44 sm:h-16 md:w-48 md:h-20 transition-all duration-300 hover:scale-105 object-contain"
+    // style={{ height: '70px' , width: '220px' }}
   />
-                  {t.mobile.cleanerApp.appStore}
-                </button>
-                <button className={`flex-1 border px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center ${
-                  isDark
-                    ? 'bg-gray-800 border-gray-600 text-white hover:border-[#FEE21B]'
-                    : 'bg-gray-50 border-gray-300 text-black hover:border-[#FEE21B]'
-                }`}>
-           <img
-    src={play} // Replace with your actual path
-    alt="App Icon"
-    className="h-9 w-9 mr-4 group-hover:scale-110 transition-transform duration-500"
-  />
-                  {t.mobile.cleanerApp.googlePlay}
-                </button>
+             
               </div>
             </div>
           </div>
@@ -754,8 +824,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             </div>
             
             {/* Right side - Content */}
-            <div className="text-center px-4 lg:text-left">
-              <h2 className={`text-4xl md:text-5xl font-bold mb-8 ${
+            <div className="text-center items-center px-4 lg:text-left">
+              <h2 className={`text-3xl md:text-5xl font-bold mb-8 ${
                 isDark ? 'text-white' : 'text-black'
               }`}>
                 {t.finalCta.title}
@@ -766,17 +836,21 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 {t.finalCta.description}
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                <button className="bg-[#FEE21B] text-black px-16 py-6 rounded-2xl font-bold text-2xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
-                  {t.finalCta.cta}
-                </button>
-                <button className={`border-2 px-16 py-6 rounded-2xl font-bold text-2xl transition-all duration-300 hover:scale-105 ${
-                  isDark 
-                    ? 'border-white text-white hover:bg-white hover:text-black' 
-                    : 'border-black text-black hover:bg-black hover:text-white'
-                }`}>
-                  En savoir plus
-                </button>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center items-center">
+              <button className="bg-[#FEE21B] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
+  {t.finalCta.cta}
+</button>
+
+<button
+  className={`w-72 h-16 border-2 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 ${
+    isDark
+      ? 'border-white text-white hover:bg-white hover:text-black'
+      : 'border-black text-black hover:bg-black hover:text-white'
+  }`}
+>
+  En savoir plus
+</button>
               </div>
             </div>
           </div>

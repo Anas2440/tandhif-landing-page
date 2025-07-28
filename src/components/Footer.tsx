@@ -98,7 +98,7 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
             <h3 className={`text-xl font-bold mb-6 ${isDark ? 'text-white' : 'text-black'}`}>
               {translations.footer.services}
             </h3>
-            <ul className="grid grid-cols-3 gap-y-2 gap-x-8">
+            <ul className="grid grid-cols-2 sm:grid-cols-3 gap-y-2 gap-x-8">
   {services.map((service, idx) => (
     <li key={idx}>
       <span className={`${isDark ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-black'} 
