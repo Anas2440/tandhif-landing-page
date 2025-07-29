@@ -6,9 +6,9 @@ export const translations = {
  whyTandhif: 'Pourquoi Tandhif',
  pricing: 'Tarifs',
  mobile: 'Application',
- becomeCleanerShort: 'Entreprise',
  bookNow: 'Connexion',
- account: 'Contact'
+ contact: 'Contact',
+ company: 'Entreprises',
  },
  hero: {
  title: 'Tandhif',
@@ -188,9 +188,10 @@ export const translations = {
     pages: {
       help: 'Centre d\'aide',
       contact: 'Contact',
+         company: 'Entreprises',
       terms: 'Conditions Générales',
       privacy: 'Politique de confidentialité',
-      company: 'Entreprises'
+   
     },
     helpPage: {
       title: 'Centre d\'aide',

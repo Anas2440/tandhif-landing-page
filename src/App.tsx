@@ -40,6 +40,9 @@ import brak8 from './images/linkedin-sales-solutions-46bom4lObsA-unsplash.jpg';
 import brak9 from './images/jon-tyson-jgaxGjXKlpw-unsplash 2.jpg';
 import brak10 from './images/gil-ribeiro-3hO8igCybds-unsplash 2.jpg';
 import AppIco from './images/Component 3.png';
+import Change1 from './images/unnamed.png';
+import Change2 from './images/unnamed2.png';
+import Change3 from './images/unnamed3.png';
 import play from './images/Component 2 (1).png';
 import toon from './images/toon.jpg';
 import logo1 from './images/black1.jpeg';
@@ -47,7 +50,6 @@ import logo2 from './images/white1.jpeg';
 import { BrowserRouter } from 'react-router-dom';
 import Help from './pages/Help';
 import Contact from './pages/Contact';
-
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import CompanySignup from './pages/CompanySignup';
@@ -150,6 +152,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
         language={language} 
         setLanguage={handleLanguageChange}
         translations={t}
+  onNavigate={showPage}
+      
       />
 
       {/* Hero Section */}
@@ -422,9 +426,9 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 <div className="mb-8">
                   <img 
                     src={[
-                      "https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=400",
-                      "https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=400",
-                      "https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=400"
+                      Change3,
+                      Change2,
+                      Change1
                     ][index]}
                     alt={step.title}
                     className="w-32 h-32 object-cover rounded-full mx-auto shadow-xl group-hover:scale-110 transition-transform duration-500"
