@@ -40,9 +40,10 @@ import brak8 from './images/linkedin-sales-solutions-46bom4lObsA-unsplash.jpg';
 import brak9 from './images/jon-tyson-jgaxGjXKlpw-unsplash 2.jpg';
 import brak10 from './images/gil-ribeiro-3hO8igCybds-unsplash 2.jpg';
 import AppIco from './images/Component 3.png';
-import Change1 from './images/unnamed.png';
+import Change1 from './images/unnamed4.png';
 import Change2 from './images/unnamed2.png';
 import Change3 from './images/unnamed3.png';
+import Change8 from './images/unnamed5.jpg';
 import play from './images/Component 2 (1).png';
 import toon from './images/toon.jpg';
 import logo1 from './images/black1.jpeg';
@@ -424,7 +425,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               <div key={index} className="text-center group">
                 {/* Step Image */}
                 <div className="mb-8">
-                  <img 
+                <img 
                     src={[
                       Change3,
                       Change2,
@@ -672,9 +673,10 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
            <div className="text-center mb-16">
             <div className="relative max-w-4xl mx-auto">
               <img 
-                src="https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+                src={Change8}
                 alt="Mobile app preview"
-                className="w-full h-80 object-cover rounded-3xl shadow-2xl"
+                style={{ height: '450px' }} 
+                className="w-full object-cover  rounded-3xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/30 to-transparent rounded-3xl flex items-center justify-center">
                 <div className="text-center">
