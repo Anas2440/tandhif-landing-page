@@ -10,6 +10,17 @@ export const translations = {
  contact: 'Contact',
  company: 'Entreprises',
  },
+
+ login:{
+  back:"Retour",
+loginTitle: "Bienvenue",
+loginSubtitle: "Veuillez vous connecter à Tandhif Web",
+emailPlaceholder: "Email",
+passwordPlaceholder: "Mot de passe",
+loginButton: "Connexion",
+backButton: "Retour"
+ },
+
  hero: {
  title: 'Tandhif',
  subtitle: 'le nettoyage en un clic. Facile. Maintenant.',
@@ -652,7 +663,7 @@ termsPage: {
     bookNow: 'Login',
     account: 'Contact'
   },
-  
+
   hero: {
     title: 'Tandhif',
     subtitle: 'cleaning in one click. Easy. Now.',

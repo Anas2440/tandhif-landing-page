@@ -296,20 +296,46 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
 
             {/* Copyright */}
             <div className="text-center md:text-right">
-              <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                © 2025 Tandhif. {translations.footer.copyright}
-              </p>
-              <div className="flex items-center justify-center md:justify-end space-x-4 mt-2">
-                <span className={`text-xs ${isDark ? 'text-gray-500 hover:text-gray-400' : 'text-gray-500 hover:text-gray-600'} 
-                  transition-colors duration-300 cursor-pointer`}>
-                  {translations.footer.privacy || 'Politique de confidentialité'}
-                </span>
-                <span className={`text-xs ${isDark ? 'text-gray-500 hover:text-gray-400' : 'text-gray-500 hover:text-gray-600'} 
-                  transition-colors duration-300 cursor-pointer`}>
-                  {translations.footer.terms || 'CGU'}
-                </span>
-              </div>
-            </div>
+  <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+    © 2025 Tandhif. {translations.footer?.copyright || 'Le Nettoyage nouvelle génération.'}
+  </p>
+  <div className="flex items-center justify-center md:justify-end space-x-4 mt-2">
+    <span
+      onClick={() => {
+        onNavigate && onNavigate('privacy');
+        setTimeout(() => {
+          const topElement = document.getElementById('top');
+          if (topElement) {
+            topElement.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }, 100);
+      }}
+      className={`text-xs underline ${isDark ? 'text-gray-500 hover:text-gray-400' : 'text-gray-500 hover:text-gray-600'} transition-colors duration-300 cursor-pointer`}
+    >
+      {translations.footer?.privacy || 'Politique de confidentialité'}
+    </span>
+
+    <span
+      onClick={() => {
+        onNavigate && onNavigate('terms');
+        setTimeout(() => {
+          const topElement = document.getElementById('top');
+          if (topElement) {
+            topElement.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }, 100);
+      }}
+      className={`text-xs underline ${isDark ? 'text-gray-500 hover:text-gray-400' : 'text-gray-500 hover:text-gray-600'} transition-colors duration-300 cursor-pointer`}
+    >
+      {translations.footer?.terms || 'Conditions Générales'}
+    </span>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

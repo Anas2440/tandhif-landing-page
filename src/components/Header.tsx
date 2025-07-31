@@ -18,7 +18,7 @@ interface HeaderProps {
   language: Language;
   setLanguage: (lang: Language) => void;
   translations: any;
-  onNavigate?: (page: 'help' | 'contact' | 'terms' | 'privacy' | 'company' | 'account' | 'hero') => void;
+  onNavigate?: (page: 'help' | 'contact' | 'terms' | 'login' | 'privacy' | 'company' | 'account' | 'hero') => void;
 }
 
 const Header: React.FC<HeaderProps> = ({ 
@@ -278,7 +278,19 @@ const Header: React.FC<HeaderProps> = ({
             </button>
 
             {/* CTA Button */}
-            <button className="hidden md:flex bg-[#FEE21B] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">
+            <button  onClick={() => {
+      onNavigate?.('login');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
+  }}  className="hidden md:flex bg-[#FEE21B] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">
               {translations.nav.bookNow || 'Réserver'}
             </button>
 
@@ -388,7 +400,19 @@ const Header: React.FC<HeaderProps> = ({
                                 {translations.pages?.contact || 'contact'}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
                               </button>
-              <button className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-extrabold text-xl tracking-wide transition-all duration-300 hover:bg-yellow-300 mt-4">
+              <button   onClick={() => {
+      onNavigate?.('login');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
+  }} className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-extrabold text-xl tracking-wide transition-all duration-300 hover:bg-yellow-300 mt-4">
                 {translations.nav.bookNow}
               </button>
             </nav>

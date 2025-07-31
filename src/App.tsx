@@ -17,7 +17,8 @@ import {
   Award,
   Users,
   MapPin,
-  TrendingUp
+  TrendingUp,
+  LogIn
 } from 'lucide-react';
 import { pricingData } from './data/pricing';
 import PricingModal from './components/PricingModal';
@@ -54,15 +55,20 @@ import Contact from './pages/Contact';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import CompanySignup from './pages/CompanySignup';
+import Login from './pages/Login';
+import AboutPopup from './components/AboutPopup';
 
 
 function App() {
   const [isDark, setIsDark] = useState(true);
   const [language, setLanguage] = useState<Language>('fr');
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState<'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'>(
+  const [showAbout, setShowAbout] = useState(false);
+  const [currentPage, setCurrentPage] = useState<'home' | 'help' | 'contact' | 'terms' | 'privacy'| "about" | "login" | 'company'>(
     'home'
   );
+
+
   // Load theme preference from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('tandhif-theme');
@@ -94,7 +100,7 @@ function App() {
   const prices = pricingData[language] || pricingData.fr;
  // Page navigation handlers
  const showPage = (
-  page: 'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'
+  page: 'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company' | 'about'| 'login'
 ) => setCurrentPage(page);
 const goHome = () => showPage('home');
 
@@ -103,7 +109,9 @@ if (currentPage === 'help')   return <Help    isDark={isDark} onBack={goHome} tr
 if (currentPage === 'contact')return <Contact isDark={isDark} onBack={goHome} translations={t}/>;
 if (currentPage === 'terms')  return <Terms   isDark={isDark} onBack={goHome} translations={t}/>;
 if (currentPage === 'privacy')return <Privacy isDark={isDark} onBack={goHome} translations={t}/>;
+if (currentPage === 'login')return <Login isDark={isDark} onBack={goHome} translations={t}/>;
 if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHome} translations={t}/>;
+// if (currentPage === 'about')return <AboutSection isDark={isDark} onBack={goHome} translations={t}/>;
     /* ---------- helper ---------- */
   const getPlatform = (): 'android' | 'ios' | 'other' => {
     const ua = navigator.userAgent || navigator.vendor || (window as any).opera;
@@ -849,6 +857,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
 </button>
 
 <button
+  onClick={() =>  setShowAbout(true)}
   className={`w-72 h-16 border-2 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 ${
     isDark
       ? 'border-white text-white hover:bg-white hover:text-black'
@@ -869,6 +878,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
         services={serviceNames}
         onNavigate={showPage}
       />
+
+      
       {/* Pricing Modal */}
       <PricingModal
         isOpen={isPricingModalOpen}
@@ -878,6 +889,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
         translations={t}
         language={language}
       />
+
+<AboutPopup isOpen={showAbout} onClose={() => setShowAbout(false)}  isDark={isDark} />
  
     </div>
   );
