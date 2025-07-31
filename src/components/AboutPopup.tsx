@@ -6,9 +6,12 @@ interface AboutPopupProps {
   isOpen: boolean;
   onClose: () => void;
   isDark?: boolean;
+  translations: any;
+  language: string;
 }
 
-const AboutPopup: React.FC<AboutPopupProps> = ({ isOpen, onClose, isDark }) => {
+const AboutPopup: React.FC<AboutPopupProps> = ({ isOpen, onClose, isDark ,translations ,language }) => {
+  const t = translations.about;
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'unset';
     return () => {
@@ -46,10 +49,11 @@ const AboutPopup: React.FC<AboutPopupProps> = ({ isOpen, onClose, isDark }) => {
           animation: 'modalSlideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards'
         }}
         onClick={(e) => e.stopPropagation()} // Prevent close on content click
+        dir={language === 'ar' ? 'rtl' : 'ltr'}
       >
         <button
           onClick={onClose}
-          className={`absolute top-6 right-6 p-3 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-90 ${
+          className={`absolute top-6 ${language === 'ar' ? 'left-6' : 'right-6'} p-3 rounded-full transition-all duration-300 hover:scale-110 hover:rotate-90 ${
             isDark
               ? 'bg-gray-800/80 text-gray-400 hover:bg-gray-700 hover:text-white'
               : 'bg-gray-100/80 text-gray-600 hover:bg-gray-200 hover:text-black'
@@ -59,35 +63,34 @@ const AboutPopup: React.FC<AboutPopupProps> = ({ isOpen, onClose, isDark }) => {
         </button>
 
         <header className="mb-6">
-          <h2 className="text-4xl font-bold mb-4 max-[450px]:text-[25px]">À propos de Tandhif</h2>
+          <h2 className="text-4xl font-bold mb-4 max-[450px]:text-[23px]">{t.title}</h2>
         
         </header>
 
         <div className="overflow-y-auto max-h-[70vh] " style={{ scrollbarWidth: 'thin' }}>
         <p className={`${
                   isDark ? 'text-center' : 'text-center'
-                }`}>
-            Tandhif est une application de nettoyage à la demande qui permet aux particuliers et aux entreprises de réserver rapidement plus de 45 types de prestations.
-            Grâce à une technologie de géolocalisation et de matching automatique, nous facilitons l’accès à des professionnels du nettoyage qualifiés, partout en France.
-          </p>
+                }`}>{t.description1}
+</p>
 
-          <h3 className="text-2xl font-bold mb-4 max-[450px]:text-[22px]">Avantages pour les clients</h3>
+          <h3 className="text-2xl font-bold mb-4 max-[450px]:text-[22px]">{t.clientAdvantages}</h3>
           <ul className="space-y-4 list-disc pl-6">
             <li>
-              <strong>Crédit d’impôt instantané (CESU Avance Immédiate)</strong><br />
-              Tandhif est compatible avec le dispositif d’Avance Immédiate de l’URSSAF. Cela permet à nos clients particuliers de bénéficier de 50 % de crédit d’impôt directement déduit du montant à payer.
-            </li>
+              <strong>{t.t1}</strong><br />
+
+              {t.taxCredit}
+                   </li>
             <li>
-              <strong>Service client réactif</strong><br />
-              Nous assurons un accompagnement personnalisé avant, pendant et après chaque prestation. En cas de question ou d’imprévu, notre service client est disponible et réactif.
-            </li>
+              <strong>{t.t2}</strong><br />
+              {t.support}
+               </li>
             <li>
-              <strong>Suivi en temps réel</strong><br />
-              Une fois la mission confirmée, vous suivez en temps réel l’arrivée du cleaner et l’avancement de la tâche directement via l’application.
-            </li>
+              <strong>{t.t3}</strong><br />
+              {t.tracking}
+              </li>
             <li>
-              <strong>Professionnels de confiance</strong><br />
-              Tous les professionnels présents.
+              <strong>{t.t4}</strong><br />
+            {t.trustedProfessionals}
             </li>
           </ul>
         </div>

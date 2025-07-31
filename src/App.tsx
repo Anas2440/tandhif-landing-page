@@ -659,6 +659,61 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
   </p>
 </div>
 
+ {/* Final CTA */}
+<section className={`py-14 ${
+        isDark ? 'bg-[#0E0E0E]' : 'bg-white'
+      }`}>
+        <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="relative">
+            <img
+  src={toon} // ton image
+  alt="Description"
+  className="w-full h-66 object-contain shadow-2xl 
+             sm:h-96 sm:object-cover rounded-none"
+/>
+              <div className="absolute inset-0  rounded-3xl"></div>
+              {/* Floating badge */}
+              <div className="absolute -top-6 right-3  bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
+                #1 en France
+              </div>
+            </div>
+            
+            {/* Right side - Content */}
+            <div className="text-center items-center px-4 lg:text-left">
+              <h2 className={`text-3xl md:text-5xl font-bold mb-8 ${
+                isDark ? 'text-white' : 'text-black'
+              }`}>
+                {t.finalCta.title}
+              </h2>
+              <p className={`text-xl mb-12 max-w-4xl mx-auto lg:mx-0 leading-relaxed ${
+                isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
+              }`}>
+                {t.finalCta.description}
+              </p>
+              
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center items-center">
+              <button className="bg-[#FEE21B] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
+  {t.finalCta.cta}
+</button>
+
+<button
+  onClick={() =>  setShowAbout(true)}
+  className={`w-72 h-16 border-2 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 ${
+    isDark
+      ? 'border-white text-white hover:bg-white hover:text-black'
+      : 'border-black text-black hover:bg-black hover:text-white'
+  }`}
+>
+  En savoir plus
+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
        {/* Mobile App */}
        <section id="mobile" className={`py-10 ${
         isDark ? 'bg-gray-900/50' : 'bg-gray-50'
@@ -816,61 +871,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       </section>
  
    
-      {/* Final CTA */}
-      <section className={`py-14 ${
-        isDark ? 'bg-[#0E0E0E]' : 'bg-white'
-      }`}>
-        <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Image */}
-            <div className="relative">
-            <img
-  src={toon} // ton image
-  alt="Description"
-  className="w-full h-66 object-contain shadow-2xl 
-             sm:h-96 sm:object-cover rounded-none"
-/>
-              <div className="absolute inset-0  rounded-3xl"></div>
-              {/* Floating badge */}
-              <div className="absolute -top-6 right-3  bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
-                #1 en France
-              </div>
-            </div>
-            
-            {/* Right side - Content */}
-            <div className="text-center items-center px-4 lg:text-left">
-              <h2 className={`text-3xl md:text-5xl font-bold mb-8 ${
-                isDark ? 'text-white' : 'text-black'
-              }`}>
-                {t.finalCta.title}
-              </h2>
-              <p className={`text-xl mb-12 max-w-4xl mx-auto lg:mx-0 leading-relaxed ${
-                isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
-              }`}>
-                {t.finalCta.description}
-              </p>
-              
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center items-center">
-              <button className="bg-[#FEE21B] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
-  {t.finalCta.cta}
-</button>
+     
 
-<button
-  onClick={() =>  setShowAbout(true)}
-  className={`w-72 h-16 border-2 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 ${
-    isDark
-      ? 'border-white text-white hover:bg-white hover:text-black'
-      : 'border-black text-black hover:bg-black hover:text-white'
-  }`}
->
-  En savoir plus
-</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer
         isDark={isDark}
@@ -890,7 +892,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
         language={language}
       />
 
-<AboutPopup isOpen={showAbout} onClose={() => setShowAbout(false)}  isDark={isDark} />
+<AboutPopup isOpen={showAbout} onClose={() => setShowAbout(false)}  isDark={isDark}   translations={t}  language={language} />
  
     </div>
   );

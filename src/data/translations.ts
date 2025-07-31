@@ -10,6 +10,21 @@ export const translations = {
  contact: 'Contact',
  company: 'Entreprises',
  },
+ about: {
+  title: "À propos de Tandhif",
+  description1:
+    "Tandhif est une application de nettoyage à la demande qui permet aux particuliers et aux entreprises de réserver rapidement plus de 45 types de prestations. Grâce à une technologie de géolocalisation et de matching automatique, nous facilitons l’accès à des professionnels du nettoyage qualifiés, partout en France.",
+  clientAdvantages: "Avantages pour les clients",
+  t1:"Crédit d’impôt instantané (CESU Avance Immédiate)",
+  t2:"Service client réactif",
+  t3:"Suivi en temps réel",
+  t4:"Professionnels de confiance",
+  taxCredit:
+    " Tandhif est compatible avec le dispositif d’Avance Immédiate de l’URSSAF.",
+  support: " Nous assurons un accompagnement personnalisé avant, pendant et après chaque prestation.",
+  tracking: " Vous suivez en temps réel l’arrivée du cleaner via l’application.",
+  trustedProfessionals: "Tous les professionnels sont vérifiés et de confiance.",
+},
 
  login:{
   back:"Retour",
@@ -663,6 +678,30 @@ termsPage: {
     bookNow: 'Login',
     account: 'Contact'
   },
+  about: {
+    title: "About Tandhif",
+    description1:
+      "Tandhif is an on-demand cleaning app that allows individuals and businesses to quickly book more than 45 types of services. With geolocation and automatic matching technology, we make it easy to access qualified cleaning professionals across France.",
+    clientAdvantages: "Advantages for Clients",
+    t1: "Instant tax credit (CESU Immediate Advance)",
+    t2: "Responsive customer service",
+    t3: "Real-time tracking",
+    t4: "Trusted professionals",
+    taxCredit: "Tandhif supports the Immediate Advance system by URSSAF.",
+    support: "We provide personalized support before, during, and after each service.",
+    tracking: "Track the cleaner's arrival in real time through the app.",
+    trustedProfessionals: "All professionals are verified and trustworthy.",
+  },
+
+  login: {
+    back: "Back",
+    loginTitle: "Welcome",
+    loginSubtitle: "Please login to Tandhif Web",
+    emailPlaceholder: "Email",
+    passwordPlaceholder: "Password",
+    loginButton: "Login",
+    backButton: "Back"
+  },
 
   hero: {
     title: 'Tandhif',
@@ -1300,6 +1339,31 @@ termsPage: {
     bookNow: 'تسجيل الدخول',
     account: 'تواصل معنا'
   },
+  about: {
+    title: "عن Tandhif",
+    description1:
+      "Tandhif هو تطبيق تنظيف عند الطلب يتيح للأفراد والشركات حجز أكثر من 45 نوعًا من الخدمات بسرعة. بفضل تقنية تحديد الموقع الجغرافي والمطابقة التلقائية، نُسهل الوصول إلى محترفي التنظيف المؤهلين في جميع أنحاء فرنسا.",
+    clientAdvantages: "مزايا للعملاء",
+    t1: "ائتمان ضريبي فوري (CESU الدفعة الفورية)",
+    t2: "دعم عملاء سريع الاستجابة",
+    t3: "تتبع في الوقت الفعلي",
+    t4: "محترفون موثوقون",
+    taxCredit: "Tandhif يدعم نظام الدفعة الفورية من URSSAF.",
+    support: "نحن نوفر دعمًا مخصصًا قبل وأثناء وبعد كل خدمة.",
+    tracking: "تتبع وصول عامل التنظيف في الوقت الفعلي عبر التطبيق.",
+    trustedProfessionals: "جميع المحترفين تم التحقق منهم ويمكن الوثوق بهم.",
+  },
+  login: {
+    back: "رجوع",
+    loginTitle: "مرحبًا",
+    loginSubtitle: "يرجى تسجيل الدخول إلى Tandhif Web",
+    emailPlaceholder: "البريد الإلكتروني",
+    passwordPlaceholder: "كلمة المرور",
+    loginButton: "تسجيل الدخول",
+    backButton: "رجوع"
+  },
+
+
   hero: {
     title: 'تنديف',
     subtitle: 'تنظيف بضغطة زر. بسهولة. الآن.',
@@ -1365,6 +1429,7 @@ termsPage: {
     ],
     cta: 'ابدأ الآن'
   },
+  
   whyTandhif: {
     title: 'لماذا تختار تنديف؟',
     subtitle: 'الفرق الذي يصنع الفرق',
@@ -1933,6 +1998,29 @@ companyPage: {
     becomeCleanerShort: 'Empresa',
     bookNow: 'Iniciar sesión',
     account: 'Contacto'
+  },
+  about: {
+    title: "Acerca de Tandhif",
+    description1:
+      "Tandhif es una aplicación de limpieza bajo demanda que permite a particulares y empresas reservar rápidamente más de 45 tipos de servicios. Gracias a la geolocalización y al emparejamiento automático, facilitamos el acceso a profesionales de limpieza calificados en toda Francia.",
+    clientAdvantages: "Ventajas para los clientes",
+    t1: "Crédito fiscal instantáneo (CESU Avance Inmediato)",
+    t2: "Atención al cliente rápida",
+    t3: "Seguimiento en tiempo real",
+    t4: "Profesionales de confianza",
+    taxCredit: "Tandhif es compatible con el sistema de Avance Inmediato de URSSAF.",
+    support: "Ofrecemos asistencia personalizada antes, durante y después de cada servicio.",
+    tracking: "Puede seguir en tiempo real la llegada del profesional a través de la aplicación.",
+    trustedProfessionals: "Todos los profesionales están verificados y son de confianza.",
+  },
+  login: {
+    back: "Volver",
+    loginTitle: "Bienvenido",
+    loginSubtitle: "Por favor inicie sesión en Tandhif Web",
+    emailPlaceholder: "Correo electrónico",
+    passwordPlaceholder: "Contraseña",
+    loginButton: "Iniciar sesión",
+    backButton: "Volver"
   },
   hero: {
     title: 'Tandhif',
@@ -2582,6 +2670,29 @@ companyPage: {
     bookNow: 'Entrar',
     account: 'Contato'
   },
+  about: {
+    title: "Sobre o Tandhif",
+    description1:
+      "Tandhif é um aplicativo de limpeza sob demanda que permite que indivíduos e empresas reservem rapidamente mais de 45 tipos de serviços. Com tecnologia de geolocalização e correspondência automática, facilitamos o acesso a profissionais de limpeza qualificados em toda a França.",
+    clientAdvantages: "Vantagens para os clientes",
+    t1: "Crédito fiscal instantâneo (CESU Avanço Imediato)",
+    t2: "Atendimento ao cliente ágil",
+    t3: "Acompanhamento em tempo real",
+    t4: "Profissionais de confiança",
+    taxCredit: "Tandhif é compatível com o sistema de Avanço Imediato da URSSAF.",
+    support: "Oferecemos suporte personalizado antes, durante e após cada serviço.",
+    tracking: "Acompanhe em tempo real a chegada do profissional pelo aplicativo.",
+    trustedProfessionals: "Todos os profissionais são verificados e confiáveis.",
+  },
+  login: {
+    back: "Voltar",
+    loginTitle: "Bem-vindo",
+    loginSubtitle: "Por favor, faça login no Tandhif Web",
+    emailPlaceholder: "Email",
+    passwordPlaceholder: "Senha",
+    loginButton: "Entrar",
+    backButton: "Voltar"
+  },
   hero: {
     title: 'Tandhif',
     subtitle: 'limpeza com um clique. Fácil. Agora.',
@@ -3229,6 +3340,29 @@ companyPage: {
     becomeCleanerShort: 'Azienda',
     bookNow: 'Accedi',
     account: 'Contatto'
+  },
+  about: {
+    title: "Informazioni su Tandhif",
+    description1:
+      "Tandhif è un'app di pulizie on-demand che consente a privati e aziende di prenotare rapidamente oltre 45 tipi di servizi. Grazie alla tecnologia di geolocalizzazione e abbinamento automatico, facilitiamo l'accesso a professionisti delle pulizie qualificati in tutta la Francia.",
+    clientAdvantages: "Vantaggi per i clienti",
+    t1: "Credito d'imposta immediato (CESU Anticipo Immediato)",
+    t2: "Assistenza clienti reattiva",
+    t3: "Tracciamento in tempo reale",
+    t4: "Professionisti fidati",
+    taxCredit: "Tandhif è compatibile con il sistema di Anticipo Immediato dell'URSSAF.",
+    support: "Forniamo supporto personalizzato prima, durante e dopo ogni servizio.",
+    tracking: "Traccia in tempo reale l'arrivo del cleaner tramite l'app.",
+    trustedProfessionals: "Tutti i professionisti sono verificati e affidabili.",
+  },
+  login: {
+    back: "Indietro",
+    loginTitle: "Benvenuto",
+    loginSubtitle: "Effettua l'accesso a Tandhif Web",
+    emailPlaceholder: "Email",
+    passwordPlaceholder: "Password",
+    loginButton: "Accedi",
+    backButton: "Indietro"
   },
   hero: {
     title: 'Tandhif',
@@ -3878,6 +4012,30 @@ companyPage: {
  bookNow: 'Buchen',
  account: 'Kontakt'
  },
+ about: {
+  title: "Über Tandhif",
+  description1:
+    "Tandhif ist eine Reinigungs-App auf Abruf, mit der Privatpersonen und Unternehmen schnell über 45 verschiedene Dienstleistungen buchen können. Dank Geolokalisierungs- und automatischer Matching-Technologie ermöglichen wir den Zugang zu qualifizierten Reinigungskräften in ganz Frankreich.",
+  clientAdvantages: "Vorteile für Kunden",
+  t1: "Sofortiger Steuerabzug (CESU Vorauszahlung)",
+  t2: "Reaktionsschneller Kundenservice",
+  t3: "Echtzeit-Tracking",
+  t4: "Vertrauenswürdige Fachkräfte",
+  taxCredit: "Tandhif ist mit dem Vorauszahlungssystem der URSSAF kompatibel.",
+  support: "Wir bieten persönliche Unterstützung vor, während und nach jedem Service.",
+  tracking: "Verfolgen Sie die Ankunft des Reinigers in Echtzeit über die App.",
+  trustedProfessionals: "Alle Fachkräfte sind überprüft und vertrauenswürdig.",
+},
+ login: {
+  back: "Zurück",
+  loginTitle: "Willkommen",
+  loginSubtitle: "Bitte melden Sie sich bei Tandhif Web an",
+  emailPlaceholder: "E-Mail",
+  passwordPlaceholder: "Passwort",
+  loginButton: "Anmelden",
+  backButton: "Zurück"
+},
+
  hero: {
  title: 'Tandhif',
  subtitle: 'Reinigung mit einem Klick. Einfach. Jetzt.',
