@@ -23,25 +23,25 @@ export const servicesData: Record<string, Service[]> = {
   },
   {
     id: 'vêtements',
-    name: 'Vêtements',
+    name: 'Vêtement',
     image: serviceImages.default.vetements,
     description: 'Nettoyage, détachage, repassage par vos voisins cleaners.'
   },
   {
     id: 'chaussures',
-    name: 'Chaussures',
+    name: 'Chaussure',
     image: serviceImages.default.chaussures,
     description: 'Nettoyage à la main ou vapeur selon matière (cuir, tissu).'
   },
   {
     id: 'canapés',
-    name: 'Canapés',
+    name: 'Canapé',
     image: serviceImages.default.canapes,
     description: 'Traitement en profondeur pour tissu, cuir, microfibre…'
   },
   {
     id: 'fauteuils',
-    name: 'Fauteuils',
+    name: 'Fauteuil',
     image: serviceImages.default.fauteuils,
     description: 'Nettoyage à la main ou injection/extraction selon la matière.'
   },
@@ -71,13 +71,13 @@ export const servicesData: Record<string, Service[]> = {
   },
   {
     id: 'vitres',
-    name: 'Vitres',
+    name: 'Vitre',
     image: serviceImages.default.vitres,
     description: 'Intérieur et extérieur, sans trace, pour maisons ou bureaux.'
   },
   {
     id: 'vitrines',
-    name: 'Vitrines',
+    name: 'Vitrine',
     image: serviceImages.default.vitrines,
     description: 'Nettoyage sans traces, intérieur/extérieur, commerces.'
   },
@@ -257,7 +257,7 @@ export const servicesData: Record<string, Service[]> = {
   },
   {
     id: 'poubelles',
-    name: 'Poubelles',
+    name: 'Poubelle',
     image: serviceImages.default.poubelles,
     description: 'Nettoyage bac à ordures, désinfection, désodorisation.'
   },

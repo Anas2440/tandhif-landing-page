@@ -1,5 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
+import { FaFacebook, FaInstagram, FaLinkedin, FaSnapchatSquare } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io";
 import logo from '../images/logo.png';
 import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
 
@@ -26,9 +28,31 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
   // const navigate = useNavigate();
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' }
+    {
+      href: "https://facebook.com",
+      label: "Facebook",
+      icon: FaFacebook,
+    },
+    {
+      href: "https://instagram.com",
+      label: "Instagram",
+      icon: FaInstagram,
+    },
+    {
+      href: "https://linkedin.com",
+      label: "LinkedIn",
+      icon: FaLinkedin,
+    },
+    {
+      href: "https://youtube.com",
+      label: "YouTube",
+      icon: IoLogoYoutube,
+    },
+    {
+      href: "https://snapchat.com",
+      label: "Snapchat",
+      icon: FaSnapchatSquare,
+    },
   ];
 
   return (
@@ -274,68 +298,50 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
         <div className={`mt-16 pt-8 border-t ${isDark ? 'border-gray-800' : 'border-gray-200'}`}>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              <span className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                {translations.footer.followUs || 'Suivez-nous'}
-              </span>
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className={`p-3 rounded-xl transition-all duration-300 hover:scale-110 ${
-                    isDark 
-                      ? 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white' 
-                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-black'
-                  }`}
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-3 sm:space-y-0">
+  <span
+    className={`text-sm font-medium ${
+      isDark ? 'text-gray-400' : 'text-gray-600'
+    }`}
+  >
+    {translations.footer.followUs || 'Suivez-nous'}
+  </span>
 
-            {/* Copyright */}
-            <div className="text-center md:text-right">
-  <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-    © 2025 Tandhif. {translations.footer?.copyright || 'Le Nettoyage nouvelle génération.'}
-  </p>
-  <div className="flex items-center justify-center md:justify-end space-x-4 mt-2">
-    <span
-      onClick={() => {
-        onNavigate && onNavigate('privacy');
-        setTimeout(() => {
-          const topElement = document.getElementById('top');
-          if (topElement) {
-            topElement.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-        }, 100);
-      }}
-      className={`text-xs underline ${isDark ? 'text-gray-500 hover:text-gray-400' : 'text-gray-500 hover:text-gray-600'} transition-colors duration-300 cursor-pointer`}
-    >
-      {translations.footer?.privacy || 'Politique de confidentialité'}
-    </span>
-
-    <span
-      onClick={() => {
-        onNavigate && onNavigate('terms');
-        setTimeout(() => {
-          const topElement = document.getElementById('top');
-          if (topElement) {
-            topElement.scrollIntoView({ behavior: 'smooth' });
-          } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }
-        }, 100);
-      }}
-      className={`text-xs underline ${isDark ? 'text-gray-500 hover:text-gray-400' : 'text-gray-500 hover:text-gray-600'} transition-colors duration-300 cursor-pointer`}
-    >
-      {translations.footer?.terms || 'Conditions Générales'}
-    </span>
+  <div className="flex space-x-3">
+    {socialLinks.map((social, index) => (
+      <a
+        key={index}
+        href={social.href}
+        className={`p-3 rounded-xl transition-all duration-300 hover:scale-110 ${
+          isDark
+            ? 'bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-white'
+            : 'bg-gray-100 text-gray-600 hover:bg-gray-200 hover:text-black'
+        }`}
+        aria-label={social.label}
+      >
+        <social.icon className="h-5 w-5" />
+      </a>
+    ))}
   </div>
 </div>
 
+
+            {/* Copyright */}
+            <div className="text-center md:text-right">
+              <p className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                © 2025 Tandhif. {translations.footer.copyright}
+              </p>
+              <div className="flex items-center justify-center md:justify-end space-x-4 mt-2">
+                <span className={`text-xs ${isDark ? 'text-gray-500 hover:text-gray-400' : 'text-gray-500 hover:text-gray-600'} 
+                  transition-colors duration-300 cursor-pointer`}>
+                  {translations.footer.privacy || 'Politique de confidentialité'}
+                </span>
+                <span className={`text-xs ${isDark ? 'text-gray-500 hover:text-gray-400' : 'text-gray-500 hover:text-gray-600'} 
+                  transition-colors duration-300 cursor-pointer`}>
+                  {translations.footer.terms || 'CGU'}
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
