@@ -54,7 +54,7 @@ import CompanySignup from './pages/CompanySignup';
 
 
 function App() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [language, setLanguage] = useState<Language>('fr');
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState<'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'>(
@@ -72,13 +72,65 @@ function App() {
       setLanguage(savedLanguage);
     }
   }, []);
-  
 
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    localStorage.setItem('tandhif-theme', newTheme ? 'dark' : 'light');
-  };
+
+useEffect(() => {
+  // Pehle check karo localStorage me theme saved hai ya nahi
+  const savedTheme = localStorage.getItem("tandhif-theme");
+  if (savedTheme) {
+    setIsDark(savedTheme === "dark");
+    return;
+  }
+
+  // Country ke hisaab se local time check karo
+  fetch("https://ipapi.co/json/")
+    .then((res) => res.json())
+    .then((data) => {
+      const localHour = parseInt(
+        new Date().toLocaleTimeString("en-US", {
+          hour: "numeric",
+          hour12: false,
+          timeZone: data.timezone, // API se timezone aayega
+        }),
+        10
+      );
+
+      if (localHour >= 18 || localHour < 6) {
+        setIsDark(true);
+        localStorage.setItem("tandhif-theme", "dark");
+      } else {
+        setIsDark(false);
+        localStorage.setItem("tandhif-theme", "light");
+      }
+    })
+    .catch((err) => console.error("Time fetch error:", err));
+}, []);
+
+const toggleTheme = () => {
+  const newTheme = !isDark;
+  setIsDark(newTheme);
+  localStorage.setItem("tandhif-theme", newTheme ? "dark" : "light");
+};
+
+
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem('tandhif-theme');
+  //   if (savedTheme) {
+  //     const hour = new Date().getHours();
+  //     const shouldBeDark = hour >= 19 || hour < 6; 
+  //     setIsDark(shouldBeDark);
+  //     localStorage.setItem('tandhif-theme', shouldBeDark ? 'dark' : 'light');
+  //   } else {
+  //     setIsDark(savedTheme === 'dark');
+  //   }
+  // }, []);
+
+  // const toggleTheme = () => {
+  //   const newTheme = !isDark;
+  //   setIsDark(newTheme);
+  //   localStorage.setItem('tandhif-theme', newTheme ? 'dark' : 'light');
+  // };
+
 
   const handleLanguageChange = (newLanguage: Language) => {
     setLanguage(newLanguage);
@@ -592,7 +644,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </div>
               </div>
               
-              <div className="bg-[#001f3f] text-white rounded-3xl p-10">
+              <div className="bg-[#FEE21B] text-black rounded-3xl p-10">
                 {/* Calculator Image */}
                 <div className="mb-6">
                 <img 
