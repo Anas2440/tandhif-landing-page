@@ -18,14 +18,17 @@ interface HeaderProps {
   language: Language;
   setLanguage: (lang: Language) => void;
   translations: any;
+  onNavigate?: (page: 'help' | 'contact' | 'terms' | 'login' | 'privacy' | 'company' | 'account' | 'hero') => void;
 }
+
 
 const Header: React.FC<HeaderProps> = ({ 
   isDark, 
   toggleTheme, 
   language, 
   setLanguage,
-  translations 
+  translations ,
+  onNavigate
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,12 +71,29 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   const navItems = [
-    { key: 'services', label: translations.nav.services },
-    { key: 'how-it-works', label: translations.nav.howItWorks },
-    { key: 'pricing', label: translations.nav.pricing },
-    { key: 'mobile', label: translations.nav.mobile },
-    { key: 'hero', label: translations.nav.becomeCleanerShort }
+    { key: 'services', label: translations.nav.services, type: 'scroll' },
+    { key: 'how-it-works', label: translations.nav.howItWorks, type: 'scroll' },
+    { key: 'pricing', label: translations.nav.pricing, type: 'scroll' },
+    { key: 'mobile', label: translations.nav.mobile, type: 'scroll' },
+    // { key: 'company', label: translations.nav.company, type: 'navigate' },
+    // { key: 'contact', label: translations.nav.contact, type: 'navigate' }, 
   ];
+
+  // Allowed keys for onNavigate
+  const allowedNavigateKeys = ['help', 'contact', 'terms', 'privacy', 'company', 'account', 'hero'] as const;
+
+  const scrollTo = (key: string) => {
+    if (key === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const section = document.getElementById(key);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.warn(`Section with id "${key}" not found.`);
+      }
+    }
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -81,7 +101,7 @@ const Header: React.FC<HeaderProps> = ({
         ? `${isDark ? 'bg-black/90' : 'bg-white/90'} backdrop-blur-xl shadow-2xl border-b ${isDark ? 'border-gray-800' : 'border-gray-100'}` 
         : 'bg-transparent'
     }`}>
-     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-[0.5rem]">
+       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 p-[0.5rem]">
         <div className="flex items-center justify-between ">
           {/* Logo */}
           <div 
@@ -90,37 +110,109 @@ const Header: React.FC<HeaderProps> = ({
           >
             <div className="relative">
             <img
-  src={icon}
-  alt="App Icon"
-  className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300"
-/>
+                src={icon}
+                alt="App Icon"
+                className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300"
+              />
+
 
             </div>
-           <div className="flex items-center">
-           <img
-  src={logo}
-  alt="Tandhif Logo"
-  className="h-4 object-contain "
-/>
-           </div>  
+            <div className="flex items-center">
+              <img
+                src={logo}
+                alt="Tandhif Logo"
+                className="h-4 object-contain"
+              />
+            </div>  
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
-                key={item.key}
-                onClick={() => scrollToSection(item.key)}
-                className={`relative px-4 py-2 font-medium transition-all duration-300 group ${
+              key={item.key}
+              onClick={() => {
+                if (item.type === 'scroll') {
+                  setTimeout(() => {
+                    const topElement = document.getElementById(item.key);
+                    if (topElement) {
+                      topElement.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }, 100);
+                } else {
+                  if (allowedNavigateKeys.includes(item.key as any)) {
+                    onNavigate?.(item.key as typeof allowedNavigateKeys[number]);
+                  } else {
+                    console.warn(`onNavigate called with unsupported key: ${item.key}`);
+                  }
+                }
+                setIsMenuOpen(false);
+              }}
+              className={`relative px-4 py-2 font-medium transition-all duration-300 group  ${
+                isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
+              }`}
+            >
+              {item.label}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+            </button>            ))}
+          </nav>
+          <button
+  //                                                   onClick={() => {
+  //   onNavigate?.('company');
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }}
+                                    onClick={() => {
+      onNavigate?.('company');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
+  }}
+                  // onClick={() => onNavigate?.('company')}
+
+                  className={`relative px-4 py-2 font-medium transition-all duration-300 group hidden lg:flex items-center space-x-8${
+                    isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
+                  }`}
+                >
+                  {translations.pages?.company || 'Entreprises'}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+                </button>
+                <button
+                
+                //                                   onClick={() => {
+                //   onNavigate?.('contact');
+                //   window.scrollTo({ top: 0, behavior: 'smooth' });
+                // }}
+                                // onClick={() => onNavigate?.('contact')}
+              
+                                                  onClick={() => {
+                  onNavigate?.('contact');
+                  setTimeout(() => {
+                    // Try scrollIntoView first
+                    const topElement = document.getElementById('top');
+                    if (topElement) {
+                      topElement.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      // Fallback to scrollTo
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }, 100);
+                }}
+                className={`relative px-4 py-2 font-medium transition-all duration-300 group hidden lg:flex items-center space-x-8 ${
                   isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
                 }`}
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
-              </button>
-            ))}
-          </nav>
-
+                              >
+                                {translations.pages?.contact || 'contact'}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+                              </button>
           {/* Controls */}
           <div className="flex items-center space-x-3">
             {/* Language Dropdown */}
@@ -135,16 +227,14 @@ const Header: React.FC<HeaderProps> = ({
               
               >
                 {/* <Globe className="h-4 w-4" /> */}
-                <div className=''>
-                <span className="text-sm font-medium flex items-center gap-1">
-                <span className="text-3xl  rounded-md ">
-                   {languageNames[language].split(' ')[0]}
-               </span>
-  {/* {languageNames[language].split(' ')[0]}{' '} */}
-  {languageNames[language].split(' ')[1].slice(0, 2).toUpperCase()}
-</span>
-
-</div>
+                <div>
+                  <span className="text-sm font-medium flex items-center gap-1">
+                    <span className="text-3xl rounded-md">
+                      {languageNames[language].split(' ')[0]}
+                    </span>
+                    {languageNames[language].split(' ')[1].slice(0, 2).toUpperCase()}
+                  </span>
+                </div>
                 <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isLanguageOpen ? 'rotate-180' : ''}`} />
               </button>
               
@@ -172,7 +262,7 @@ const Header: React.FC<HeaderProps> = ({
                     >
                       {/* Flag and Language Name */}
                       <span className="mr-2">{languageNames[lang].split(' ')[0]}</span>
-                      <span>{languageNames[lang].split(' ')[1]}</span>. 
+                      <span>{languageNames[lang].split(' ')[1]}</span>
                     </button>
                   ))}
                 </div>
@@ -192,9 +282,22 @@ const Header: React.FC<HeaderProps> = ({
             </button>
 
             {/* CTA Button */}
-            <button className="hidden md:flex bg-[#FEE21B] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">
+            <button  onClick={() => {
+      onNavigate?.('login');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
+  }}  className="hidden md:flex bg-[#FEE21B] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">
               {translations.nav.bookNow || 'Réserver'}
             </button>
+
 
             {/* Mobile Menu Button */}
             <button
@@ -215,43 +318,108 @@ const Header: React.FC<HeaderProps> = ({
           <div className={`lg:hidden absolute top-20 left-0 right-0 ${
             isDark ? 'bg-black/95' : 'bg-white/95'
           } backdrop-blur-xl border-t ${isDark ? 'border-gray-800' : 'border-gray-200'} shadow-2xl`}>
-            <nav className="px-4 py-6 space-y-4">
+           <nav className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
-                <button
-                  key={item.key}
-                  onClick={() => scrollToSection(item.key)}
-                  className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
-                    isDark 
-                      ? 'text-gray-300 hover:text-white hover:bg-gray-800' 
-                      : 'text-gray-700 hover:text-black hover:bg-gray-100'
+         <button
+         key={item.key}
+         onClick={() => {
+           if (item.type === 'scroll') {
+             setTimeout(() => {
+               const topElement = document.getElementById(item.key);
+               if (topElement) {
+                 topElement.scrollIntoView({ behavior: 'smooth' });
+               } else {
+                 window.scrollTo({ top: 0, behavior: 'smooth' });
+               }
+             }, 100);
+           } else {
+             if (allowedNavigateKeys.includes(item.key as any)) {
+               onNavigate?.(item.key as typeof allowedNavigateKeys[number]);
+             } else {
+               console.warn(`onNavigate called with unsupported key: ${item.key}`);
+             }
+           }
+           setIsMenuOpen(false);
+         }}
+         className={`{block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300  ${
+           isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
+         }`}
+       >
+         {item.label}
+         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+       </button>
+       
+              ))}
+                  <button
+  //                                                   onClick={() => {
+  //   onNavigate?.('company');
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }}
+                                    onClick={() => {
+      onNavigate?.('company');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
+  }}
+                  // onClick={() => onNavigate?.('company')}
+
+                  className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300  ${
+                    isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
                   }`}
                 >
-                  {item.label}
+                  {translations.pages?.company || 'Entreprises'}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
                 </button>
-              ))}
-              <button
-                className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
-                  isDark 
-                    ? 'text-gray-300 hover:text-white hover:bg-gray-800' 
-                    : 'text-gray-700 hover:text-black hover:bg-gray-100'
+                <button
+                
+                //                                   onClick={() => {
+                //   onNavigate?.('contact');
+                //   window.scrollTo({ top: 0, behavior: 'smooth' });
+                // }}
+                                // onClick={() => onNavigate?.('contact')}
+              
+                                                  onClick={() => {
+                  onNavigate?.('contact');
+                  setTimeout(() => {
+                    // Try scrollIntoView first
+                    const topElement = document.getElementById('top');
+                    if (topElement) {
+                      topElement.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      // Fallback to scrollTo
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }, 100);
+                }}
+                className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300   ${
+                  isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
                 }`}
-              >
-                {translations.nav.account}
+                              >
+                                {translations.pages?.contact || 'contact'}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+                              </button>
+              <button   onClick={() => {
+      onNavigate?.('login');
+    setTimeout(() => {
+      // Try scrollIntoView first
+      const topElement = document.getElementById('top');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Fallback to scrollTo
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 100);
+  }} className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-extrabold text-xl tracking-wide transition-all duration-300 hover:bg-yellow-300 mt-4">
+                {translations.nav.bookNow}
               </button>
-
-{/*               
-              <button     
-                onClick={() => scrollToSection('hero')}
-                className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-all duration-300 ${
-                  isDark 
-                    ? 'text-gray-300 hover:text-white hover:bg-gray-800' 
-                    : 'text-gray-700 hover:text-black hover:bg-gray-100'
-                }`}
-              >Contect
-              </button> */}
-<button className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-extrabold text-xl tracking-wide transition-all duration-300 hover:bg-yellow-300 mt-4">
-  {translations.nav.bookNow}
-</button>
 
             </nav>
           </div>
@@ -262,3 +430,5 @@ const Header: React.FC<HeaderProps> = ({
 };
 
 export default Header;
+
+

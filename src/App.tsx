@@ -17,7 +17,8 @@ import {
   Award,
   Users,
   MapPin,
-  TrendingUp
+  TrendingUp,
+  LogIn
 } from 'lucide-react';
 import { pricingData } from './data/pricing';
 import PricingModal from './components/PricingModal';
@@ -39,6 +40,10 @@ import brak7 from './images/joshua-bowers-J4i2xrPmcm0-unsplash.jpg';
 import brak8 from './images/linkedin-sales-solutions-46bom4lObsA-unsplash.jpg';
 import brak9 from './images/jon-tyson-jgaxGjXKlpw-unsplash 2.jpg';
 import brak10 from './images/gil-ribeiro-3hO8igCybds-unsplash 2.jpg';
+import Change1 from './images/unnamed.png';
+import Change2 from './images/unnamed2.png';
+import Change3 from './images/unnamed3.png';
+import Change8 from './images/unnamed5.png';
 import AppIco from './images/Component 3.png';
 import play from './images/Component 2 (1).png';
 import toon from './images/toon.jpg';
@@ -47,7 +52,8 @@ import logo2 from './images/white1.jpeg';
 import { BrowserRouter } from 'react-router-dom';
 import Help from './pages/Help';
 import Contact from './pages/Contact';
-
+import Login from './pages/Login';
+import AboutPopup from './components/AboutPopup';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import CompanySignup from './pages/CompanySignup';
@@ -57,9 +63,11 @@ function App() {
   const [isDark, setIsDark] = useState(false);
   const [language, setLanguage] = useState<Language>('fr');
   const [isPricingModalOpen, setIsPricingModalOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState<'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'>(
+  const [showAbout, setShowAbout] = useState(false);
+  const [currentPage, setCurrentPage] = useState<'home' | 'help' | 'contact' | 'terms' | 'privacy'| "about" | "login" | 'company'>(
     'home'
   );
+
   // Load theme preference from localStorage
   useEffect(() => {
     const savedTheme = localStorage.getItem('tandhif-theme');
@@ -143,12 +151,13 @@ const toggleTheme = () => {
   const prices = pricingData[language] || pricingData.fr;
  // Page navigation handlers
  const showPage = (
-  page: 'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company'
+  page: 'home' | 'help' | 'contact' | 'terms' | 'privacy' | 'company' | 'about'| 'login'
 ) => setCurrentPage(page);
 const goHome = () => showPage('home');
 
 // ----- page routing (simple switch) -----
 if (currentPage === 'help')   return <Help    isDark={isDark} onBack={goHome} translations={t}/>;
+if (currentPage === 'login')return <Login isDark={isDark} onBack={goHome} translations={t}/>;
 if (currentPage === 'contact')return <Contact isDark={isDark} onBack={goHome} translations={t}/>;
 if (currentPage === 'terms')  return <Terms   isDark={isDark} onBack={goHome} translations={t}/>;
 if (currentPage === 'privacy')return <Privacy isDark={isDark} onBack={goHome} translations={t}/>;
@@ -202,6 +211,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
         language={language} 
         setLanguage={handleLanguageChange}
         translations={t}
+        onNavigate={showPage}
+
       />
 
       {/* Hero Section */}
@@ -312,7 +323,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       {/* Titre en haut */}
       <div className="absolute top-6 left-0 w-full flex justify-center px-4">
         <h2 className="text-yellow-400 text-2xl md:text-3xl font-bold text-center font-extrabold  px-4 py-2 rounded-xl">
-        {t.hero.cleanerTitle}
+        {/* {t.hero.cleanerTitle} */}
         </h2>
       </div>
 
@@ -428,12 +439,12 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       }`}>
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="text-center mb-5">
-            <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${
+          <h2 className={`text-3xl md:text-5xl font-bold mb-6  ${
               isDark ? 'text-white' : 'text-black'
             }`}>
               {t.services.title}
             </h2>
-            <p className={`text-xl max-w-3xl mx-auto ${
+            <p className={`text-xl max-w-3xl mx-auto px-4 ${
               isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
             }`}>
               {t.services.subtitle}
@@ -474,9 +485,9 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 <div className="mb-8">
                   <img 
                     src={[
-                      "https://images.pexels.com/photos/4099471/pexels-photo-4099471.jpeg?auto=compress&cs=tinysrgb&w=400",
-                      "https://images.pexels.com/photos/4099238/pexels-photo-4099238.jpeg?auto=compress&cs=tinysrgb&w=400",
-                      "https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=400"
+                      Change3,
+                      Change2,
+                      Change1
                     ][index]}
                     alt={step.title}
                     className="w-32 h-32 object-cover rounded-full mx-auto shadow-xl group-hover:scale-110 transition-transform duration-500"
@@ -691,7 +702,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
     style={{ height: '400px', objectFit: 'cover' }}
   />
 
-  <p className={`text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-4 sm:px-6 ${
+<p className={`text-xl sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-4 sm:px-6 ${
     isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
   }`}>
     {t.mobile.cleanerApp.cleanerDescription}
@@ -716,13 +727,69 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             </p>
           </div>
           
+          <section className={`py-14 ${
+        isDark ? 'bg-[#0E0E0E]' : 'bg-white'
+      }`}>
+        <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="relative">
+            <img
+  src={toon} // ton image
+  alt="Description"
+  className="w-full h-66 object-contain shadow-2xl 
+             sm:h-96 sm:object-cover rounded-none"
+/>
+              <div className="absolute inset-0  rounded-3xl"></div>
+              {/* Floating badge */}
+              <div className="absolute -top-6 right-3  bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
+                #1 en France
+              </div>
+            </div>
+            
+            {/* Right side - Content */}
+            <div className="text-center items-center px-4 lg:text-left">
+              <h2 className={`text-3xl md:text-5xl font-bold mb-8 ${
+                isDark ? 'text-white' : 'text-black'
+              }`}>
+                {t.finalCta.title}
+              </h2>
+              <p className={`text-xl mb-12 max-w-4xl mx-auto lg:mx-0 leading-relaxed ${
+                isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
+              }`}>
+                {t.finalCta.description}
+              </p>
+              
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center items-center">
+              <button className="bg-[#FEE21B] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
+  {t.finalCta.cta}
+</button>
+
+<button
+  onClick={() =>  setShowAbout(true)}
+  className={`w-72 h-16 border-2 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 ${
+    isDark
+      ? 'border-white text-white hover:bg-white hover:text-black'
+      : 'border-black text-black hover:bg-black hover:text-white'
+  }`}
+>
+  En savoir plus
+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
            {/* Mobile App Preview */}
            <div className="text-center mb-16">
             <div className="relative max-w-4xl mx-auto">
-              <img 
-                src="https://images.pexels.com/photos/4491461/pexels-photo-4491461.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+            <img 
+                src={Change8}
                 alt="Mobile app preview"
-                className="w-full h-80 object-cover rounded-3xl shadow-2xl"
+                style={{ height: '450px' }} 
+                className="w-full object-cover  rounded-3xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/30 to-transparent rounded-3xl flex items-center justify-center">
                 <div className="text-center">
@@ -768,7 +835,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 <img 
                   src={logo1}
                   alt="Client using app"
-                 className="w-12 h-12 sm:w-20 sm:h-20 md:w-16 md:h-16 rounded-2xl object-contain"
+               className="w-15 h-20 md:w-[70px] md:h-[70px] rounded-2xl object-cover"
                 />
                   
                 </div>
@@ -818,7 +885,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               <img 
   src={logo2}
   alt="Client using app"
-  className="w-12 h-12 sm:w-20 sm:h-20 md:w-16 md:h-16 rounded-2xl object-contain"
+   className="w-15 h-20 md:w-[70px] md:h-[70px] rounded-2xl object-cover"
  />
                   
                 </div>
@@ -854,60 +921,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
       </section>
  
    
-      {/* Final CTA */}
-      <section className={`py-14 ${
-        isDark ? 'bg-[#0E0E0E]' : 'bg-white'
-      }`}>
-        <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Image */}
-            <div className="relative">
-            <img
-  src={toon} // ton image
-  alt="Description"
-  className="w-full h-66 object-contain shadow-2xl 
-             sm:h-96 sm:object-cover rounded-none"
-/>
-              <div className="absolute inset-0  rounded-3xl"></div>
-              {/* Floating badge */}
-              <div className="absolute -top-6 right-3  bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
-                #1 en France
-              </div>
-            </div>
-            
-            {/* Right side - Content */}
-            <div className="text-center items-center px-4 lg:text-left">
-              <h2 className={`text-3xl md:text-5xl font-bold mb-8 ${
-                isDark ? 'text-white' : 'text-black'
-              }`}>
-                {t.finalCta.title}
-              </h2>
-              <p className={`text-xl mb-12 max-w-4xl mx-auto lg:mx-0 leading-relaxed ${
-                isDark ? 'text-[#BFBFBF]' : 'text-[#7A7A7A]'
-              }`}>
-                {t.finalCta.description}
-              </p>
-              
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center items-center">
-              <button className="bg-[#FEE21B] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
-  {t.finalCta.cta}
-</button>
-
-<button
-  className={`w-72 h-16 border-2 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 ${
-    isDark
-      ? 'border-white text-white hover:bg-white hover:text-black'
-      : 'border-black text-black hover:bg-black hover:text-white'
-  }`}
->
-  En savoir plus
-</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+   
 
       <Footer
         isDark={isDark}
@@ -924,7 +938,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
         translations={t}
         language={language}
       />
- 
+ <AboutPopup isOpen={showAbout} onClose={() => setShowAbout(false)}  isDark={isDark}   translations={t}  language={language} />
     </div>
   );
 }
