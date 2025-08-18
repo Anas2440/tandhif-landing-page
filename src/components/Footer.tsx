@@ -2,8 +2,8 @@ import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Instagram, Twitter } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaSnapchatSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
-import logo from '../images/logo.png';
-import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
+import logo from '../images/main_logo_1.png';
+import icon from '../images//Main_logo.png';
 
 interface FooterProps {
   isDark: boolean;
@@ -69,12 +69,12 @@ const Footer: React.FC<FooterProps> = ({ isDark, translations, services, onNavig
   <img
     src={icon}
     alt="App Icon"
-    className="h-12 w-12 group-hover:scale-110 transition-transform duration-500"
+    className="h-14 w-15 group-hover:scale-110 transition-transform duration-500"
   />
   <img
     src={logo}
     alt="Tandhif Logo"
-    className="h-7 object-left"
+    className="h-12 object-left"
   />
 </div>
 

@@ -28,12 +28,12 @@ import AnimatedCounter from './components/AnimatedCounter';
 import ServicesCarousel from './components/ServicesCarousel';
 import { translations, Language, supportedLanguages } from './data/translations';
 import { servicesData } from './data/services';
-import logo from './images/logo.png';
+import logo from './images/main_logo_1.png';
 import brak from './images/brooks-rice-_ECrWRcYA3o-unsplash.jpg';
 import brak2 from './images/bruce-mars-FWVMhUa_wbY-unsplash 2.jpg';
 import brak3 from './images/patrick-tomasso-fMntI8HAAB8-unsplash.jpg';
 import brak4 from './images/neelabh-raj-cw1914zDHUs-unsplash.jpg';
-import icon from './images/imgpsh_fullsize_anim__1_-removebg-preview.png';
+import icon from './images//Main_logo.png';
 import brak5 from './images/cytonn-photography-n95VMLxqM2I-unsplash.jpg';
 import brak6 from './images/nicolas-hoizey--4trKf0Kbow-unsplash.jpg';
 import brak7 from './images/joshua-bowers-J4i2xrPmcm0-unsplash.jpg';
@@ -47,8 +47,8 @@ import Change8 from './images/unnamed5.png';
 import AppIco from './images/Component 3.png';
 import play from './images/Component 2 (1).png';
 import toon from './images/toon.jpg';
-import logo1 from './images/black1.jpeg';
-import logo2 from './images/white1.jpeg';
+import logo1 from './images/Black.png';
+import logo2 from './images/White.png';
 import { BrowserRouter } from 'react-router-dom';
 import Help from './pages/Help';
 import Contact from './pages/Contact';
@@ -247,21 +247,21 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                   <img
                     src={icon} // Replace with your actual path
                     alt="App Icon"
-                    className="h-16 w-16 mr-4 group-hover:scale-110 transition-transform duration-500"
+                    className="h-16 w-18 mr-4 group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 h-16 w-16 mr-4 animate-ping opacity-20">
                     <img
                       src={icon} // Optionally use a blurred or transparent version
                       alt="App Icon Ping"
-                      className="h-16 w-16"
+                      className="h-18 w-18"
                     />
                   </div>
                 </div>
-                <div className="flex items-center">
+                <div className="flex">
                   <img
                     src={logo}
                     alt="Tandhif Logo"
-                    className="h-10 object-contain" // Keep height fixed, let width adjust
+                    className="h-14 object-contain" // Keep height fixed, let width adjust
                   />
                 </div>
               </div>
@@ -533,7 +533,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
           </div>
           
           <div className="text-center mt-16">
-            <button className="bg-[#74C9D5] text-black px-10 py-5 rounded-2xl font-bold text-xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
+            <button className="bg-[#74C9D5] text-black px-10 py-5 rounded-2xl font-bold text-xl hover:bg-customcyan transition-all duration-300 hover:scale-105 shadow-2xl">
               {t.howItWorks.cta}
             </button>
           </div>
@@ -762,7 +762,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center items-center">
-              <button className="bg-[#74C9D5] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
+              <button className="bg-[#74C9D5] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-customcyan transition-all duration-300 hover:scale-105 shadow-2xl">
   {t.finalCta.cta}
 </button>
 

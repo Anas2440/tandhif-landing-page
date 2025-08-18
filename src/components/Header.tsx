@@ -9,8 +9,8 @@ import {
   ChevronDown
 } from 'lucide-react';
 import { Language, supportedLanguages, languageNames } from '../data/translations';
-import logo from '../images/logo.png';
-import icon from '../images/imgpsh_fullsize_anim__1_-removebg-preview.png';
+import logo from '../images/main_logo_1.png';
+import icon from '../images//Main_logo.png';
 
 interface HeaderProps {
   isDark: boolean;
@@ -112,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({
             <img
                 src={icon}
                 alt="App Icon"
-                className="h-7 w-7 mr-1 group-hover:scale-110 transition-transform duration-300"
+                className="h-10 w-9 mr-1 group-hover:scale-110 transition-transform duration-300"
               />
 
 
@@ -121,7 +121,7 @@ const Header: React.FC<HeaderProps> = ({
               <img
                 src={logo}
                 alt="Tandhif Logo"
-                className="h-4 object-contain"
+                className="h-6 object-contain"
               />
             </div>  
           </div>

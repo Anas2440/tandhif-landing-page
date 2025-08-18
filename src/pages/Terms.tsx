@@ -248,7 +248,7 @@ const Terms: React.FC<TermsProps> = ({ isDark, onBack, translations }) => {
               {t.contactSection.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#74C9D5] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105">
+              <button className="bg-[#74C9D5] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-customcyan hover:scale-105">
                 {t.contactSection.contactButton}
               </button>
               <button className={`border-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 ${
