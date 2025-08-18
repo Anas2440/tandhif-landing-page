@@ -229,24 +229,7 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
 </div>
 
 
-            {/* Action Buttons */}
-            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                className="bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-yellow-300 hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Réserver ce service
-              </button>
-              <button 
-                onClick={closeOverlay}
-                className={`px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 border-2 ${
-                  isDark 
-                    ? 'border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white' 
-                    : 'border-gray-300 text-gray-700 hover:border-gray-400 hover:text-black'
-                }`}
-              >
-                Fermer
-              </button>
-            </div> */}
+           
           </div>
         </div>
       )}
