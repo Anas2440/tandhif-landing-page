@@ -155,7 +155,7 @@ const Header: React.FC<HeaderProps> = ({
               }`}
             >
               {item.label}
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#74C9D5] transition-all duration-300 group-hover:w-full"></span>
             </button>            ))}
           </nav>
           <button
@@ -183,7 +183,7 @@ const Header: React.FC<HeaderProps> = ({
                   }`}
                 >
                   {translations.pages?.company || 'Entreprises'}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#74C9D5] transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 <button
                 
@@ -210,8 +210,8 @@ const Header: React.FC<HeaderProps> = ({
                   isDark ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-black'
                 }`}
                               >
-                                {translations.pages?.contact || 'contact'}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+                                {translations.pages?.contact || 'contact'}  
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#74C9D5] transition-all duration-300 group-hover:w-full"></span>
                               </button>
           {/* Controls */}
           <div className="flex items-center space-x-3">
@@ -253,7 +253,7 @@ const Header: React.FC<HeaderProps> = ({
                       }}
                       className={`w-full px-4 py-3 text-left text-sm transition-colors duration-200 ${
                         language === lang 
-                          ? 'bg-[#FEE21B] text-black font-medium' 
+                          ? 'bg-[#74C9D5] text-black font-medium' 
                           : isDark 
                             ? 'text-white hover:bg-gray-700' 
                             : 'text-black hover:bg-gray-50'
@@ -294,7 +294,7 @@ const Header: React.FC<HeaderProps> = ({
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }, 100);
-  }}  className="hidden md:flex bg-[#FEE21B] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-lg">
+  }}  className="hidden md:flex bg-[#74C9D5] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-customcyan hover:scale-105 hover:shadow-lg">
               {translations.nav.bookNow || 'Réserver'}
             </button>
 
@@ -346,7 +346,7 @@ const Header: React.FC<HeaderProps> = ({
          }`}
        >
          {item.label}
-         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#74C9D5] transition-all duration-300 group-hover:w-full"></span>
        </button>
        
               ))}
@@ -375,7 +375,7 @@ const Header: React.FC<HeaderProps> = ({
                   }`}
                 >
                   {translations.pages?.company || 'Entreprises'}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#74C9D5] transition-all duration-300 group-hover:w-full"></span>
                 </button>
                 <button
                 
@@ -403,7 +403,7 @@ const Header: React.FC<HeaderProps> = ({
                 }`}
                               >
                                 {translations.pages?.contact || 'contact'}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#FEE21B] transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#74C9D5] transition-all duration-300 group-hover:w-full"></span>
                               </button>
               <button   onClick={() => {
       onNavigate?.('login');
@@ -417,7 +417,7 @@ const Header: React.FC<HeaderProps> = ({
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }, 100);
-  }} className="w-full bg-[#FEE21B] text-black px-6 py-4 rounded-xl font-extrabold text-xl tracking-wide transition-all duration-300 hover:bg-yellow-300 mt-4">
+  }} className="w-full bg-[#74C9D5] text-black px-6 py-4 rounded-xl font-extrabold text-xl tracking-wide transition-all duration-300 hover:bg-customcyan mt-4">
                 {translations.nav.bookNow}
               </button>
 

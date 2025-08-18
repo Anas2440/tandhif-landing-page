@@ -115,9 +115,9 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
             placeholder={t.searchPlaceholder}
             className={`w-full pl-12 pr-4 py-4 rounded-xl border text-lg ${
               isDark 
-                ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                : 'bg-gray-50 border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-            } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                : 'bg-gray-50 border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+            } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
           />
         </div>
       </div>
@@ -130,10 +130,10 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
             isDark 
-              ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B]' 
-              : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B]'
+              ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5]' 
+              : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5]'
           }`}>
-            <MessageCircle className="h-8 w-8 text-[#FEE21B] mb-4" />
+            <MessageCircle className="h-8 w-8 text-[#74C9D5] mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
               {t.liveChat}
             </h3>
@@ -144,10 +144,10 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
           
           <div className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
             isDark 
-              ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B]' 
-              : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B]'
+              ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5]' 
+              : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5]'
           }`}>
-            <Phone className="h-8 w-8 text-[#FEE21B] mb-4" />
+            <Phone className="h-8 w-8 text-[#74C9D5] mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
               {t.callUs}
             </h3>
@@ -158,10 +158,10 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
           
           <div className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
             isDark 
-              ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B]' 
-              : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B]'
+              ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5]' 
+              : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5]'
           }`}>
-            <Mail className="h-8 w-8 text-[#FEE21B] mb-4" />
+            <Mail className="h-8 w-8 text-[#74C9D5] mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
               {t.email}
             </h3>
@@ -181,7 +181,7 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
         {faqItems.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-12">
             <h3 className={`text-xl font-semibold mb-6 flex items-center ${isDark ? 'text-white' : 'text-black'}`}>
-              <div className="w-2 h-2 bg-[#FEE21B] rounded-full mr-3"></div>
+              <div className="w-2 h-2 bg-[#74C9D5] rounded-full mr-3"></div>
               {category.category}
             </h3>
             
@@ -199,11 +199,11 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
                     isDark ? 'text-white' : 'text-black'
                   } font-medium`}>
                     <span className="flex items-center">
-                      <Info className="h-5 w-5 text-[#FEE21B] mr-3 flex-shrink-0" />
+                      <Info className="h-5 w-5 text-[#74C9D5] mr-3 flex-shrink-0" />
                       {item.question}
                     </span>
                     <div className="ml-4 flex-shrink-0">
-                      <div className="w-6 h-6 rounded-full bg-[#FEE21B] flex items-center justify-center">
+                      <div className="w-6 h-6 rounded-full bg-[#74C9D5] flex items-center justify-center">
                         <span className="text-black text-sm font-bold group-open:rotate-45 transition-transform duration-300">+</span>
                       </div>
                     </div>
@@ -228,7 +228,7 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
             {t.notFoundDesc}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#FEE21B] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105">
+            <button className="bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105">
               {t.contactSupport}
             </button>
             <button className={`border-2 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 ${

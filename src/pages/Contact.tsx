@@ -65,11 +65,11 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
             <div className="space-y-6 mb-12">
               <div className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                 isDark 
-                  ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B]' 
-                  : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B]'
+                  ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5]' 
+                  : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5]'
               }`}>
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[#FEE21B] rounded-xl flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-[#74C9D5] rounded-xl flex items-center justify-center mr-4">
                     <Phone className="h-6 w-6 text-black" />
                   </div>
                   <div>
@@ -88,11 +88,11 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
 
               <div className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                 isDark 
-                  ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B]' 
-                  : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B]'
+                  ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5]' 
+                  : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5]'
               }`}>
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[#FEE21B] rounded-xl flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-[#74C9D5] rounded-xl flex items-center justify-center mr-4">
                     <Mail className="h-6 w-6 text-black" />
                   </div>
                   <div>
@@ -111,11 +111,11 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
 
               <div className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                 isDark 
-                  ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B]' 
-                  : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B]'
+                  ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5]' 
+                  : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5]'
               }`}>
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[#FEE21B] rounded-xl flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-[#74C9D5] rounded-xl flex items-center justify-center mr-4">
                     <MapPin className="h-6 w-6 text-black" />
                   </div>
                   <div>
@@ -132,11 +132,11 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
 
               <div className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                 isDark 
-                  ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B]' 
-                  : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B]'
+                  ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5]' 
+                  : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5]'
               }`}>
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-[#FEE21B] rounded-xl flex items-center justify-center mr-4">
+                  <div className="w-12 h-12 bg-[#74C9D5] rounded-xl flex items-center justify-center mr-4">
                     <Clock className="h-6 w-6 text-black" />
                   </div>
                   <div>
@@ -161,28 +161,28 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <button className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 text-center ${
                 isDark 
-                  ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B] text-white' 
-                  : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B] text-black'
+                  ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5] text-white' 
+                  : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5] text-black'
               }`}>
-                <MessageCircle className="h-6 w-6 text-[#FEE21B] mx-auto mb-2" />
+                <MessageCircle className="h-6 w-6 text-[#74C9D5] mx-auto mb-2" />
                 <span className="text-sm font-medium">{t.liveChat}</span>
               </button>
               
               <button className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 text-center ${
                 isDark 
-                  ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B] text-white' 
-                  : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B] text-black'
+                  ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5] text-white' 
+                  : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5] text-black'
               }`}>
-                <Users className="h-6 w-6 text-[#FEE21B] mx-auto mb-2" />
+                <Users className="h-6 w-6 text-[#74C9D5] mx-auto mb-2" />
                 <span className="text-sm font-medium">{t.becomeCleanerShort}</span>
               </button>
               
               <button className={`p-4 rounded-xl border transition-all duration-300 hover:scale-105 text-center ${
                 isDark 
-                  ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B] text-white' 
-                  : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B] text-black'
+                  ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5] text-white' 
+                  : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5] text-black'
               }`}>
-                <Building className="h-6 w-6 text-[#FEE21B] mx-auto mb-2" />
+                <Building className="h-6 w-6 text-[#74C9D5] mx-auto mb-2" />
                 <span className="text-sm font-medium">{t.business}</span>
               </button>
             </div>
@@ -208,9 +208,9 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
                     required
                     className={`w-full px-4 py-3 rounded-xl border ${
                       isDark 
-                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                    } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                    } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                     placeholder={t.yourName}
                   />
                 </div>
@@ -227,9 +227,9 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
                     required
                     className={`w-full px-4 py-3 rounded-xl border ${
                       isDark 
-                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                    } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                    } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                     placeholder={t.yourEmail}
                   />
                 </div>
@@ -245,9 +245,9 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
                   onChange={handleChange}
                   className={`w-full px-4 py-3 rounded-xl border ${
                     isDark 
-                      ? 'bg-gray-800 border-gray-700 text-white focus:border-[#FEE21B]' 
-                      : 'bg-white border-gray-300 text-black focus:border-[#FEE21B]'
-                  } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                      ? 'bg-gray-800 border-gray-700 text-white focus:border-[#74C9D5]' 
+                      : 'bg-white border-gray-300 text-black focus:border-[#74C9D5]'
+                  } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                 >
                   {/* FIX: Use the keys from your latest translation object */}
                   <option value="general">{t.generalQuestion}</option>
@@ -271,9 +271,9 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
                   required
                   className={`w-full px-4 py-3 rounded-xl border ${
                     isDark 
-                      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                      : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                  } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                      : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                  } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                   placeholder={t.subjectPlaceholder}
                 />
               </div>
@@ -290,16 +290,16 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
                   rows={6}
                   className={`w-full px-4 py-3 rounded-xl border resize-none ${
                     isDark 
-                      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                      : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                  } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                      : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                  } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                   placeholder={t.messagePlaceholder}
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#FEE21B] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 flex items-center justify-center"
+                className="w-full bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 flex items-center justify-center"
               >
                 <Send className="h-5 w-5 mr-2" />
                 {t.sendButton}

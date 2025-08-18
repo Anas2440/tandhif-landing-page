@@ -48,32 +48,32 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
 
   const benefits = [
     {
-      icon: <TrendingUp className="h-8 w-8 text-[#FEE21B]" />,
+      icon: <TrendingUp className="h-8 w-8 text-[#74C9D5]" />,
       title: t.benefits.preferentialRates.title,
       description: t.benefits.preferentialRates.description
     },
     {
-      icon: <Users className="h-8 w-8 text-[#FEE21B]" />,
+      icon: <Users className="h-8 w-8 text-[#74C9D5]" />,
       title: t.benefits.dedicatedTeam.title,
       description: t.benefits.dedicatedTeam.description
     },
     {
-      icon: <Clock className="h-8 w-8 text-[#FEE21B]" />,
+      icon: <Clock className="h-8 w-8 text-[#74C9D5]" />,
       title: t.benefits.flexibility.title,
       description: t.benefits.flexibility.description
     },
     {
-      icon: <Shield className="h-8 w-8 text-[#FEE21B]" />,
+      icon: <Shield className="h-8 w-8 text-[#74C9D5]" />,
       title: t.benefits.insurance.title,
       description: t.benefits.insurance.description
     },
     {
-      icon: <Award className="h-8 w-8 text-[#FEE21B]" />,
+      icon: <Award className="h-8 w-8 text-[#74C9D5]" />,
       title: t.benefits.certified.title,
       description: t.benefits.certified.description
     },
     {
-      icon: <Building className="h-8 w-8 text-[#FEE21B]" />,
+      icon: <Building className="h-8 w-8 text-[#74C9D5]" />,
       title: t.benefits.billing.title,
       description: t.benefits.billing.description
     }
@@ -92,7 +92,7 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
             {t.back}
           </button>
           <div className="flex items-center mb-4">
-            <Building className="h-8 w-8 text-[#FEE21B] mr-3" />
+            <Building className="h-8 w-8 text-[#74C9D5] mr-3" />
             <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
               {t.title}
             </h1>
@@ -118,7 +118,7 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
             <div className={`text-center p-6 rounded-2xl border ${
               isDark ? 'border-gray-700 bg-gray-800/30' : 'border-gray-200 bg-gray-50/30'
             }`}>
-              <div className="text-3xl font-bold text-[#FEE21B] mb-2">500+</div>
+              <div className="text-3xl font-bold text-[#74C9D5] mb-2">500+</div>
               <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                 {t.stats.companies}
               </div>
@@ -126,7 +126,7 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
             <div className={`text-center p-6 rounded-2xl border ${
               isDark ? 'border-gray-700 bg-gray-800/30' : 'border-gray-200 bg-gray-50/30'
             }`}>
-              <div className="text-3xl font-bold text-[#FEE21B] mb-2">98%</div>
+              <div className="text-3xl font-bold text-[#74C9D5] mb-2">98%</div>
               <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                 {t.stats.satisfaction}
               </div>
@@ -134,7 +134,7 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
             <div className={`text-center p-6 rounded-2xl border ${
               isDark ? 'border-gray-700 bg-gray-800/30' : 'border-gray-200 bg-gray-50/30'
             }`}>
-              <div className="text-3xl font-bold text-[#FEE21B] mb-2">24h</div>
+              <div className="text-3xl font-bold text-[#74C9D5] mb-2">24h</div>
               <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
                 {t.stats.response}
               </div>
@@ -151,8 +151,8 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
             {benefits.map((benefit, index) => (
               <div key={index} className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
                 isDark 
-                  ? 'bg-gray-800 border-gray-700 hover:border-[#FEE21B]' 
-                  : 'bg-gray-50 border-gray-200 hover:border-[#FEE21B]'
+                  ? 'bg-gray-800 border-gray-700 hover:border-[#74C9D5]' 
+                  : 'bg-gray-50 border-gray-200 hover:border-[#74C9D5]'
               }`}>
                 <div className="mb-4">{benefit.icon}</div>
                 <h4 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
@@ -192,9 +192,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                     required
                     className={`w-full px-4 py-3 rounded-xl border ${
                       isDark 
-                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                    } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                    } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                     placeholder={t.form.companyNamePlaceholder}
                   />
                 </div>
@@ -211,9 +211,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                       required
                       className={`w-full px-4 py-3 rounded-xl border ${
                         isDark 
-                          ? 'bg-gray-800 border-gray-700 text-white focus:border-[#FEE21B]' 
-                          : 'bg-white border-gray-300 text-black focus:border-[#FEE21B]'
-                      } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                          ? 'bg-gray-800 border-gray-700 text-white focus:border-[#74C9D5]' 
+                          : 'bg-white border-gray-300 text-black focus:border-[#74C9D5]'
+                      } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                     >
                       <option value="">{t.form.select}</option>
                       <option value="technology">{t.form.industries.technology}</option>
@@ -237,9 +237,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                       required
                       className={`w-full px-4 py-3 rounded-xl border ${
                         isDark 
-                          ? 'bg-gray-800 border-gray-700 text-white focus:border-[#FEE21B]' 
-                          : 'bg-white border-gray-300 text-black focus:border-[#FEE21B]'
-                      } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                          ? 'bg-gray-800 border-gray-700 text-white focus:border-[#74C9D5]' 
+                          : 'bg-white border-gray-300 text-black focus:border-[#74C9D5]'
+                      } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                     >
                       <option value="">{t.form.select}</option>
                       <option value="1-10">1-10</option>
@@ -270,9 +270,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                     required
                     className={`w-full px-4 py-3 rounded-xl border ${
                       isDark 
-                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                    } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                    } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                     placeholder="Votre nom"
                   />
                 </div>
@@ -290,9 +290,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                       required
                       className={`w-full px-4 py-3 rounded-xl border ${
                         isDark 
-                          ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                          : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                      } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                          ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                          : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                      } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                       placeholder="votre@email.com"
                     />
                   </div>
@@ -309,9 +309,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                       required
                       className={`w-full px-4 py-3 rounded-xl border ${
                         isDark 
-                          ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                          : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                      } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                          ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                          : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                      } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                       placeholder="+33 1 23 45 67 89"
                     />
                   </div>
@@ -336,9 +336,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                     required
                     className={`w-full px-4 py-3 rounded-xl border ${
                       isDark 
-                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                    } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                        : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                    } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                     placeholder="123 Rue de la République"
                   />
                 </div>
@@ -356,9 +356,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                       required
                       className={`w-full px-4 py-3 rounded-xl border ${
                         isDark 
-                          ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                          : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                      } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                          ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                          : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                      } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                       placeholder="Paris"
                     />
                   </div>
@@ -375,9 +375,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                       required
                       className={`w-full px-4 py-3 rounded-xl border ${
                         isDark 
-                          ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                          : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                      } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                          ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                          : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                      } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                       placeholder="75001"
                     />
                   </div>
@@ -401,7 +401,7 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                       />
                       <div className={`flex items-center justify-center w-5 h-5 mr-3 rounded border-2 transition-all duration-300 ${
                         formData.services.includes(service)
-                          ? 'bg-[#FEE21B] border-[#FEE21B]'
+                          ? 'bg-[#74C9D5] border-[#74C9D5]'
                           : isDark
                             ? 'border-gray-600 hover:border-gray-500'
                             : 'border-gray-300 hover:border-gray-400'
@@ -429,9 +429,9 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                   onChange={handleChange}
                   className={`w-full px-4 py-3 rounded-xl border ${
                     isDark 
-                      ? 'bg-gray-800 border-gray-700 text-white focus:border-[#FEE21B]' 
-                      : 'bg-white border-gray-300 text-black focus:border-[#FEE21B]'
-                  } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                      ? 'bg-gray-800 border-gray-700 text-white focus:border-[#74C9D5]' 
+                      : 'bg-white border-gray-300 text-black focus:border-[#74C9D5]'
+                  } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                 >
                   <option value="">Sélectionnez</option>
                   <option value="daily">Quotidien</option>
@@ -454,16 +454,16 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
                   rows={4}
                   className={`w-full px-4 py-3 rounded-xl border resize-none ${
                     isDark 
-                      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#FEE21B]' 
-                      : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#FEE21B]'
-                  } focus:outline-none focus:ring-2 focus:ring-[#FEE21B]/20 transition-all duration-300`}
+                      ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400 focus:border-[#74C9D5]' 
+                      : 'bg-white border-gray-300 text-black placeholder-gray-500 focus:border-[#74C9D5]'
+                  } focus:outline-none focus:ring-2 focus:ring-[#74C9D5]/20 transition-all duration-300`}
                   placeholder="Décrivez vos besoins spécifiques..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#FEE21B] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 text-lg"
+                className="w-full bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 text-lg"
               >
                 {t.form.submitButton}
               </button>
@@ -478,7 +478,7 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
             }`}>
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 text-[#FEE21B] fill-current" />
+                  <Star key={i} className="h-5 w-5 text-[#74C9D5] fill-current" />
                 ))}
               </div>
               <blockquote className={`text-lg italic mb-4 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
@@ -522,7 +522,7 @@ const CompanySignup: React.FC<CompanySignupProps> = ({ isDark, onBack, translati
               <div className="space-y-4">
                 {t.process.steps.map((step: any, index: number) => (
                   <div key={index} className="flex items-start">
-                    <div className="w-6 h-6 bg-[#FEE21B] rounded-full flex items-center justify-center text-black text-sm font-bold mr-3 mt-1">
+                    <div className="w-6 h-6 bg-[#74C9D5] rounded-full flex items-center justify-center text-black text-sm font-bold mr-3 mt-1">
                       {index + 1}
                     </div>
                     <div>

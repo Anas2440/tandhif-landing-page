@@ -118,21 +118,21 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
             {/* Hover Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#FEE21B]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#74C9D5]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
             {/* Service Name Overlay - Bottom Left */}
             <div className="absolute bottom-0 left-0 right-0 p-6">
-              <h3 className="text-2xl font-bold text-white group-hover:text-[#FEE21B] transition-colors duration-300 drop-shadow-lg">
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#74C9D5] transition-colors duration-300 drop-shadow-lg">
                 {service.name}
               </h3>
             </div>
 
             {/* Subtle Border Glow on Hover */}
-            <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#FEE21B]/60 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#FEE21B]/20" />
+            <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#74C9D5]/60 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-[#74C9D5]/20" />
 
             {/* Click Indicator */}
             <div className="absolute top-4 right-4 w-8 h-8 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="w-3 h-3 bg-[#FEE21B] rounded-full animate-pulse" />
+              <div className="w-3 h-3 bg-[#74C9D5] rounded-full animate-pulse" />
             </div>
           </div>
         </div>
@@ -199,7 +199,7 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
 }`}>
   {selectedService.description.split('\n').map((line, index) => (
     <li key={index} className="flex items-start gap-2">
-      <span className="mt-1 text-[#FEE21B]">•</span>
+      <span className="mt-1 text-[#74C9D5]">•</span>
       <span>{line}</span>
     </li>
   ))}
@@ -221,7 +221,7 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
   }`}>
     {selectedService.description.split('\n').map((line, index) => (
       <li key={index} className="flex items-center gap-3">
-        <span className="text-[#FEE21B] text-xl">•</span>
+        <span className="text-[#74C9D5] text-xl">•</span>
         <span>{line}</span>
       </li>
     ))}
@@ -232,7 +232,7 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
             {/* Action Buttons */}
             {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button 
-                className="bg-[#FEE21B] text-black px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-yellow-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                className="bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-yellow-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Réserver ce service
               </button>
@@ -280,14 +280,14 @@ const ServicesCarousel: React.FC<ServicesCarouselProps> = ({
         }
         
         .services-swiper .swiper-pagination-bullet-active {
-          background: #FEE21B !important;
+          background: #74C9D5 !important;
           transform: scale(1.3) !important;
           box-shadow: 0 0 20px rgba(254, 226, 27, 0.5) !important;
         }
         
         .services-swiper .swiper-button-next,
         .services-swiper .swiper-button-prev {
-          color: #FEE21B !important;
+          color: #74C9D5 !important;
           background: ${isDark ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.8)'} !important;
           width: 50px !important;
           height: 50px !important;

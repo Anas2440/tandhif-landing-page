@@ -232,8 +232,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             />
           </div>
           <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FEE21B] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '0s' }}></div>
-            <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-[#FEE21B] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#74C9D5] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '0s' }}></div>
+            <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-[#74C9D5] rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
         
@@ -285,7 +285,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                     ? 'border-gray-700 bg-gray-800/50 text-[#BFBFBF]' 
                     : 'border-gray-200 bg-gray-50/50 text-[#7A7A7A]'
                 }`}>
-                  <CheckCircle className="h-6 w-6 text-[#FEE21B] mr-3" />
+                  <CheckCircle className="h-6 w-6 text-[#74C9D5] mr-3" />
                   <span className="font-medium">{t.hero.feature1}</span>
                 </div>
                 <div className={`flex items-center px-6 py-3 rounded-full border transition-all duration-300 hover:scale-105 ${
@@ -293,7 +293,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                     ? 'border-gray-700 bg-gray-800/50 text-[#BFBFBF]' 
                     : 'border-gray-200 bg-gray-50/50 text-[#7A7A7A]'
                 }`}>
-                  <CheckCircle className="h-6 w-6 text-[#FEE21B] mr-3" />
+                  <CheckCircle className="h-6 w-6 text-[#74C9D5] mr-3" />
                   <span className="font-medium">{t.hero.feature2}</span>
                 </div>
               </div>
@@ -302,8 +302,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               <div className="flex flex-col sm:flex-col gap-6 justify-center lg:justify-start mb-4">
                 <button
                   onClick={() => openStore('user')}
-                  className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl
-                            transition-all duration-300 hover:bg-yellow-300 hover:scale-105 hover:shadow-2xl"
+                  className="bg-[#74C9D5] text-black px-10 py-5 rounded-2xl font-bold text-xl
+                            transition-all duration-300 hover:bg-customcyan hover:scale-105 hover:shadow-2xl"
                 >
                   {t.hero.ctaPrimary}
                 </button>
@@ -378,7 +378,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                   className="w-full h-auto rounded-3xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 />
                 {/* Floating elements */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#FEE21B] rounded-full flex items-center justify-center shadow-xl animate-bounce">
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#74C9D5] rounded-full flex items-center justify-center shadow-xl animate-bounce">
                   <Sparkles className="h-12 w-12 text-black" />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl">
@@ -386,7 +386,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </div>
               </div>
               {/* Background decoration */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl transform rotate-3 scale-105 -z-10"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#74C9D5]/20 to-transparent rounded-3xl transform rotate-3 scale-105 -z-10"></div>
             </div>
           </div>
           {/* Stats */}
@@ -397,7 +397,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                     ? 'border-gray-700 bg-gray-800/30' 
                     : 'border-gray-200 bg-gray-50/30'
                 }`}>
-                  <div className="text-3xl font-bold text-[#FEE21B] mb-2">
+                  <div className="text-3xl font-bold text-[#74C9D5] mb-2">
                     <AnimatedCounter end={2000} prefix="+" />
                   </div>
                   <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -409,7 +409,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                     ? 'border-gray-700 bg-gray-800/30' 
                     : 'border-gray-200 bg-gray-50/30'
                 }`}>
-                  <div className="text-3xl font-bold text-[#FEE21B] mb-2">
+                  <div className="text-3xl font-bold text-[#74C9D5] mb-2">
                     <AnimatedCounter end={500} prefix="+" />
                   </div>
                   <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -421,7 +421,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                     ? 'border-gray-700 bg-gray-800/30' 
                     : 'border-gray-200 bg-gray-50/30'
                 }`}>
-                  <div className="text-3xl font-bold text-[#FEE21B] mb-2">
+                  <div className="text-3xl font-bold text-[#74C9D5] mb-2">
                     <AnimatedCounter end={50} prefix="+" />
                   </div>
                   <div className={`text-sm font-medium ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
@@ -494,7 +494,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                   />
                 </div>
                 <div className="relative mb-8">
-                  <div className="bg-[#FEE21B] text-black w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto group-hover:scale-125 transition-all duration-500 shadow-2xl">
+                  <div className="bg-[#74C9D5] text-black w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto group-hover:scale-125 transition-all duration-500 shadow-2xl">
                     {index + 1}
                   </div>
                   {index < 2 && (
@@ -502,7 +502,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                                     w-full h-0.5 ${
                       isDark ? 'bg-gray-700' : 'bg-gray-200'
                     }`}>
-                      <div className="w-0 h-full bg-[#FEE21B] group-hover:w-full transition-all duration-1000"></div>
+                      <div className="w-0 h-full bg-[#74C9D5] group-hover:w-full transition-all duration-1000"></div>
                     </div>
                   )}
                 </div>
@@ -528,12 +528,12 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
   className="w-full h-90 object-cover rounded-3xl shadow-2xl"
   // style={{ height: '400px', width: '100%' }} // Adjust height and width as needed
 />
-              {/* <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/20 to-transparent rounded-3xl"></div> */}
+              {/* <div className="absolute inset-0 bg-gradient-to-r from-[#74C9D5]/20 to-transparent rounded-3xl"></div> */}
             </div>
           </div>
           
           <div className="text-center mt-16">
-            <button className="bg-[#FEE21B] text-black px-10 py-5 rounded-2xl font-bold text-xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
+            <button className="bg-[#74C9D5] text-black px-10 py-5 rounded-2xl font-bold text-xl hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
               {t.howItWorks.cta}
             </button>
           </div>
@@ -561,9 +561,9 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {t.whyTandhif.features.map((feature: any, index: number) => {
               const icons = [
-                <Zap className="h-16 w-16 text-[#FEE21B]" />,
-                <Shield className="h-16 w-16 text-[#FEE21B]" />,
-                <Award className="h-16 w-16 text-[#FEE21B]" />
+                <Zap className="h-16 w-16 text-[#74C9D5]" />,
+                <Shield className="h-16 w-16 text-[#74C9D5]" />,
+                <Award className="h-16 w-16 text-[#74C9D5]" />
               ];
               const featureImages = [
                brak6,
@@ -574,8 +574,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               return (
                 <div key={index} className={`text-center border rounded-3xl p-10 transition-all duration-500 hover:scale-105 group ${
                   isDark 
-                    ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20' 
-                    : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
+                    ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#74C9D5] hover:shadow-2xl hover:shadow-[#74C9D5]/20' 
+                    : 'bg-white border-gray-200 hover:border-[#74C9D5] shadow-sm hover:shadow-2xl hover:shadow-[#74C9D5]/20'
                 }`}>
                    {/* Feature Image */}
                   <div className="mb-6">
@@ -646,7 +646,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 <div className="space-y-6">
                   {t.pricing.features.map((feature: string, index: number) => (
                     <div key={index} className="flex items-start">
-                      <CheckCircle className="h-6 w-6 text-[#FEE21B] mr-4 mt-1 flex-shrink-0" />
+                      <CheckCircle className="h-6 w-6 text-[#74C9D5] mr-4 mt-1 flex-shrink-0" />
                       <span className={`text-lg ${isDark ? 'text-white' : 'text-black'}`}>
                         {feature}
                       </span>
@@ -655,7 +655,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 </div>
               </div>
               
-              <div className="bg-[#FEE21B] text-black rounded-3xl p-10">
+              <div className="bg-[#74C9D5] text-black rounded-3xl p-10">
                 {/* Calculator Image */}
                 <div className="mb-6">
                 <img 
@@ -742,7 +742,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
 />
               <div className="absolute inset-0  rounded-3xl"></div>
               {/* Floating badge */}
-              <div className="absolute -top-6 right-3  bg-[#FEE21B] text-black px-6 py-3 rounded-full font-bold shadow-xl">
+              <div className="absolute -top-6 right-3  bg-[#74C9D5] text-black px-6 py-3 rounded-full font-bold shadow-xl">
                 #1 en France
               </div>
             </div>
@@ -762,7 +762,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
               
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-center items-center">
-              <button className="bg-[#FEE21B] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
+              <button className="bg-[#74C9D5] text-black w-72 h-16 rounded-2xl font-bold text-lg hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-2xl">
   {t.finalCta.cta}
 </button>
 
@@ -791,7 +791,7 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
                 style={{ height: '450px' }} 
                 className="w-full object-cover  rounded-3xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#FEE21B]/30 to-transparent rounded-3xl flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-[#74C9D5]/30 to-transparent rounded-3xl flex items-center justify-center">
                 <div className="text-center">
                   <Smartphone className="h-24 w-24 text-white mx-auto mb-4" />
                   <h3 className="text-3xl font-bold text-white">Applications mobiles disponibles</h3>
@@ -804,10 +804,10 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             {t.mobile.features.map((feature: string, index: number) => (
               <div key={index} className={`text-center p-6 rounded-2xl border transition-all duration-300 hover:scale-105 ${
                 isDark
-                  ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B]'
-                  : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-md'
+                  ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#74C9D5]'
+                  : 'bg-white border-gray-200 hover:border-[#74C9D5] shadow-sm hover:shadow-md'
               }`}>
-                <CheckCircle className="h-8 w-8 text-[#FEE21B] mx-auto mb-3" />
+                <CheckCircle className="h-8 w-8 text-[#74C9D5] mx-auto mb-3" />
                 <span className={`font-medium ${isDark ? 'text-white' : 'text-black'}`}>
                   {feature}
                 </span>
@@ -819,8 +819,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             {/* User App */}
             <div className={`p-8 rounded-3xl border transition-all duration-300 hover:scale-105 ${
               isDark
-                ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20'
-                : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
+                ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#74C9D5] hover:shadow-2xl hover:shadow-[#74C9D5]/20'
+                : 'bg-white border-gray-200 hover:border-[#74C9D5] shadow-sm hover:shadow-2xl hover:shadow-[#74C9D5]/20'
             }`}>
                {/* User App Image */}
               <div className="mb-6">
@@ -869,8 +869,8 @@ if (currentPage === 'company')return <CompanySignup isDark={isDark} onBack={goHo
             {/* Cleaner App */}
             <div className={`p-8 rounded-3xl border transition-all duration-300 hover:scale-105 ${
               isDark
-                ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#FEE21B] hover:shadow-2xl hover:shadow-[#FEE21B]/20'
-                : 'bg-white border-gray-200 hover:border-[#FEE21B] shadow-sm hover:shadow-2xl hover:shadow-[#FEE21B]/20'
+                ? 'bg-[#0E0E0E] border-[#7A7A7A] hover:border-[#74C9D5] hover:shadow-2xl hover:shadow-[#74C9D5]/20'
+                : 'bg-white border-gray-200 hover:border-[#74C9D5] shadow-sm hover:shadow-2xl hover:shadow-[#74C9D5]/20'
             }`}>
                {/* Cleaner App Image */}
               <div className="mb-6">

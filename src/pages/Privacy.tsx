@@ -23,7 +23,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
             {t.back}
           </button>
           <div className="flex items-center mb-4">
-            <Shield className="h-8 w-8 text-[#FEE21B] mr-3" />
+            <Shield className="h-8 w-8 text-[#74C9D5] mr-3" />
             <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
               {t.title}
             </h1>
@@ -39,11 +39,11 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Important Notice */}
-        <div className={`p-6 rounded-xl border-l-4 border-[#FEE21B] mb-12 ${
+        <div className={`p-6 rounded-xl border-l-4 border-[#74C9D5] mb-12 ${
           isDark ? 'bg-gray-800/50 border-r border-t border-b border-gray-700' : 'bg-blue-50 border-r border-t border-b border-blue-200'
         }`}>
           <div className="flex items-start">
-            <Lock className="h-6 w-6 text-[#FEE21B] mr-3 mt-1 flex-shrink-0" />
+            <Lock className="h-6 w-6 text-[#74C9D5] mr-3 mt-1 flex-shrink-0" />
             <div>
               <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
                 {t.importantNotice.title}
@@ -60,7 +60,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
           <div className={`p-6 rounded-xl border text-center ${
             isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'
           }`}>
-            <Eye className="h-8 w-8 text-[#FEE21B] mx-auto mb-4" />
+            <Eye className="h-8 w-8 text-[#74C9D5] mx-auto mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
               {t.overview.transparency.title}
             </h3>
@@ -72,7 +72,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
           <div className={`p-6 rounded-xl border text-center ${
             isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'
           }`}>
-            <Lock className="h-8 w-8 text-[#FEE21B] mx-auto mb-4" />
+            <Lock className="h-8 w-8 text-[#74C9D5] mx-auto mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
               {t.overview.security.title}
             </h3>
@@ -84,7 +84,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
           <div className={`p-6 rounded-xl border text-center ${
             isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'
           }`}>
-            <UserCheck className="h-8 w-8 text-[#FEE21B] mx-auto mb-4" />
+            <UserCheck className="h-8 w-8 text-[#74C9D5] mx-auto mb-4" />
             <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
               {t.overview.control.title}
             </h3>
@@ -99,7 +99,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
           {/* Section 1 */}
           <section>
             <h2 className={`text-2xl font-bold mb-6 flex items-center ${isDark ? 'text-white' : 'text-black'}`}>
-              <Database className="h-6 w-6 text-[#FEE21B] mr-3" />
+              <Database className="h-6 w-6 text-[#74C9D5] mr-3" />
               {t.dataCollection.title}
             </h2>
             <div className="space-y-6">
@@ -217,7 +217,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
               Nous ne vendons jamais vos données personnelles. Nous pouvons les partager uniquement dans les cas suivants :
             </p>
             <div className="space-y-4">
-              <div className={`p-4 rounded-xl border-l-4 border-[#FEE21B] ${
+              <div className={`p-4 rounded-xl border-l-4 border-[#74C9D5] ${
                 isDark ? 'bg-gray-800/50 border-r border-t border-b border-gray-700' : 'bg-yellow-50 border-r border-t border-b border-yellow-200'
               }`}>
                 <h3 className={`font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
@@ -228,7 +228,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
                 </p>
               </div>
 
-              <div className={`p-4 rounded-xl border-l-4 border-[#FEE21B] ${
+              <div className={`p-4 rounded-xl border-l-4 border-[#74C9D5] ${
                 isDark ? 'bg-gray-800/50 border-r border-t border-b border-gray-700' : 'bg-yellow-50 border-r border-t border-b border-yellow-200'
               }`}>
                 <h3 className={`font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
@@ -239,7 +239,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
                 </p>
               </div>
 
-              <div className={`p-4 rounded-xl border-l-4 border-[#FEE21B] ${
+              <div className={`p-4 rounded-xl border-l-4 border-[#74C9D5] ${
                 isDark ? 'bg-gray-800/50 border-r border-t border-b border-gray-700' : 'bg-yellow-50 border-r border-t border-b border-yellow-200'
               }`}>
                 <h3 className={`font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
@@ -384,7 +384,7 @@ const Privacy: React.FC<PrivacyProps> = ({ isDark, onBack, translations }) => {
             isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'
           }`}>
             <div className="flex items-center mb-4">
-              <AlertTriangle className="h-6 w-6 text-[#FEE21B] mr-3" />
+              <AlertTriangle className="h-6 w-6 text-[#74C9D5] mr-3" />
               <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
                 {t.contact.title}
               </h3>

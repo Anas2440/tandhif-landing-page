@@ -27,7 +27,7 @@ const Terms: React.FC<TermsProps> = ({ isDark, onBack, translations }) => {
             {t.back}
           </button>
           <div className="flex items-center mb-4">
-            <FileText className="h-8 w-8 text-[#FEE21B] mr-3" />
+            <FileText className="h-8 w-8 text-[#74C9D5] mr-3" />
             <h1 className={`text-4xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
               {t.title}
             </h1>
@@ -43,11 +43,11 @@ const Terms: React.FC<TermsProps> = ({ isDark, onBack, translations }) => {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Important Notice */}
-        <div className={`p-6 rounded-xl border-l-4 border-[#FEE21B] mb-12 ${
+        <div className={`p-6 rounded-xl border-l-4 border-[#74C9D5] mb-12 ${
           isDark ? 'bg-gray-800/50 border-r border-t border-b border-gray-700' : 'bg-yellow-50 border-r border-t border-b border-yellow-200'
         }`}>
           <div className="flex items-start">
-            <AlertTriangle className="h-6 w-6 text-[#FEE21B] mr-3 mt-1 flex-shrink-0" />
+            <AlertTriangle className="h-6 w-6 text-[#74C9D5] mr-3 mt-1 flex-shrink-0" />
             <div>
               <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-black'}`}>
                 {t.importantInfo}
@@ -71,7 +71,7 @@ const Terms: React.FC<TermsProps> = ({ isDark, onBack, translations }) => {
               <a
                 key={index}
                 href={`#section-${index + 1}`}
-                className={`text-sm ${isDark ? 'text-gray-300 hover:text-[#FEE21B]' : 'text-gray-600 hover:text-[#FEE21B]'} 
+                className={`text-sm ${isDark ? 'text-gray-300 hover:text-[#74C9D5]' : 'text-gray-600 hover:text-[#74C9D5]'} 
                   transition-colors duration-300 hover:underline`}
               >
                 {item}
@@ -239,7 +239,7 @@ const Terms: React.FC<TermsProps> = ({ isDark, onBack, translations }) => {
             isDark ? 'bg-gray-800 border-gray-700' : 'bg-gray-50 border-gray-200'
           }`}>
             <div className="flex items-center mb-4">
-              <Shield className="h-6 w-6 text-[#FEE21B] mr-3" />
+              <Shield className="h-6 w-6 text-[#74C9D5] mr-3" />
               <h3 className={`text-xl font-bold ${isDark ? 'text-white' : 'text-black'}`}>
                 {t.contactSection.title}
               </h3>
@@ -248,7 +248,7 @@ const Terms: React.FC<TermsProps> = ({ isDark, onBack, translations }) => {
               {t.contactSection.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#FEE21B] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105">
+              <button className="bg-[#74C9D5] text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105">
                 {t.contactSection.contactButton}
               </button>
               <button className={`border-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 ${
