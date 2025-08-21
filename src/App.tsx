@@ -47,7 +47,7 @@ import Change8 from './images/unnamed5.png';
 import AppIco from './images/Component 3.png';
 import play from './images/Component 2 (1).png';
 import toon from './images/toon.jpg';
-import logo1 from './images/Black.png';
+import logo1 from './images/old.jpeg';
 import logo2 from './images/White.png';
 import { BrowserRouter } from 'react-router-dom';
 import Help from './pages/Help';
