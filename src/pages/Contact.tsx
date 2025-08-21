@@ -299,7 +299,7 @@ const Contact: React.FC<ContactProps> = ({ isDark, onBack, translations }) => {
 
               <button
                 type="submit"
-                className="w-full bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105 flex items-center justify-center"
+                className="w-full bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-customcyan hover:scale-105 flex items-center justify-center"
               >
                 <Send className="h-5 w-5 mr-2" />
                 {t.sendButton}

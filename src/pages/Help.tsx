@@ -228,7 +228,7 @@ const Help: React.FC<HelpProps> = ({ isDark, onBack, translations }) => {
             {t.notFoundDesc}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-yellow-300 hover:scale-105">
+            <button className="bg-[#74C9D5] text-black px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:bg-customcyan hover:scale-105">
               {t.contactSupport}
             </button>
             <button className={`border-2 px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:scale-105 ${
